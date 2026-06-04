@@ -11,7 +11,7 @@ st.set_page_config(
 # 2. Inyección de CSS para estética profesional (¡Corregido para Modo Oscuro!)
 st.markdown("""
 <style>
-    .main-title { font-size: 2.8rem; color: #1E3A8A; font-weight: 800; margin-bottom: 0px;}
+    .main-title { font-size: 2.8rem; color: #FFFFFF; font-weight: 800; margin-bottom: 0px;}
     .sub-title { font-size: 1.2rem; color: #64748B; margin-bottom: 30px;}
     .section-header { font-size: 1.8rem; color: #0284C7; border-bottom: 2px solid #E2E8F0; padding-bottom: 10px; margin-top: 20px;}
     .highlight-card { 
