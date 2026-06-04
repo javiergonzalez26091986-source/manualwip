@@ -12,7 +12,7 @@ st.set_page_config(
 st.markdown("""
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
-    .main-title { font-size: 2.4rem; color: #1E3A8A; font-weight: 800; margin-bottom: 0px; margin-top: 10px;}
+    .main-title { font-size: 2.4rem; color: #FFFFFF; font-weight: 800; margin-bottom: 0px; margin-top: 10px;}
     .sub-title { font-size: 1.1rem; color: #64748B; margin-bottom: 30px;}
     .section-header { font-size: 1.6rem; color: #0284C7; border-bottom: 2px solid #E2E8F0; padding-bottom: 10px; margin-top: 20px; margin-bottom: 20px;}
     .highlight-card { background-color: #F8FAFC; color: #0F172A; padding: 20px; border-radius: 8px; border-left: 5px solid #0EA5E9; box-shadow: 0 2px 4px rgb(0 0 0 / 0.05); }
