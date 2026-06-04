@@ -1,9 +1,9 @@
 import streamlit as st
 
-# 1. Configuración principal
+# 1. Configuración principal de la página (Ícono de pestaña configurado)
 st.set_page_config(
-    page_title="Manual Interactivo Wip", 
-    page_icon="🧊", 
+    page_title="Manual Interactivo Wip - SERGEM", 
+    page_icon="sergemLogo.ico", # <- Archivo .ico asignado como favicon de la pestaña
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -12,7 +12,7 @@ st.set_page_config(
 st.markdown("""
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
-    .main-title { font-size: 2.4rem; color: #FFFFFF; font-weight: 800; margin-bottom: 0px; margin-top: 10px;}
+    .main-title { font-size: 2.4rem; color: #1E3A8A; font-weight: 800; margin-bottom: 0px; margin-top: 10px;}
     .sub-title { font-size: 1.1rem; color: #64748B; margin-bottom: 30px;}
     .section-header { font-size: 1.6rem; color: #0284C7; border-bottom: 2px solid #E2E8F0; padding-bottom: 10px; margin-top: 20px; margin-bottom: 20px;}
     .highlight-card { background-color: #F8FAFC; color: #0F172A; padding: 20px; border-radius: 8px; border-left: 5px solid #0EA5E9; box-shadow: 0 2px 4px rgb(0 0 0 / 0.05); }
@@ -20,22 +20,26 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# 3. Encabezado con Logotipos
-col_logo1, col_espacio, col_logo2 = st.columns([1, 3, 1])
+# 3. Encabezado en el cuerpo con los tres logotipos alineados
+col_logo1, col_logo2, col_logo3 = st.columns([1, 1, 1])
 with col_logo1:
-    # Ajusta el ancho según lo requieras
     try:
         st.image("wipLogo.png", width=120)
     except:
         st.caption("[Logo WIP]")
 with col_logo2:
     try:
-        st.image("constructoraBolivarLogo.png", width=150)
+        st.image("sergemLogo.png", width=130) # <- Logo de SERGEM en el cuerpo de la app
+    except:
+        st.caption("[Logo SERGEM]")
+with col_logo3:
+    try:
+        st.image("constructoraBolivarLogo.png", width=140)
     except:
         st.caption("[Logo Bolívar]")
 
 st.markdown('<p class="main-title">Manual Operativo Dinámico</p>', unsafe_allow_html=True)
-st.markdown('<p class="sub-title">Gestión y Coordinación de Mensajería Wip - Constructora Bolívar</p>', unsafe_allow_html=True)
+st.markdown('<p class="sub-title">Gestión y Coordinación de Mensajería Wip - Operación Nacional</p>', unsafe_allow_html=True)
 
 # 4. Buscador Rápido (Sidebar)
 st.sidebar.markdown("### <i class='fas fa-search icon-prof'></i> Búsqueda Rápida", unsafe_allow_html=True)
@@ -112,8 +116,8 @@ else:
             st.markdown('#### <i class="fas fa-user-tie" style="color:#1E3A8A;"></i> Funcionario Bolívar', unsafe_allow_html=True)
             st.info("Ingresa la solicitud directamente en la interfaz web de Wip, especificando origen, destino y prioridad.")
         with c2:
-            st.markdown('#### <i class="fas fa-headset" style="color:#1E3A8A;"></i> Coordinador', unsafe_allow_html=True)
-            st.error("Audita la información, consolida las rutas y despacha las órdenes al personal según disponibilidad zonal.")
+            st.markdown('#### <i class="fas fa-headset" style="color:#1E3A8A;"></i> Coordinador Logístico', unsafe_allow_html=True)
+            st.error("Audita la información desde el panel central, consolida las rutas nacionales y despacha las órdenes según disponibilidad.")
         with c3:
             st.markdown('#### <i class="fas fa-motorcycle" style="color:#1E3A8A;"></i> Mensajero', unsafe_allow_html=True)
             st.success("Ejecuta la orden en calle, recolecta la firma digital y cierra el ciclo reportando el estado final en su App.")
@@ -153,7 +157,6 @@ else:
         st.markdown('<p class="section-header"><i class="fas fa-question-circle icon-prof"></i> 4. Preguntas Frecuentes (FAQ)</p>', unsafe_allow_html=True)
         
         for pregunta, respuesta in faq_db.items():
-            # Formateamos la clave para que se vea como pregunta capitalizada
             titulo_pregunta = "¿Dudas sobre " + pregunta.split()[0] + "?"
             with st.expander(titulo_pregunta.capitalize()):
                 st.write(respuesta)
