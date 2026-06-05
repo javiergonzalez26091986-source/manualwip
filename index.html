@@ -14,14 +14,15 @@
             --primary: #0A2540;
             --secondary: #0284C7;
             --accent: #00D4FF;
-            --bg-light: #F8FAFC;
         }
 
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: var(--bg-light);
+            /* Fondo corporativo premium: Degradado sutil */
+            background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
             color: #334155;
             padding-top: 80px; /* Espacio para el menú fijo */
+            min-height: 100vh;
         }
 
         /* Menú de Navegación Fijo */
@@ -114,7 +115,23 @@
             font-weight: 600;
         }
 
-        /* Videos */
+        /* Estilos para el Manual Interactivo (Pills) */
+        .nav-pills .nav-link {
+            color: var(--primary);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+        .nav-pills .nav-link:hover {
+            background-color: #F1F5F9;
+        }
+        .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+            background-color: var(--secondary);
+            color: white;
+            box-shadow: 0 4px 10px rgba(2, 132, 199, 0.3);
+        }
+
+        /* Contenedores de Video */
         .video-box {
             background: #1E293B;
             border-radius: 15px;
@@ -122,6 +139,23 @@
             text-align: center;
             color: white;
             border: 2px dashed #475569;
+        }
+        .video-responsive {
+            position: relative;
+            padding-bottom: 56.25%; /* Proporción 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 15px;
+            background: #1E293B;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .video-responsive iframe, .video-responsive video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
         }
     </style>
 </head>
@@ -182,7 +216,7 @@
                     </div>
                 </div>
                 <div class="col-12">
-                    <div class="card-custom border border-light bg-light">
+                    <div class="card-custom border border-light" style="background-color: #F8FAFC;">
                         <h4 class="fw-bold text-primary"><i class="fas fa-map-marked-alt"></i> Cobertura y Rutas Especiales</h4>
                         <p><b>Ciudades Activas:</b> Bogotá (y aledaños), Barranquilla, Santa Marta, Cartagena, Ibagué y Medellín.</p>
                         <div class="row mt-3">
@@ -205,24 +239,73 @@
 
     <section id="plataforma">
         <div class="container">
-            <h2 class="section-title">Procedimiento en Plataforma</h2>
-            <div class="row align-items-center bg-white p-4 rounded-4 shadow-sm">
-                <div class="col-md-6">
-                    <h5 class="fw-bold">Creación de Solicitudes</h5>
-                    <p class="text-muted">La plataforma permite seleccionar entre opciones de un origen con uno o más destinos. En caso de requerir una diligencia fuera del perímetro, se debe validar disponibilidad.</p>
-                    <ol class="list-group list-group-numbered mb-4">
-                        <li class="list-group-item border-0">Ingresa a la plataforma web.</li>
-                        <li class="list-group-item border-0">Haz clic en <b>Nueva Solicitud</b>.</li>
-                        <li class="list-group-item border-0">Selecciona tipo <b>Individual</b> o <b>Masiva</b>.</li>
-                        <li class="list-group-item border-0">Diligencia la Sede de Origen y Destino.</li>
-                    </ol>
-                    <div class="alert alert-info py-2"><i class="fas fa-info-circle"></i> <b>Cierre documental:</b> El mensajero escanea documentos y envía por correo. Soportes físicos van a archivo.</div>
+            <h2 class="section-title">Manual Interactivo en Plataforma</h2>
+            <p class="text-muted mb-4">Selecciona un proceso en el menú para visualizar el videotutorial paso a paso correspondiente.</p>
+
+            <div class="row bg-white p-4 rounded-4 shadow-sm align-items-start">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <button class="nav-link active text-start mb-2 fw-bold px-3 py-3" id="v-pills-individual-tab" data-bs-toggle="pill" data-bs-target="#v-pills-individual" type="button" role="tab" aria-selected="true">
+                            <i class="fas fa-user-check me-2"></i> Solicitud Individual
+                        </button>
+                        <button class="nav-link text-start mb-2 fw-bold px-3 py-3" id="v-pills-masiva-tab" data-bs-toggle="pill" data-bs-target="#v-pills-masiva" type="button" role="tab" aria-selected="false">
+                            <i class="fas fa-users me-2"></i> Solicitud Masiva
+                        </button>
+                        <button class="nav-link text-start mb-2 fw-bold px-3 py-3" id="v-pills-rastreo-tab" data-bs-toggle="pill" data-bs-target="#v-pills-rastreo" type="button" role="tab" aria-selected="false">
+                            <i class="fas fa-search-location me-2"></i> Rastreo de Paquetes
+                        </button>
+                        <button class="nav-link text-start fw-bold px-3 py-3" id="v-pills-novedades-tab" data-bs-toggle="pill" data-bs-target="#v-pills-novedades" type="button" role="tab" aria-selected="false">
+                            <i class="fas fa-exclamation-triangle me-2"></i> Gestión de Novedades
+                        </button>
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="video-box">
-                        <i class="fas fa-play-circle fa-3x mb-3" style="color: var(--accent);"></i>
-                        <h5>Videotutorial Paso a Paso</h5>
-                        <p class="small text-muted">Espacio reservado para los videos explicativos.</p>
+
+                <div class="col-md-8">
+                    <div class="tab-content" id="v-pills-tabContent">
+                        
+                        <div class="tab-pane fade show active" id="v-pills-individual" role="tabpanel">
+                            <h4 class="fw-bold text-primary mb-3">Creación de Solicitud Individual</h4>
+                            <div class="video-box mb-4">
+                                <i class="fas fa-play-circle fa-4x mb-3" style="color: var(--accent);"></i>
+                                <h5>Videotutorial: Individual</h5>
+                                <p class="small text-muted mb-0">[Aquí irá el reproductor de video]</p>
+                            </div>
+                            <p class="text-muted">Pasos principales mostrados en el video:</p>
+                            <ol class="list-group list-group-numbered mb-0">
+                                <li class="list-group-item border-0 py-1 bg-transparent">Ingresa a "Nueva Solicitud" y selecciona "Individual".</li>
+                                <li class="list-group-item border-0 py-1 bg-transparent">Diligencia la Sede de Origen y Destino.</li>
+                                <li class="list-group-item border-0 py-1 bg-transparent">Confirma los datos del paquete.</li>
+                            </ol>
+                        </div>
+
+                        <div class="tab-pane fade" id="v-pills-masiva" role="tabpanel">
+                            <h4 class="fw-bold text-primary mb-3">Carga Masiva de Solicitudes</h4>
+                            <div class="video-box mb-4">
+                                <i class="fas fa-file-excel fa-4x mb-3" style="color: var(--accent);"></i>
+                                <h5>Videotutorial: Carga Masiva</h5>
+                                <p class="small text-muted mb-0">[Aquí irá el reproductor de video]</p>
+                            </div>
+                            <div class="alert alert-info py-2 border-0"><i class="fas fa-info-circle"></i> Recuerda descargar siempre la última versión de la plantilla en Excel antes de subirla al sistema.</div>
+                        </div>
+
+                        <div class="tab-pane fade" id="v-pills-rastreo" role="tabpanel">
+                            <h4 class="fw-bold text-primary mb-3">¿Cómo hacer seguimiento?</h4>
+                            <div class="video-box mb-4">
+                                <i class="fas fa-route fa-4x mb-3" style="color: var(--accent);"></i>
+                                <h5>Videotutorial: Trazabilidad</h5>
+                                <p class="small text-muted mb-0">[Aquí irá el reproductor de video]</p>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="v-pills-novedades" role="tabpanel">
+                            <h4 class="fw-bold text-primary mb-3">Resolución de Novedades</h4>
+                            <div class="video-box mb-4">
+                                <i class="fas fa-user-shield fa-4x mb-3" style="color: var(--accent);"></i>
+                                <h5>Videotutorial: Novedades Operativas</h5>
+                                <p class="small text-muted mb-0">[Aquí irá el reproductor de video]</p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -234,19 +317,19 @@
             <h2 class="section-title">Gestión y Control Operativo</h2>
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="card-custom bg-light">
+                    <div class="card-custom" style="background-color: #F8FAFC; border: 1px solid #E2E8F0;">
                         <h5 class="fw-bold text-primary"><i class="fas fa-chart-pie"></i> Indicadores y Tableros</h5>
                         <p class="small text-muted">Dashboard interactivo para supervisión en tiempo real de estados de solicitud, medición de KPIs (Tiempos de respuesta/SLA) y efectividad de entrega en primer intento.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card-custom bg-light">
+                    <div class="card-custom" style="background-color: #F8FAFC; border: 1px solid #E2E8F0;">
                         <h5 class="fw-bold text-primary"><i class="fas fa-bullhorn"></i> Plan de Comunicación</h5>
                         <p class="small text-muted">Estrategia de despliegue del manual hacia los funcionarios. Incluye campañas de expectativa, flujos de escalamiento y documentación estandarizada.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card-custom bg-light">
+                    <div class="card-custom" style="background-color: #F8FAFC; border: 1px solid #E2E8F0;">
                         <h5 class="fw-bold text-primary"><i class="fas fa-file-excel"></i> Informes de Operación</h5>
                         <p class="small text-muted">Estructura para consolidación mensual de la productividad por mensajero y análisis de volumen de radicaciones por centro de costo regional.</p>
                     </div>
@@ -255,80 +338,80 @@
         </div>
     </section>
 
-    <section id="respuestas" class="bg-light border-top border-bottom">
+    <section id="respuestas">
         <div class="container">
             <h2 class="section-title">Respuestas Rápidas (FAQ)</h2>
             <p class="text-muted mb-4">Busca rápidamente las dudas más comunes sobre la operación o navega por la lista.</p>
             
             <div class="search-box">
                 <i class="fas fa-search"></i>
-                <input type="text" id="faqSearch" class="form-control form-control-lg" placeholder="Ej: contraseña, editar, rastreo, destinatario...">
+                <input type="text" id="faqSearch" class="form-control form-control-lg border-0" placeholder="Ej: contraseña, editar, rastreo, destinatario...">
             </div>
 
             <div class="accordion shadow-sm" id="accordionFAQ">
-                <div class="accordion-item faq-item">
+                <div class="accordion-item border-0 mb-2 rounded-3 overflow-hidden faq-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
                             ¿Qué hago si olvidé mi contraseña de acceso a Wip?
                         </button>
                     </h2>
                     <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#accordionFAQ">
-                        <div class="accordion-body text-muted faq-text">
+                        <div class="accordion-body text-muted faq-text bg-white">
                             Debes hacer clic en la opción "¿Olvidaste tu contraseña?" en la pantalla de inicio. Recibirás un enlace en tu correo corporativo para restablecerla.
                         </div>
                     </div>
                 </div>
-                <div class="accordion-item faq-item">
+                <div class="accordion-item border-0 mb-2 rounded-3 overflow-hidden faq-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
                             ¿Es posible editar o cancelar una solicitud?
                         </button>
                     </h2>
                     <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
-                        <div class="accordion-body text-muted faq-text">
+                        <div class="accordion-body text-muted faq-text bg-white">
                             Sí, siempre y cuando el estado siga como "Pendiente". Una vez asignada a un mensajero (Estado: "Asignado" o "En Tránsito"), deberás comunicarte con el coordinador.
                         </div>
                     </div>
                 </div>
-                <div class="accordion-item faq-item">
+                <div class="accordion-item border-0 mb-2 rounded-3 overflow-hidden faq-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
                             ¿Cómo puedo hacer seguimiento (rastreo) a mi paquete?
                         </button>
                     </h2>
                     <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
-                        <div class="accordion-body text-muted faq-text">
+                        <div class="accordion-body text-muted faq-text bg-white">
                             Desde la sección "Mis Servicios" en Wip. La plataforma actualiza en tiempo real los estados: Creado, Asignado, En Tránsito, Entregado o Novedad.
                         </div>
                     </div>
                 </div>
-                <div class="accordion-item faq-item">
+                <div class="accordion-item border-0 rounded-3 overflow-hidden faq-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
                             ¿Qué sucede si el destinatario no está?
                         </button>
                     </h2>
                     <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
-                        <div class="accordion-body text-muted faq-text">
+                        <div class="accordion-body text-muted faq-text bg-white">
                             El mensajero reportará una "Novedad". El paquete regresará al punto de origen o base para reprogramar la visita.
                         </div>
                     </div>
                 </div>
             </div>
             
-            <div id="noResults" class="alert alert-warning mt-3" style="display: none;">
+            <div id="noResults" class="alert alert-warning mt-3 border-0 shadow-sm" style="display: none;">
                 No se encontraron respuestas para tu búsqueda. Intenta con otras palabras.
             </div>
         </div>
     </section>
 
-    <section id="directorio" class="bg-white">
+    <section id="directorio" class="bg-white pb-5">
         <div class="container">
             <h2 class="section-title">Directorio de Coordinación</h2>
             <div class="row g-4 text-center">
                 <div class="col-md-4">
-                    <div class="card-custom border">
-                        <div class="rounded-circle bg-primary text-white d-inline-flex justify-content-center align-items-center mb-3" style="width: 70px; height: 70px; font-size: 24px; font-weight: bold;">SR</div>
+                    <div class="card-custom border" style="background-color: #F8FAFC;">
+                        <div class="rounded-circle bg-primary text-white d-inline-flex justify-content-center align-items-center mb-3 shadow-sm" style="width: 70px; height: 70px; font-size: 24px; font-weight: bold;">SR</div>
                         <h5 class="fw-bold">Stiven Rodriguez</h5>
                         <p class="text-muted small">Coordinador Mensajería<br>Regional Centro - Norte</p>
                         <a href="mailto:mensajeria@constructorabolivar.com" class="btn btn-outline-primary w-100 mb-2">mensajeria@...</a>
@@ -336,8 +419,8 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card-custom border">
-                        <div class="rounded-circle bg-info text-white d-inline-flex justify-content-center align-items-center mb-3" style="width: 70px; height: 70px; font-size: 24px; font-weight: bold;">EP</div>
+                    <div class="card-custom border" style="background-color: #F8FAFC;">
+                        <div class="rounded-circle bg-info text-white d-inline-flex justify-content-center align-items-center mb-3 shadow-sm" style="width: 70px; height: 70px; font-size: 24px; font-weight: bold;">EP</div>
                         <h5 class="fw-bold">Eliana Padilla</h5>
                         <p class="text-muted small">Coordinadora Mensajería<br>Regional Norte</p>
                         <a href="mailto:eliana.padilla@constructorabolivar.com" class="btn btn-outline-primary w-100 mb-2">eliana.padilla@...</a>
@@ -345,19 +428,19 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card-custom border">
-                        <div class="rounded-circle bg-success text-white d-inline-flex justify-content-center align-items-center mb-3" style="width: 70px; height: 70px; font-size: 24px; font-weight: bold;">DP</div>
+                    <div class="card-custom border" style="background-color: #F8FAFC;">
+                        <div class="rounded-circle bg-success text-white d-inline-flex justify-content-center align-items-center mb-3 shadow-sm" style="width: 70px; height: 70px; font-size: 24px; font-weight: bold;">DP</div>
                         <h5 class="fw-bold">Daniela Parra</h5>
                         <p class="text-muted small">Coordinadora Mensajería<br>Regional Centro</p>
                         <a href="mailto:daniela.parra@constructorabolivar.com" class="btn btn-outline-primary w-100 mb-2">daniela.parra@...</a>
-                        <button class="btn btn-light w-100 text-muted" disabled>Consolidando teléfono</button>
+                        <button class="btn btn-light w-100 text-muted border" disabled>Consolidando teléfono</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-dark text-white text-center py-4">
+    <footer class="bg-dark text-white text-center py-4 mt-auto">
         <p class="mb-0 small">© 2026 Plataforma Operativa Wip. Todos los derechos reservados.</p>
     </footer>
 
