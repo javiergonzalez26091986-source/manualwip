@@ -18,14 +18,12 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            /* Fondo corporativo premium: Degradado sutil */
             background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
             color: #334155;
-            padding-top: 80px; /* Espacio para el menú fijo */
+            padding-top: 80px;
             min-height: 100vh;
         }
 
-        /* Menú de Navegación Fijo */
         .navbar-custom {
             background-color: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
@@ -44,14 +42,12 @@
             color: var(--secondary);
         }
 
-        /* Encabezado Logos */
         .header-logos img {
             height: 45px;
             object-fit: contain;
             margin: 0 10px;
         }
 
-        /* Secciones */
         section {
             padding: 60px 0;
         }
@@ -73,7 +69,6 @@
             border-radius: 2px;
         }
 
-        /* Tarjetas */
         .card-custom {
             background: white;
             border: none;
@@ -88,7 +83,6 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.08);
         }
 
-        /* Buscador Respuestas Rápidas */
         .search-box {
             position: relative;
             margin-bottom: 30px;
@@ -108,14 +102,12 @@
             font-size: 1.2rem;
         }
 
-        /* Acordeón FAQ */
         .accordion-button:not(.collapsed) {
             background-color: #F0F9FF;
             color: var(--secondary);
             font-weight: 600;
         }
 
-        /* Estilos para el Manual Interactivo (Pills) */
         .nav-pills .nav-link {
             color: var(--primary);
             border-radius: 10px;
@@ -131,7 +123,6 @@
             box-shadow: 0 4px 10px rgba(2, 132, 199, 0.3);
         }
 
-        /* Contenedores de Video */
         .video-box {
             background: #1E293B;
             border-radius: 15px;
@@ -142,7 +133,7 @@
         }
         .video-responsive {
             position: relative;
-            padding-bottom: 56.25%; /* Proporción 16:9 */
+            padding-bottom: 56.25%; 
             height: 0;
             overflow: hidden;
             border-radius: 15px;
@@ -193,17 +184,20 @@
         </div>
     </section>
 
+    <!-- SECCIÓN ANS ACTUALIZADA CON LA NUEVA INFORMACIÓN -->
     <section id="ans" class="bg-white">
         <div class="container">
             <h2 class="section-title">Acuerdos de Nivel de Servicio (ANS) y Cobertura</h2>
+            <p class="text-muted mb-4 lead">En este documento se detallan los horarios y procedimientos para la solicitud de diligencias de mensajería en nuestras sedes administrativas a nivel Nacional.</p>
+            
             <div class="row g-4">
                 <div class="col-md-6">
                     <div class="card-custom border border-light">
                         <h4 class="fw-bold text-primary"><i class="fas fa-clock"></i> Horarios de Atención</h4>
                         <ul class="mt-3 text-muted">
-                            <li class="mb-2"><b>Antes de las 8:30 am (o tarde anterior):</b> Se gestionan antes del mediodía.</li>
+                            <li class="mb-2"><b>Antes de las 8:30 am o tarde del día anterior:</b> Se gestionan antes del mediodía.</li>
                             <li class="mb-2"><b>Entre 8:30 am y 2:00 pm:</b> Se gestionan por la tarde (excepto Soacha y municipios).</li>
-                            <li><b>Fuera de horario:</b> Se gestiona el siguiente día hábil.</li>
+                            <li><b>Fuera de horario:</b> Lo entregado fuera de horario se gestiona el siguiente día hábil.</li>
                         </ul>
                     </div>
                 </div>
@@ -211,26 +205,38 @@
                     <div class="card-custom border border-light">
                         <h4 class="fw-bold text-danger"><i class="fas fa-weight-hanging"></i> Restricciones de Carga</h4>
                         <p class="mt-3 text-muted">Nuestros motorizados tienen restricción por peso y/o volumen:</p>
-                        <div class="alert alert-danger fw-bold text-center">Máximo 25 kg o 30 escrituras</div>
-                        <p class="small text-muted mb-0">Si excede, distribuir en más de un viaje o solicitar transporte en carro mediante el formulario en Theo.</p>
+                        <div class="alert alert-danger fw-bold text-center py-2">Máximo 25 kg o 30 escrituras</div>
+                        <p class="small text-muted mb-0">Si se requiere trasladar algo que excede estas dimensiones, se debe programar más de un viaje (distribuir las cargas) o <a href="https://forms.gle/HdBpe9ZuFhfbwa4x9" target="_blank" class="fw-bold text-primary text-decoration-none">solicitar transporte en carro por medio de este formulario</a> que encuentras disponible en Theo.</p>
                     </div>
                 </div>
+                
                 <div class="col-12">
                     <div class="card-custom border border-light" style="background-color: #F8FAFC;">
                         <h4 class="fw-bold text-primary"><i class="fas fa-map-marked-alt"></i> Cobertura y Rutas Especiales</h4>
-                        <p><b>Ciudades Activas:</b> Bogotá (y aledaños), Barranquilla, Santa Marta, Cartagena, Ibagué y Medellín.</p>
-                        <div class="row mt-3">
+                        <p class="text-muted">El servicio de mensajería funciona dentro de cada ciudad (Bogotá y municipios aledaños, Barranquilla, Santa Marta, Cartagena, Ibagué y Medellín). En la plataforma podrás acceder a la mensajería para cada una de estas ciudades y seleccionar entre opciones de un origen con uno o más destinos en caso de que el trámite lo requiera.</p>
+                        <p class="small text-danger"><b>Nota:</b> En caso de requerir una diligencia fuera del perímetro se debe validar la disponibilidad y se coordinará según demanda.</p>
+                        
+                        <div class="row mt-4">
                             <div class="col-md-6">
-                                <div class="p-3 bg-white rounded shadow-sm border-start border-4 border-info">
-                                    <b>Ruta Norte:</b> Cajicá, Chía, Zipaquirá.<br> <small class="text-muted">Recorridos: Lunes, Miércoles y Viernes.</small>
+                                <div class="p-3 bg-white rounded shadow-sm border-start border-4 border-info h-100">
+                                    <b>Ruta Norte:</b> Cajicá, Chía, Zipaquirá y aledaños.<br> 
+                                    <small class="text-muted">Recorridos: Lunes, Miércoles y Viernes (y el día siguiente si hay festivo), dependiendo del volumen de solicitudes.</small>
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="p-3 bg-white rounded shadow-sm border-start border-4 border-warning mt-3 mt-md-0">
-                                    <b>Ruta Sur/Occidente:</b> Funza, Madrid, Mosquera, Soacha, Usme.<br> <small class="text-muted">Recorridos: Martes y Jueves.</small>
+                                <div class="p-3 bg-white rounded shadow-sm border-start border-4 border-warning h-100 mt-3 mt-md-0">
+                                    <b>Ruta Sur/Occidente:</b> Funza, Madrid, Mosquera, Soacha, Usme y aledaños.<br> 
+                                    <small class="text-muted">Recorridos: Martes y Jueves, dependiendo del volumen de solicitudes.</small>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="card-custom border border-light bg-light">
+                        <h5 class="fw-bold text-secondary mb-2"><i class="fas fa-file-signature"></i> Información Adicional (Gestión Documental)</h5>
+                        <p class="text-muted mb-0 small">Después de tramitar las diligencias, el mensajero debe escanear los documentos y enviarlos por correo (si es requerido). Los soportes físicos se entregan al área de archivo si no son requeridos por el área usuaria.</p>
                     </div>
                 </div>
             </div>
@@ -433,7 +439,7 @@
                         <h5 class="fw-bold">Daniela Parra</h5>
                         <p class="text-muted small">Coordinadora Mensajería<br>Regional Centro</p>
                         <a href="mailto:daniela.parra@constructorabolivar.com" class="btn btn-outline-primary w-100 mb-2">daniela.parra@...</a>
-                       <a href="tel:3006674685" class="btn btn-primary w-100"><i class="fas fa-phone"></i> 3006674685</a
+                        <button class="btn btn-light w-100 text-muted border" disabled>Consolidando teléfono</button>
                     </div>
                 </div>
             </div>
@@ -459,7 +465,6 @@
                 if (buttonText.includes(filter) || bodyText.includes(filter)) {
                     item.style.display = 'block';
                     hasResults = true;
-                    // Abrir automáticamente el acordeón si hay filtro y coincide
                     if(filter.length > 2) {
                         let collapseElement = item.querySelector('.accordion-collapse');
                         let bsCollapse = new bootstrap.Collapse(collapseElement, {toggle: false});
@@ -470,7 +475,6 @@
                 }
             });
 
-            // Mostrar mensaje si no hay resultados
             document.getElementById('noResults').style.display = hasResults ? 'none' : 'block';
         });
 
