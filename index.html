@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual Interactivo Wip - SERGEM</title>
+    <link rel="icon" href="sergemLogo.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-blue: #1E3A8A;
+            --secondary-blue: #0284C7;
+            --light-bg: #F8FAFC;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #F1F5F9;
+            color: #334155;
+        }
+        .header-logos img {
+            max-height: 60px;
+            object-fit: contain;
+        }
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            color: white;
+            padding: 3rem 0;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .nav-pills .nav-link {
+            color: var(--primary-blue);
+            font-weight: 600;
+            border-radius: 10px;
+            margin: 5px;
+            transition: all 0.3s;
+        }
+        .nav-pills .nav-link.active {
+            background-color: var(--secondary-blue);
+            color: white;
+            box-shadow: 0 4px 6px rgba(2, 132, 199, 0.3);
+        }
+        .card-custom {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+            height: 100%;
+        }
+        .card-custom:hover {
+            transform: translateY(-5px);
+        }
+        .icon-box {
+            font-size: 2rem;
+            color: var(--secondary-blue);
+            margin-bottom: 15px;
+        }
+        .video-placeholder {
+            background-color: #0F172A;
+            color: white;
+            border-radius: 10px;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container bg-white p-3 mt-3 rounded-4 shadow-sm header-logos d-flex justify-content-between align-items-center">
+        <img src="wipLogo.png" alt="Logo Wip">
+        <img src="sergemLogo.png" alt="Logo SERGEM">
+        <img src="constructoraBolivarLogo.png" alt="Logo Bolívar">
+    </div>
+
+    <div class="container hero-section text-center mt-3">
+        <h1 class="fw-bold"><i class="fas fa-cubes"></i> Manual Operativo Wip</h1>
+        <p class="lead mb-0">Plataforma de Gestión y Coordinación de Mensajería a Nivel Nacional</p>
+    </div>
+
+    <div class="container mt-4">
+        <ul class="nav nav-pills justify-content-center mb-4" id="manualTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#ans" type="button"><i class="fas fa-clipboard-list"></i> ANS y Políticas</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#plataforma" type="button"><i class="fas fa-desktop"></i> Uso de Plataforma</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#contactos" type="button"><i class="fas fa-address-book"></i> Directorio</button>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="manualTabsContent">
+            
+            <div class="tab-pane fade show active" id="ans" role="tabpanel">
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card card-custom p-4 border-top border-4 border-primary">
+                            <div class="icon-box"><i class="fas fa-clock"></i></div>
+                            <h4 class="fw-bold text-primary">Horarios de Atención</h4>
+                            <ul class="list-unstyled mt-3">
+                                <li class="mb-2"><i class="fas fa-check-circle text-success"></i> <b>Antes de las 8:30 am (o tarde anterior):</b> Se gestionan antes del mediodía.</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success"></i> <b>Entre 8:30 am y 2:00 pm:</b> Se gestionan por la tarde.</li>
+                                <li class="mb-2"><i class="fas fa-info-circle text-warning"></i> <b>Fuera de horario:</b> Se gestionan el siguiente día hábil.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card card-custom p-4 border-top border-4 border-danger">
+                            <div class="icon-box text-danger"><i class="fas fa-weight-hanging"></i></div>
+                            <h4 class="fw-bold text-danger">Restricciones de Carga</h4>
+                            <p>Nuestros motorizados tienen restricciones por peso y/o volumen. El máximo permitido por viaje es:</p>
+                            <h5 class="fw-bold">25 Kg o máximo 30 escrituras</h5>
+                            <p class="text-muted small">Si se excede, se debe distribuir la carga en varios viajes o solicitar transporte en carro mediante el formulario correspondiente en Theo.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="card card-custom p-4">
+                            <h4 class="fw-bold text-primary"><i class="fas fa-map-marked-alt icon-box"></i> Cobertura y Rutas Especiales</h4>
+                            <p>Servicio activo en: <b>Bogotá, Barranquilla, Santa Marta, Cartagena, Ibagué y Medellín.</b></p>
+                            <div class="row mt-3">
+                                <div class="col-md-6">
+                                    <div class="alert alert-info">
+                                        <b>Cajicá, Chía, Zipaquirá:</b><br> Recorridos Lunes, Miércoles y Viernes.
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="alert alert-secondary">
+                                        <b>Funza, Madrid, Mosquera, Soacha, Usme:</b><br> Recorridos Martes y Jueves.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="plataforma" role="tabpanel">
+                <div class="card card-custom p-4 mb-4">
+                    <h3 class="fw-bold text-primary mb-4">Creación de Solicitudes en Wip</h3>
+                    
+                    <div class="row">
+                        <div class="col-md-5">
+                            <h5 class="fw-bold">Paso a Paso:</h5>
+                            <ol class="list-group list-group-numbered mb-3">
+                                <li class="list-group-item border-0">Ingresa a la plataforma y dirígete al menú lateral.</li>
+                                <li class="list-group-item border-0">Haz clic en <b>Nueva Solicitud</b>.</li>
+                                <li class="list-group-item border-0">Selecciona el tipo: <b>Individual</b> o <b>Masiva</b>.</li>
+                                <li class="list-group-item border-0">Diligencia la Sede de Origen, Sede de Destino y detalles del paquete.</li>
+                            </ol>
+                            <div class="alert alert-warning mt-3">
+                                <i class="fas fa-lightbulb"></i> <b>Nota:</b> Puedes hacer seguimiento de tus radicados desde la sección <b>"Mis Servicios"</b> en el menú principal.
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="video-placeholder shadow">
+                                <i class="fas fa-play-circle fa-3x mb-3 text-info"></i>
+                                <h4>Video Tutorial</h4>
+                                <p>Radicación de Nueva Solicitud (Individual y Masiva)</p>
+                                <small class="text-secondary">Aquí insertaremos el video mp4 grabado</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card card-custom p-4">
+                    <h4 class="fw-bold text-primary">Cierre y Envío de Soportes</h4>
+                    <p>Después de tramitar las diligencias, el mensajero debe escanear los documentos y enviarlos por correo (si es requerido). Los soportes físicos se entregan al área de archivo.</p>
+                    <div class="video-placeholder shadow" style="padding: 20px;">
+                        <i class="fas fa-video text-info"></i> <small>Espacio para video de soportes</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="contactos" role="tabpanel">
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card card-custom p-4 text-center">
+                            <div class="rounded-circle bg-primary text-white d-inline-flex justify-content-center align-items-center mx-auto mb-3" style="width: 60px; height: 60px; font-size: 24px;">
+                                SR
+                            </div>
+                            <h5 class="fw-bold">Stiven Rodriguez</h5>
+                            <p class="text-muted small">Coordinador Mensajería<br>Regional Centro - Norte</p>
+                            <a href="mailto:mensajeria@constructorabolivar.com" class="btn btn-outline-primary btn-sm mb-2"><i class="fas fa-envelope"></i> Correo</a>
+                            <a href="tel:3102502316" class="btn btn-outline-success btn-sm"><i class="fas fa-phone"></i> 3102502316</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-custom p-4 text-center">
+                            <div class="rounded-circle bg-info text-white d-inline-flex justify-content-center align-items-center mx-auto mb-3" style="width: 60px; height: 60px; font-size: 24px;">
+                                EP
+                            </div>
+                            <h5 class="fw-bold">Eliana Padilla</h5>
+                            <p class="text-muted small">Regional Norte<br><br></p>
+                            <a href="mailto:eliana.padilla@constructorabolivar.com" class="btn btn-outline-primary btn-sm mb-2"><i class="fas fa-envelope"></i> Correo</a>
+                            <a href="tel:3023275910" class="btn btn-outline-success btn-sm"><i class="fas fa-phone"></i> 3023275910</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-custom p-4 text-center">
+                            <div class="rounded-circle bg-success text-white d-inline-flex justify-content-center align-items-center mx-auto mb-3" style="width: 60px; height: 60px; font-size: 24px;">
+                                DP
+                            </div>
+                            <h5 class="fw-bold">Daniela Parra</h5>
+                            <p class="text-muted small">Regional Centro<br><br></p>
+                            <a href="mailto:daniela.parra@constructorabolivar.com" class="btn btn-outline-primary btn-sm mb-2"><i class="fas fa-envelope"></i> Correo</a>
+                            <a href="tel:" class="btn btn-outline-success btn-sm"><i class="fas fa-phone"></i> Consultar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
