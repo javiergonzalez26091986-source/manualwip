@@ -113,6 +113,7 @@
             border-radius: 10px;
             transition: all 0.3s ease;
             border: 1px solid transparent;
+            font-size: 0.95rem;
         }
         .nav-pills .nav-link:hover {
             background-color: #F1F5F9;
@@ -181,7 +182,6 @@
                 <h1 class="fw-bold" style="color: var(--primary);">Manual Operativo y de Consulta Wip</h1>
                 <p class="lead text-muted mb-4">Plataforma de Gestión y Coordinación de Mensajería a Nivel Nacional</p>
                 
-                <!-- Video Introductorio -->
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
                         <div class="video-responsive border border-light shadow-sm">
@@ -257,19 +257,26 @@
             <p class="text-muted mb-4">Selecciona un proceso en el menú para visualizar el videotutorial paso a paso correspondiente.</p>
 
             <div class="row bg-white p-4 rounded-4 shadow-sm align-items-start">
+                
                 <div class="col-md-4 mb-4 mb-md-0">
                     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                        <button class="nav-link active text-start mb-2 fw-bold px-3 py-3" id="v-pills-individual-tab" data-bs-toggle="pill" data-bs-target="#v-pills-individual" type="button" role="tab" aria-selected="true">
-                            <i class="fas fa-user-check me-2"></i> Solicitud Diligencia Individual
+                        <button class="nav-link active text-start mb-2 fw-bold px-3 py-3" id="v-pills-tutorial-tab" data-bs-toggle="pill" data-bs-target="#v-pills-tutorial" type="button" role="tab" aria-selected="true">
+                            <i class="fas fa-play-circle me-2"></i> Tutorial Completo (IntraB)
                         </button>
-                        <button class="nav-link text-start mb-2 fw-bold px-3 py-3" id="v-pills-masiva-tab" data-bs-toggle="pill" data-bs-target="#v-pills-masiva" type="button" role="tab" aria-selected="false">
-                            <i class="fas fa-users me-2"></i> Solicitud Diligencia Masiva
+                        <button class="nav-link text-start mb-2 fw-bold px-3 py-3" id="v-pills-crear-tab" data-bs-toggle="pill" data-bs-target="#v-pills-crear" type="button" role="tab" aria-selected="false">
+                            <i class="fas fa-user-plus me-2"></i> Cómo crear tu usuario
                         </button>
-                        <button class="nav-link text-start mb-2 fw-bold px-3 py-3" id="v-pills-rastreo-tab" data-bs-toggle="pill" data-bs-target="#v-pills-rastreo" type="button" role="tab" aria-selected="false">
-                            <i class="fas fa-search-location me-2"></i> Rastreo de Diligencias
+                        <button class="nav-link text-start mb-2 fw-bold px-3 py-3" id="v-pills-vincular-tab" data-bs-toggle="pill" data-bs-target="#v-pills-vincular" type="button" role="tab" aria-selected="false">
+                            <i class="fas fa-building me-2"></i> Vincularse a una empresa
                         </button>
-                        <button class="nav-link text-start fw-bold px-3 py-3" id="v-pills-novedades-tab" data-bs-toggle="pill" data-bs-target="#v-pills-novedades" type="button" role="tab" aria-selected="false">
-                            <i class="fas fa-exclamation-triangle me-2"></i> Seguimiento de Diligencias
+                        <button class="nav-link text-start mb-2 fw-bold px-3 py-3" id="v-pills-editar-tab" data-bs-toggle="pill" data-bs-target="#v-pills-editar" type="button" role="tab" aria-selected="false">
+                            <i class="fas fa-user-edit me-2"></i> Editar tu usuario
+                        </button>
+                        <button class="nav-link text-start mb-2 fw-bold px-3 py-3" id="v-pills-gestionar-tab" data-bs-toggle="pill" data-bs-target="#v-pills-gestionar" type="button" role="tab" aria-selected="false">
+                            <i class="fas fa-tasks me-2"></i> Gestionar un servicio
+                        </button>
+                        <button class="nav-link text-start fw-bold px-3 py-3" id="v-pills-historial-tab" data-bs-toggle="pill" data-bs-target="#v-pills-historial" type="button" role="tab" aria-selected="false">
+                            <i class="fas fa-history me-2"></i> Historial de servicios
                         </button>
                     </div>
                 </div>
@@ -277,46 +284,49 @@
                 <div class="col-md-8">
                     <div class="tab-content" id="v-pills-tabContent">
                         
-                        <div class="tab-pane fade show active" id="v-pills-individual" role="tabpanel">
-                            <h4 class="fw-bold text-primary mb-3">Creación de Solicitud Individual</h4>
-                            <div class="video-box mb-4">
-                                <i class="fas fa-play-circle fa-4x mb-3" style="color: var(--accent);"></i>
-                                <h5>Videotutorial: Individual</h5>
-                                <p class="small text-muted mb-0">[Aquí irá el reproductor de video]</p>
+                        <div class="tab-pane fade show active" id="v-pills-tutorial" role="tabpanel">
+                            <h4 class="fw-bold text-primary mb-3">Tutorial: Administración y Gestión</h4>
+                            <div class="video-responsive mb-4">
+                                <video controls preload="metadata">
+                                    <source src="videoWip.mp4" type="video/mp4">
+                                    Tu navegador no soporta el video.
+                                </video>
                             </div>
-                            <p class="text-muted">Pasos principales mostrados en el video:</p>
-                            <ol class="list-group list-group-numbered mb-0">
-                                <li class="list-group-item border-0 py-1 bg-transparent">Ingresa a "Nueva Solicitud" y selecciona "Individual".</li>
-                                <li class="list-group-item border-0 py-1 bg-transparent">Diligencia la Sede de Origen y Destino.</li>
-                                <li class="list-group-item border-0 py-1 bg-transparent">Confirma los datos del paquete.</li>
-                            </ol>
+                            <p class="text-muted small">Aprende a ingresar desde IntraB, crear una solicitud con destinos y hacer monitoreo de tus diligencias.</p>
                         </div>
 
-                        <div class="tab-pane fade" id="v-pills-masiva" role="tabpanel">
-                            <h4 class="fw-bold text-primary mb-3">Carga Masiva de Solicitudes</h4>
-                            <div class="video-box mb-4">
-                                <i class="fas fa-file-excel fa-4x mb-3" style="color: var(--accent);"></i>
-                                <h5>Videotutorial: Carga Masiva</h5>
-                                <p class="small text-muted mb-0">[Aquí irá el reproductor de video]</p>
-                            </div>
-                            <div class="alert alert-info py-2 border-0"><i class="fas fa-info-circle"></i> Recuerda descargar siempre la última versión de la plantilla en Excel antes de subirla al sistema.</div>
-                        </div>
-
-                        <div class="tab-pane fade" id="v-pills-rastreo" role="tabpanel">
-                            <h4 class="fw-bold text-primary mb-3">¿Cómo hacer seguimiento?</h4>
-                            <div class="video-box mb-4">
-                                <i class="fas fa-route fa-4x mb-3" style="color: var(--accent);"></i>
-                                <h5>Videotutorial: Trazabilidad</h5>
-                                <p class="small text-muted mb-0">[Aquí irá el reproductor de video]</p>
+                        <div class="tab-pane fade" id="v-pills-crear" role="tabpanel">
+                            <h4 class="fw-bold text-primary mb-3">Cómo crear tu usuario colaborador</h4>
+                            <div class="video-responsive mb-4">
+                                <iframe src="https://wiptool.com/academy/cursos/colaborador/clases/como-crear-tu-usuario-colaborador/" allowfullscreen></iframe>
                             </div>
                         </div>
 
-                        <div class="tab-pane fade" id="v-pills-novedades" role="tabpanel">
-                            <h4 class="fw-bold text-primary mb-3">Resolución de Novedades</h4>
-                            <div class="video-box mb-4">
-                                <i class="fas fa-user-shield fa-4x mb-3" style="color: var(--accent);"></i>
-                                <h5>Videotutorial: Novedades Operativas</h5>
-                                <p class="small text-muted mb-0">[Aquí irá el reproductor de video]</p>
+                        <div class="tab-pane fade" id="v-pills-vincular" role="tabpanel">
+                            <h4 class="fw-bold text-primary mb-3">Vincularse a una empresa</h4>
+                            <div class="video-responsive mb-4">
+                                <iframe src="https://wiptool.com/academy/cursos/colaborador/clases/vincularse-a-una-empresa/" allowfullscreen></iframe>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="v-pills-editar" role="tabpanel">
+                            <h4 class="fw-bold text-primary mb-3">Editar tu usuario</h4>
+                            <div class="video-responsive mb-4">
+                                <iframe src="https://wiptool.com/academy/cursos/colaborador/clases/editar-tu-usuario/" allowfullscreen></iframe>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="v-pills-gestionar" role="tabpanel">
+                            <h4 class="fw-bold text-primary mb-3">Gestionar un servicio</h4>
+                            <div class="video-responsive mb-4">
+                                <iframe src="https://wiptool.com/academy/cursos/colaborador/clases/gestionar-un-servicio/" allowfullscreen></iframe>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="v-pills-historial" role="tabpanel">
+                            <h4 class="fw-bold text-primary mb-3">Historial de servicios</h4>
+                            <div class="video-responsive mb-4">
+                                <iframe src="https://wiptool.com/academy/cursos/colaborador/clases/historial-de-servicios/" allowfullscreen></iframe>
                             </div>
                         </div>
 
@@ -359,7 +369,7 @@
             
             <div class="search-box">
                 <i class="fas fa-search"></i>
-                <input type="text" id="faqSearch" class="form-control form-control-lg border-0" placeholder="Ej: contraseña, editar, rastreo, destinatario...">
+                <input type="text" id="faqSearch" class="form-control form-control-lg border-0" placeholder="Ej: solicitud, app, servicios, rastreo...">
             </div>
 
             <div class="accordion shadow-sm" id="accordionFAQ">
@@ -375,6 +385,46 @@
                         </div>
                     </div>
                 </div>
+                
+                <div class="accordion-item border-0 mb-2 rounded-3 overflow-hidden faq-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                            ¿Cómo hago la solicitud o subo la diligencia?
+                        </button>
+                    </h2>
+                    <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body text-muted faq-text bg-white">
+                            Puedes ver el proceso paso a paso dirigiéndote a la sección <b>Manual Interactivo en Plataforma</b> más arriba y seleccionando el video de "Tutorial Completo" o "Gestionar un servicio". 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item border-0 mb-2 rounded-3 overflow-hidden faq-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                            ¿Dónde encuentro la app de Wip?
+                        </button>
+                    </h2>
+                    <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body text-muted faq-text bg-white">
+                            Puedes ingresar a la plataforma a través de la red interna (IntraB) haciendo clic en los botones correspondientes o ingresando directamente en tu navegador.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item border-0 mb-2 rounded-3 overflow-hidden faq-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7">
+                            Aclaración en los tipos de servicios
+                        </button>
+                    </h2>
+                    <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body text-muted faq-text bg-white">
+                            Al crear una solicitud, podrás elegir si es un servicio de múltiples destinos o único. Recuerda llenar todos los campos obligatorios para evitar demoras.
+                        </div>
+                    </div>
+                </div>
+
                 <div class="accordion-item border-0 mb-2 rounded-3 overflow-hidden faq-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
@@ -395,7 +445,7 @@
                     </h2>
                     <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
                         <div class="accordion-body text-muted faq-text bg-white">
-                            Desde la sección "Mis Servicios" en Wip. La plataforma actualiza en tiempo real los estados: Creado, Asignado, En Tránsito, Entregado o Novedad.
+                            Desde la sección "Central de Monitoreo" o "Historial" en Wip. La plataforma actualiza en tiempo real los estados: Creado, Asignado, En Tránsito, Entregado o Novedad.
                         </div>
                     </div>
                 </div>
@@ -422,34 +472,28 @@
     <section id="directorio" class="bg-white pb-5">
         <div class="container">
             <h2 class="section-title">Directorio de Coordinación</h2>
-            <div class="row g-4 text-center">
-                <div class="col-md-4">
+            <div class="row justify-content-center g-4 text-center">
+                
+                <div class="col-md-5">
                     <div class="card-custom border" style="background-color: #F8FAFC;">
-                        <div class="rounded-circle bg-primary text-white d-inline-flex justify-content-center align-items-center mb-3 shadow-sm" style="width: 70px; height: 70px; font-size: 24px; font-weight: bold;">SR</div>
-                        <h5 class="fw-bold">Stiven Rodriguez</h5>
+                        <div class="rounded-circle bg-primary text-white d-inline-flex justify-content-center align-items-center mb-3 shadow-sm" style="width: 70px; height: 70px; font-size: 24px; font-weight: bold;">LR</div>
+                        <h5 class="fw-bold">Luis Fernando Rincón</h5>
                         <p class="text-muted small">Coordinador Mensajería<br>Regional Centro - Norte</p>
-                        <a href="mailto:mensajeria@constructorabolivar.com" class="btn btn-outline-primary w-100 mb-2">mensajeria@...</a>
-                        <a href="tel:3102502316" class="btn btn-primary w-100"><i class="fas fa-phone"></i> 3102502316</a>
+                        <a href="mailto:mensajeria@constructorabolivar.com" class="btn btn-outline-primary w-100 mb-2" style="font-size: 0.9rem;">mensajeria@constructorabolivar.com</a>
+                        <a href="tel:3102502316" class="btn btn-primary w-100"><i class="fas fa-phone"></i> 310 2502316</a>
                     </div>
                 </div>
-                <div class="col-md-4">
+
+                <div class="col-md-5">
                     <div class="card-custom border" style="background-color: #F8FAFC;">
-                        <div class="rounded-circle bg-info text-white d-inline-flex justify-content-center align-items-center mb-3 shadow-sm" style="width: 70px; height: 70px; font-size: 24px; font-weight: bold;">EP</div>
-                        <h5 class="fw-bold">Eliana Padilla</h5>
-                        <p class="text-muted small">Coordinadora Mensajería<br>Regional Norte</p>
-                        <a href="mailto:eliana.padilla@constructorabolivar.com" class="btn btn-outline-primary w-100 mb-2">eliana.padilla@...</a>
-                        <a href="tel:3023275910" class="btn btn-primary w-100"><i class="fas fa-phone"></i> 3023275910</a>
+                        <div class="rounded-circle bg-info text-white d-inline-flex justify-content-center align-items-center mb-3 shadow-sm" style="width: 70px; height: 70px; font-size: 24px; font-weight: bold;">JU</div>
+                        <h5 class="fw-bold">James Urrea Ortiz</h5>
+                        <p class="text-muted small">Coordinador Mensajería<br>Regional Sur</p>
+                        <a href="mailto:jurrea@cbolivar.com" class="btn btn-outline-primary w-100 mb-2" style="font-size: 0.9rem;">jurrea@cbolivar.com</a>
+                        <a href="tel:3154849023" class="btn btn-primary w-100"><i class="fas fa-phone"></i> 315 4849023</a>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card-custom border" style="background-color: #F8FAFC;">
-                        <div class="rounded-circle bg-success text-white d-inline-flex justify-content-center align-items-center mb-3 shadow-sm" style="width: 70px; height: 70px; font-size: 24px; font-weight: bold;">DP</div>
-                        <h5 class="fw-bold">Daniela Parra</h5>
-                        <p class="text-muted small">Coordinadora Mensajería<br>Regional Centro</p>
-                        <a href="mailto:daniela.parra@constructorabolivar.com" class="btn btn-outline-primary w-100 mb-2">daniela.parra@...</a>
-                        <a href="tel:3006674685" class="btn btn-primary w-100"><i class="fas fa-phone"></i> 3006674685</a>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
