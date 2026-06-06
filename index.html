@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
     <title>Manual Operativo Wip - SERGEM</title>
-    <link rel="icon" href="sergemLogo.ico?v=3">
+    <link rel="icon" href="sergemLogo.ico?v=4">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -83,6 +88,22 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.08);
         }
 
+        /* Estilos específicos para las tarjetas interactivas del Flujo Operativo */
+        .custom-role-tab {
+            background: transparent !important;
+            border: none !important;
+        }
+        .custom-role-tab .card-custom {
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        .custom-role-tab.active .card-custom {
+            background-color: #F0F9FF;
+            border: 2px solid var(--secondary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(2, 132, 199, 0.15);
+        }
+
         .search-box {
             position: relative;
             margin-bottom: 30px;
@@ -108,30 +129,22 @@
             font-weight: 600;
         }
 
-        .nav-pills .nav-link {
+        .nav-pills .nav-link:not(.custom-role-tab) {
             color: var(--primary);
             border-radius: 10px;
             transition: all 0.3s ease;
             border: 1px solid transparent;
             font-size: 0.95rem;
         }
-        .nav-pills .nav-link:hover {
+        .nav-pills .nav-link:not(.custom-role-tab):hover {
             background-color: #F1F5F9;
         }
-        .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+        .nav-pills .nav-link.active:not(.custom-role-tab), .nav-pills .show > .nav-link:not(.custom-role-tab) {
             background-color: var(--secondary);
             color: white;
             box-shadow: 0 4px 10px rgba(2, 132, 199, 0.3);
         }
 
-        .video-box {
-            background: #1E293B;
-            border-radius: 15px;
-            padding: 40px 20px;
-            text-align: center;
-            color: white;
-            border: 2px dashed #475569;
-        }
         .video-responsive {
             position: relative;
             padding-bottom: 56.25%; 
@@ -167,8 +180,8 @@
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="#ans">ANS y Rutas</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#plataforma">Plataforma</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#gestion">Gestión Global</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#flujo">Flujo Operativo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#plataforma">Videos</a></li>
                     <li class="nav-item"><a class="nav-link" href="#respuestas">Respuestas Rápidas</a></li>
                     <li class="nav-item"><a class="nav-link" href="#directorio">Directorio</a></li>
                 </ul>
@@ -179,13 +192,13 @@
     <section id="inicio" class="pt-5">
         <div class="container">
             <div class="p-5 text-center bg-white rounded-4 shadow-sm border-top border-4 border-primary">
-                <h1 class="fw-bold" style="color: var(--primary);">Manual Operativo y de Consulta Wip</h1>
-                <p class="lead text-muted mb-4">Plataforma de Gestión y Coordinación de Mensajería a Nivel Nacional</p>
+                <h1 class="fw-bold" style="color: var(--primary);">Manual Operativo Dinámico Wip</h1>
+                <p class="lead text-muted mb-4">Gestión y Coordinación de Mensajería Wip - Operación Nacional</p>
                 
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
                         <div class="video-responsive border border-light shadow-sm">
-                            <iframe src="https://www.youtube.com/embed/h-71VuHHoiQ" title="¿Qué es Wip? Y ¿A qué tipo de empresa le sirve? Pitch" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/h-71VuHHoiQ" title="¿Qué es Wip? Pitch" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
@@ -251,31 +264,123 @@
         </div>
     </section>
 
-    <section id="plataforma">
+    <section id="flujo">
         <div class="container">
-            <h2 class="section-title">Manual Interactivo en Plataforma</h2>
+            <h2 class="section-title">Modelo de Operación Centralizada</h2>
+            <p class="text-muted mb-4 lead">El ecosistema Wip funciona mediante la interacción de tres roles clave. <b>Haz clic en cada perfil</b> para conocer su paso a paso dentro del proceso.</p>
+
+            <ul class="nav nav-pills row g-4 mb-4" id="pills-tab-roles" role="tablist">
+                
+                <li class="nav-item col-md-4" role="presentation">
+                    <button class="nav-link active w-100 h-100 text-start p-0 custom-role-tab" id="pills-usuario-tab" data-bs-toggle="pill" data-bs-target="#pills-usuario" type="button" role="tab" aria-selected="true">
+                        <div class="card-custom border shadow-sm" style="border-left: 5px solid #0A2540 !important;">
+                            <h4 class="fw-bold" style="color: #0A2540;"><i class="fas fa-user-tie mb-2"></i><br>Funcionario Bolívar</h4>
+                            <p class="small text-muted mb-0">Ingresa la solicitud directamente en la interfaz web de Wip, especificando origen, destino y prioridad.</p>
+                        </div>
+                    </button>
+                </li>
+                
+                <li class="nav-item col-md-4" role="presentation">
+                    <button class="nav-link w-100 h-100 text-start p-0 custom-role-tab" id="pills-coordinador-tab" data-bs-toggle="pill" data-bs-target="#pills-coordinador" type="button" role="tab" aria-selected="false">
+                        <div class="card-custom border shadow-sm" style="border-left: 5px solid #DC2626 !important;">
+                            <h4 class="fw-bold" style="color: #DC2626;"><i class="fas fa-headset mb-2"></i><br>Coordinador Logístico</h4>
+                            <p class="small text-muted mb-0">Audita la información desde el panel central, consolida las rutas y despacha las órdenes según disponibilidad.</p>
+                        </div>
+                    </button>
+                </li>
+                
+                <li class="nav-item col-md-4" role="presentation">
+                    <button class="nav-link w-100 h-100 text-start p-0 custom-role-tab" id="pills-mensajero-tab" data-bs-toggle="pill" data-bs-target="#pills-mensajero" type="button" role="tab" aria-selected="false">
+                        <div class="card-custom border shadow-sm" style="border-left: 5px solid #16A34A !important;">
+                            <h4 class="fw-bold" style="color: #16A34A;"><i class="fas fa-motorcycle mb-2"></i><br>Mensajero</h4>
+                            <p class="small text-muted mb-0">Ejecuta la orden en calle, recolecta la firma digital y cierra el ciclo reportando el estado final en su App.</p>
+                        </div>
+                    </button>
+                </li>
+            </ul>
+
+            <div class="tab-content bg-white p-4 rounded-4 shadow-sm border" id="pills-tabContent-roles">
+                
+                <div class="tab-pane fade show active" id="pills-usuario" role="tabpanel">
+                    <h4 class="fw-bold text-primary mb-4"><i class="fas fa-clipboard-list me-2"></i> Radicación de servicio (Paso a Paso)</h4>
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <ol class="list-group list-group-numbered list-group-flush">
+                                <li class="list-group-item border-0">Ingresar a <b>wiptool.com</b> o a través de <b>IntraB</b> con credenciales corporativas.</li>
+                                <li class="list-group-item border-0">Navegar a la opción <b>'Nueva Solicitud'</b>.</li>
+                                <li class="list-group-item border-0">Seleccionar el tipo de servicio (Individual o Múltiple).</li>
+                                <li class="list-group-item border-0">Diligenciar correctamente: Dirección, contacto, tipo de paquete y centro de costos.</li>
+                                <li class="list-group-item border-0">Dar clic en el botón <b>Crear</b>.</li>
+                            </ol>
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <i class="fas fa-laptop-house fa-5x text-muted opacity-25"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="pills-coordinador" role="tabpanel">
+                    <h4 class="fw-bold" style="color: #DC2626;"><i class="fas fa-route me-2"></i> Gestión de Coordinación (Paso a Paso)</h4>
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <ol class="list-group list-group-numbered list-group-flush">
+                                <li class="list-group-item border-0">Acceder al <b>Dashboard Central</b> de Wip.</li>
+                                <li class="list-group-item border-0">Filtrar las solicitudes en estado <b>'Pendiente'</b> por ciudad y prioridad.</li>
+                                <li class="list-group-item border-0">Validar los ANS, rutas logísticas y restricciones de carga.</li>
+                                <li class="list-group-item border-0">Asignar al mensajero disponible. Automáticamente el estado cambiará a <b>'Asignado'</b>.</li>
+                            </ol>
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <i class="fas fa-map-marked-alt fa-5x text-muted opacity-25"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="pills-mensajero" role="tabpanel">
+                    <h4 class="fw-bold" style="color: #16A34A;"><i class="fas fa-box-open me-2"></i> Confirmación y Novedades (Paso a Paso)</h4>
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <ol class="list-group list-group-numbered list-group-flush">
+                                <li class="list-group-item border-0">El mensajero visualiza la nueva tarea asignada en su dispositivo móvil.</li>
+                                <li class="list-group-item border-0">Inicia el recorrido (El estado cambia a <b>'En Tránsito'</b>).</li>
+                                <li class="list-group-item border-0">Al llegar, entrega el paquete y adjunta evidencia fotográfica o recolecta firma digital.</li>
+                                <li class="list-group-item border-0">Marca el servicio como <b>'Entregado'</b> o reporta una <b>'Novedad'</b> justificando el motivo.</li>
+                            </ol>
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <i class="fas fa-mobile-alt fa-5x text-muted opacity-25"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="plataforma" class="bg-white">
+        <div class="container">
+            <h2 class="section-title">Videotutoriales en Plataforma</h2>
             <p class="text-muted mb-4">Selecciona un proceso en el menú para visualizar el videotutorial paso a paso correspondiente.</p>
 
-            <div class="row bg-white p-4 rounded-4 shadow-sm align-items-start">
+            <div class="row bg-light p-4 rounded-4 shadow-sm align-items-start border">
                 
                 <div class="col-md-4 mb-4 mb-md-0">
                     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                        <button class="nav-link active text-start mb-2 fw-bold px-3 py-3" id="v-pills-tutorial-tab" data-bs-toggle="pill" data-bs-target="#v-pills-tutorial" type="button" role="tab" aria-selected="true">
+                        <button class="nav-link active text-start mb-2 fw-bold px-3 py-3" id="v-pills-tutorial-tab" data-bs-toggle="pill" data-bs-target="#v-pills-tutorial" type="button" role="tab">
                             <i class="fas fa-play-circle me-2"></i> Tutorial Completo (IntraB)
                         </button>
-                        <button class="nav-link text-start mb-2 fw-bold px-3 py-3" id="v-pills-crear-tab" data-bs-toggle="pill" data-bs-target="#v-pills-crear" type="button" role="tab" aria-selected="false">
+                        <button class="nav-link text-start mb-2 fw-bold px-3 py-3" id="v-pills-crear-tab" data-bs-toggle="pill" data-bs-target="#v-pills-crear" type="button" role="tab">
                             <i class="fas fa-user-plus me-2"></i> Cómo crear tu usuario
                         </button>
-                        <button class="nav-link text-start mb-2 fw-bold px-3 py-3" id="v-pills-vincular-tab" data-bs-toggle="pill" data-bs-target="#v-pills-vincular" type="button" role="tab" aria-selected="false">
+                        <button class="nav-link text-start mb-2 fw-bold px-3 py-3" id="v-pills-vincular-tab" data-bs-toggle="pill" data-bs-target="#v-pills-vincular" type="button" role="tab">
                             <i class="fas fa-building me-2"></i> Vincularse a una empresa
                         </button>
-                        <button class="nav-link text-start mb-2 fw-bold px-3 py-3" id="v-pills-editar-tab" data-bs-toggle="pill" data-bs-target="#v-pills-editar" type="button" role="tab" aria-selected="false">
+                        <button class="nav-link text-start mb-2 fw-bold px-3 py-3" id="v-pills-editar-tab" data-bs-toggle="pill" data-bs-target="#v-pills-editar" type="button" role="tab">
                             <i class="fas fa-user-edit me-2"></i> Editar tu usuario
                         </button>
-                        <button class="nav-link text-start mb-2 fw-bold px-3 py-3" id="v-pills-gestionar-tab" data-bs-toggle="pill" data-bs-target="#v-pills-gestionar" type="button" role="tab" aria-selected="false">
+                        <button class="nav-link text-start mb-2 fw-bold px-3 py-3" id="v-pills-gestionar-tab" data-bs-toggle="pill" data-bs-target="#v-pills-gestionar" type="button" role="tab">
                             <i class="fas fa-tasks me-2"></i> Gestionar un servicio
                         </button>
-                        <button class="nav-link text-start fw-bold px-3 py-3" id="v-pills-historial-tab" data-bs-toggle="pill" data-bs-target="#v-pills-historial" type="button" role="tab" aria-selected="false">
+                        <button class="nav-link text-start fw-bold px-3 py-3" id="v-pills-historial-tab" data-bs-toggle="pill" data-bs-target="#v-pills-historial" type="button" role="tab">
                             <i class="fas fa-history me-2"></i> Historial de servicios
                         </button>
                     </div>
@@ -286,7 +391,7 @@
                         
                         <div class="tab-pane fade show active" id="v-pills-tutorial" role="tabpanel">
                             <h4 class="fw-bold text-primary mb-3">Tutorial: Administración y Gestión</h4>
-                            <div class="video-responsive mb-4">
+                            <div class="video-responsive border border-secondary mb-3 shadow-sm">
                                 <video controls preload="metadata">
                                     <source src="videoWip.mp4" type="video/mp4">
                                     Tu navegador no soporta el video.
@@ -297,36 +402,36 @@
 
                         <div class="tab-pane fade" id="v-pills-crear" role="tabpanel">
                             <h4 class="fw-bold text-primary mb-3">Cómo crear tu usuario colaborador</h4>
-                            <div class="video-responsive mb-4">
-                                <iframe src="https://wiptool.com/academy/cursos/colaborador/clases/como-crear-tu-usuario-colaborador/" allowfullscreen></iframe>
+                            <div class="video-responsive border border-secondary mb-3 shadow-sm">
+                                <iframe src="https://www.youtube.com/embed/h-71VuHHoiQ" allowfullscreen></iframe>
                             </div>
                         </div>
 
                         <div class="tab-pane fade" id="v-pills-vincular" role="tabpanel">
                             <h4 class="fw-bold text-primary mb-3">Vincularse a una empresa</h4>
-                            <div class="video-responsive mb-4">
-                                <iframe src="https://wiptool.com/academy/cursos/colaborador/clases/vincularse-a-una-empresa/" allowfullscreen></iframe>
+                            <div class="video-responsive border border-secondary mb-3 shadow-sm">
+                                <iframe src="https://www.youtube.com/embed/h-71VuHHoiQ" allowfullscreen></iframe>
                             </div>
                         </div>
 
                         <div class="tab-pane fade" id="v-pills-editar" role="tabpanel">
                             <h4 class="fw-bold text-primary mb-3">Editar tu usuario</h4>
-                            <div class="video-responsive mb-4">
-                                <iframe src="https://wiptool.com/academy/cursos/colaborador/clases/editar-tu-usuario/" allowfullscreen></iframe>
+                            <div class="video-responsive border border-secondary mb-3 shadow-sm">
+                                <iframe src="https://www.youtube.com/embed/h-71VuHHoiQ" allowfullscreen></iframe>
                             </div>
                         </div>
 
                         <div class="tab-pane fade" id="v-pills-gestionar" role="tabpanel">
                             <h4 class="fw-bold text-primary mb-3">Gestionar un servicio</h4>
-                            <div class="video-responsive mb-4">
-                                <iframe src="https://wiptool.com/academy/cursos/colaborador/clases/gestionar-un-servicio/" allowfullscreen></iframe>
+                            <div class="video-responsive border border-secondary mb-3 shadow-sm">
+                                <iframe src="https://www.youtube.com/embed/h-71VuHHoiQ" allowfullscreen></iframe>
                             </div>
                         </div>
 
                         <div class="tab-pane fade" id="v-pills-historial" role="tabpanel">
                             <h4 class="fw-bold text-primary mb-3">Historial de servicios</h4>
-                            <div class="video-responsive mb-4">
-                                <iframe src="https://wiptool.com/academy/cursos/colaborador/clases/historial-de-servicios/" allowfullscreen></iframe>
+                            <div class="video-responsive border border-secondary mb-3 shadow-sm">
+                                <iframe src="https://www.youtube.com/embed/h-71VuHHoiQ" allowfullscreen></iframe>
                             </div>
                         </div>
 
@@ -407,7 +512,7 @@
                     </h2>
                     <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
                         <div class="accordion-body text-muted faq-text bg-white">
-                            Puedes ingresar a la plataforma a través de la red interna (IntraB) haciendo clic en los botones correspondientes o ingresando directamente en tu navegador.
+                            Puedes ingresar a la plataforma a través de la red interna (IntraB) haciendo clic en los botones correspondientes o ingresando directamente en tu navegador web.
                         </div>
                     </div>
                 </div>
@@ -437,6 +542,7 @@
                         </div>
                     </div>
                 </div>
+                
                 <div class="accordion-item border-0 mb-2 rounded-3 overflow-hidden faq-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
@@ -449,6 +555,7 @@
                         </div>
                     </div>
                 </div>
+                
                 <div class="accordion-item border-0 rounded-3 overflow-hidden faq-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
