@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <!-- ETIQUETAS PARA EVITAR EL CACHÉ Y FORZAR ACTUALIZACIÓN -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
@@ -195,9 +196,11 @@
                 <h1 class="fw-bold" style="color: var(--primary);">Manual Operativo Dinámico Wip</h1>
                 <p class="lead text-muted mb-4">Gestión y Coordinación de Mensajería Wip - Operación Nacional</p>
                 
+                <!-- Video Introductorio (Pitch) -->
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
                         <div class="video-responsive border border-light shadow-sm">
+                            <!-- Este video introductorio SÍ se queda porque tú me enviaste el link exacto de YouTube -->
                             <iframe src="https://www.youtube.com/embed/h-71VuHHoiQ" title="¿Qué es Wip? Pitch" allowfullscreen></iframe>
                         </div>
                     </div>
@@ -264,13 +267,14 @@
         </div>
     </section>
 
+    <!-- FLUJO OPERATIVO INTERACTIVO -->
     <section id="flujo">
         <div class="container">
             <h2 class="section-title">Modelo de Operación Centralizada</h2>
             <p class="text-muted mb-4 lead">El ecosistema Wip funciona mediante la interacción de tres roles clave. <b>Haz clic en cada perfil</b> para conocer su paso a paso dentro del proceso.</p>
 
+            <!-- Botones tipo Tarjeta (Pills) -->
             <ul class="nav nav-pills row g-4 mb-4" id="pills-tab-roles" role="tablist">
-                
                 <li class="nav-item col-md-4" role="presentation">
                     <button class="nav-link active w-100 h-100 text-start p-0 custom-role-tab" id="pills-usuario-tab" data-bs-toggle="pill" data-bs-target="#pills-usuario" type="button" role="tab" aria-selected="true">
                         <div class="card-custom border shadow-sm" style="border-left: 5px solid #0A2540 !important;">
@@ -300,7 +304,6 @@
             </ul>
 
             <div class="tab-content bg-white p-4 rounded-4 shadow-sm border" id="pills-tabContent-roles">
-                
                 <div class="tab-pane fade show active" id="pills-usuario" role="tabpanel">
                     <h4 class="fw-bold text-primary mb-4"><i class="fas fa-clipboard-list me-2"></i> Radicación de servicio (Paso a Paso)</h4>
                     <div class="row align-items-center">
@@ -356,6 +359,7 @@
         </div>
     </section>
 
+    <!-- SECCIÓN DE VIDEOS EN PLATAFORMA -->
     <section id="plataforma" class="bg-white">
         <div class="container">
             <h2 class="section-title">Videotutoriales en Plataforma</h2>
@@ -363,6 +367,7 @@
 
             <div class="row bg-light p-4 rounded-4 shadow-sm align-items-start border">
                 
+                <!-- Menú Lateral -->
                 <div class="col-md-4 mb-4 mb-md-0">
                     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                         <button class="nav-link active text-start mb-2 fw-bold px-3 py-3" id="v-pills-tutorial-tab" data-bs-toggle="pill" data-bs-target="#v-pills-tutorial" type="button" role="tab">
@@ -389,6 +394,7 @@
                 <div class="col-md-8">
                     <div class="tab-content" id="v-pills-tabContent">
                         
+                        <!-- Video Local GitHub -->
                         <div class="tab-pane fade show active" id="v-pills-tutorial" role="tabpanel">
                             <h4 class="fw-bold text-primary mb-3">Tutorial: Administración y Gestión</h4>
                             <div class="video-responsive border border-secondary mb-3 shadow-sm">
@@ -400,41 +406,52 @@
                             <p class="text-muted small">Aprende a ingresar desde IntraB, crear una solicitud con destinos y hacer monitoreo de tus diligencias.</p>
                         </div>
 
+                        <!-- Video 1 -->
                         <div class="tab-pane fade" id="v-pills-crear" role="tabpanel">
                             <h4 class="fw-bold text-primary mb-3">Cómo crear tu usuario colaborador</h4>
-                            <div class="video-responsive border border-secondary mb-3 shadow-sm">
-                                <iframe src="https://www.youtube.com/embed/h-71VuHHoiQ" allowfullscreen></iframe>
+                            <div class="video-responsive border border-secondary mb-3 shadow-sm">                                
+                                <iframe src="https://wiptool.com/academy/cursos/colaborador/clases/como-crear-tu-usuario-colaborador/" allowfullscreen></iframe>
                             </div>
                         </div>
 
+                        <!-- Video 2 -->
                         <div class="tab-pane fade" id="v-pills-vincular" role="tabpanel">
                             <h4 class="fw-bold text-primary mb-3">Vincularse a una empresa</h4>
-                            <div class="video-responsive border border-secondary mb-3 shadow-sm">
-                                <iframe src="https://www.youtube.com/embed/h-71VuHHoiQ" allowfullscreen></iframe>
+                            <div class="video-responsive border border-secondary mb-3 shadow-sm">                              
+                                <iframe src="https://wiptool.com/academy/cursos/colaborador/clases/vincularse-a-una-empresa/" allowfullscreen></iframe>
                             </div>
                         </div>
 
+                        <!-- Video 3 -->
                         <div class="tab-pane fade" id="v-pills-editar" role="tabpanel">
                             <h4 class="fw-bold text-primary mb-3">Editar tu usuario</h4>
-                            <div class="video-responsive border border-secondary mb-3 shadow-sm">
-                                <iframe src="https://www.youtube.com/embed/h-71VuHHoiQ" allowfullscreen></iframe>
+                            <div class="video-responsive border border-secondary mb-3 shadow-sm">                            
+                                <iframe src="https://wiptool.com/academy/cursos/colaborador/clases/editar-tu-usuario/" allowfullscreen></iframe>
                             </div>
                         </div>
 
+                        <!-- Video 4 -->
                         <div class="tab-pane fade" id="v-pills-gestionar" role="tabpanel">
                             <h4 class="fw-bold text-primary mb-3">Gestionar un servicio</h4>
-                            <div class="video-responsive border border-secondary mb-3 shadow-sm">
-                                <iframe src="https://www.youtube.com/embed/h-71VuHHoiQ" allowfullscreen></iframe>
+                            <div class="video-responsive border border-secondary mb-3 shadow-sm">                                
+                                <iframe src="https://wiptool.com/academy/cursos/colaborador/clases/gestionar-un-servicio/" allowfullscreen></iframe>
                             </div>
                         </div>
 
+                        <!-- Video 5 -->
                         <div class="tab-pane fade" id="v-pills-historial" role="tabpanel">
                             <h4 class="fw-bold text-primary mb-3">Historial de servicios</h4>
-                            <div class="video-responsive border border-secondary mb-3 shadow-sm">
-                                <iframe src="https://www.youtube.com/embed/h-71VuHHoiQ" allowfullscreen></iframe>
+                            <div class="video-responsive border border-secondary mb-3 shadow-sm">                            
+                                <iframe src="https://wiptool.com/academy/cursos/colaborador/clases/historial-de-servicios/" allowfullscreen></iframe>
                             </div>
                         </div>
-
+                        <!-- Video 6 -->
+                        <div class="tab-pane fade" id="v-pills-historial" role="tabpanel">
+                            <h4 class="fw-bold text-primary mb-3">Ajustes a tu celular para mejor rendimiento de la app</h4>
+                            <div class="video-responsive border border-secondary mb-3 shadow-sm">                            
+                                <iframe src="https://wiptool.com/academy/cursos/colaborador/clases/ajustes-a-tu-celular-para-mejor-rendimiento-de-la-app/" allowfullscreen></iframe>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -576,6 +593,7 @@
         </div>
     </section>
 
+    <!-- DIRECTORIO DE COORDINACIÓN -->
     <section id="directorio" class="bg-white pb-5">
         <div class="container">
             <h2 class="section-title">Directorio de Coordinación</h2>
