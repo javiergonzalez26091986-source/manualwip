@@ -233,7 +233,8 @@
     <section id="inicio" class="pt-4">
         <div class="container">
             <div class="banner-container">
-                <img src="banner.png?v=1" alt="Banner Oficial Wip SERGEM">
+                <!-- Se ha actualizado la ruta para utilizar la nueva imagen generada: image_3.png -->
+                <img src="image_3.png?v=1" alt="Banner Oficial Wip SERGEM">
             </div>
             
             <div class="text-center mt-4">
@@ -286,6 +287,381 @@
                         </div>
                         <p class="small text-muted mb-0">
                             <b>Protocolo de Excedentes:</b> Si el volumen supera el umbral, se debe fragmentar en múltiples solicitudes o <a href="https://forms.gle/HdBpe9ZuFhfbwa4x9" target="_blank" class="fw-bold text-primary text-decoration-none">gestionar un vehículo de soporte (carro) mediante el formulario oficial en Theo</a>.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-12">
+                    <div class="card-custom border-0 bg-light p-4 mt-2">
+                        <h4 class="fw-bold text-primary mb-3"><i class="fas fa-globe-americas text-secondary me-2"></i> Planificación de Frecuencias Logísticas y Cobertura</h4>
+                        <p class="text-muted">
+                            Operación centralizada con cobertura en cascos urbanos principales: <b>Bogotá D.C., Barranquilla, Santa Marta, Cartagena, Ibagué y Medellín</b>. Las rutas satélites o periféricas responden al siguiente esquema de control:
+                        </p>
+                        
+                        <div class="row mt-4 g-3">
+                            <div class="col-md-6">
+                                <div class="p-3 bg-white rounded-3 shadow-sm border-start border-4 border-info h-100">
+                                    <span class="badge bg-info text-white mb-2">Frecuencia: L - M - V</span>
+                                    <h6 class="fw-bold text-primary mb-1">Eje Satélite Norte</h6>
+                                    <p class="mb-0 small text-muted">Cobertura extendida en Cajicá, Chía, Zipaquirá y zonas aledañas. (En semanas con lunes festivo, se traslada al día hábil siguiente).</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-3 bg-white rounded-3 shadow-sm border-start border-4 border-warning h-100">
+                                    <span class="badge bg-warning text-dark mb-2">Frecuencia: M - J</span>
+                                    <h6 class="fw-bold text-primary mb-1">Eje Satélite Sur/Occidente</h6>
+                                    <p class="mb-0 small text-muted">Despachos programados hacia Funza, Madrid, Mosquera, Soacha, Usme periférico y zonas circundantes según la densidad de solicitudes.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="card-custom border-0 p-4" style="background-color: #EDF4F9;">
+                        <h5 class="fw-bold text-dark mb-2"><i class="fas fa-file-invoice-dollar text-secondary me-2"></i> Trazabilidad y Cierre Documental (Auditoría Post-Servicio)</h5>
+                        <p class="text-muted mb-0 small">
+                            Una vez finalizado el ciclo en calle, el mensajero está obligado a digitalizar las evidencias físicas y transmitirlas vía plataforma o correo electrónico corporativo al área requirente. Los soportes físicos en original serán custodiados y radicados directamente ante la Central de Archivo para su almacenamiento definitivo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="flujo">
+        <div class="container">
+            <h2 class="section-title">Modelo de Operación Centralizada</h2>
+            <p class="text-muted mb-4 lead">Interacción sistémica de roles clave. Selecciona un perfil para auditar el flujo procedimental en plataforma:</p>
+
+            <ul class="nav nav-pills row g-4 mb-4" id="pills-tab-roles" role="tablist">
+                <li class="nav-item col-md-4" role="presentation">
+                    <button class="nav-link active w-100 h-100 text-start p-0 custom-role-tab" id="pills-usuario-tab" data-bs-toggle="pill" data-bs-target="#pills-usuario" type="button" role="tab" aria-selected="true">
+                        <div class="card-custom border shadow-sm" style="border-left: 5px solid #0A2540 !important;">
+                            <h4 class="fw-bold" style="color: #0A2540;"><i class="fas fa-user-tie mb-2"></i><br>Funcionario Bolívar</h4>
+                            <p class="small text-muted mb-0">Radica y parametriza la orden en el entorno web corporativo.</p>
+                        </div>
+                    </button>
+                </li>
+                <li class="nav-item col-md-4" role="presentation">
+                    <button class="nav-link w-100 h-100 text-start p-0 custom-role-tab" id="pills-coordinador-tab" data-bs-toggle="pill" data-bs-target="#pills-coordinador" type="button" role="tab" aria-selected="false">
+                        <div class="card-custom border shadow-sm" style="border-left: 5px solid #DC2626 !important;">
+                            <h4 class="fw-bold" style="color: #DC2626;"><i class="fas fa-headset mb-2"></i><br>Coordinador Logístico</h4>
+                            <p class="small text-muted mb-0">Valida la viabilidad, consolida cargas e instruye el despacho zonal.</p>
+                        </div>
+                    </button>
+                </li>
+                <li class="nav-item col-md-4" role="presentation">
+                    <button class="nav-link w-100 h-100 text-start p-0 custom-role-tab" id="pills-mensajero-tab" data-bs-toggle="pill" data-bs-target="#pills-mensajero" type="button" role="tab" aria-selected="false">
+                        <div class="card-custom border shadow-sm" style="border-left: 5px solid #16A34A !important;">
+                            <h4 class="fw-bold" style="color: #16A34A;"><i class="fas fa-motorcycle mb-2"></i><br>Mensajero en Calle</h4>
+                            <p class="small text-muted mb-0">Efectúa la entrega física, captura la prueba digital y cierra el ciclo operativo.</p>
+                        </div>
+                    </button>
+                </li>
+            </ul>
+
+            <div class="tab-content bg-white p-4 rounded-4 shadow-sm border" id="pills-tabContent-roles">
+                <div class="tab-pane fade show active" id="pills-usuario" role="tabpanel">
+                    <h4 class="fw-bold text-primary mb-4"><i class="fas fa-clipboard-list me-2"></i> Radicación de servicio (Paso a Paso)</h4>
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <ol class="list-group list-group-numbered list-group-flush">
+                                <li class="list-group-item border-0">Ingresar a <b>wiptool.com</b> o mediante la intranet corporativa <b>IntraB</b>.</li>
+                                <li class="list-group-item border-0">Navegar al panel lateral izquierdo y seleccionar la opción <b>'Nueva Solicitud'¡Claro que sí! Aquí tienes tu código HTML completo, actualizado para referenciar la imagen del banner que acabo de crear (`image_3.png`).
+
+Asegúrate de guardar la imagen del banner que te envié como `image_3.png` en la misma carpeta que tu archivo HTML para que se visualice correctamente.
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <title>Manual Operativo Wip - SERGEM</title>
+    <link rel="icon" href="sergemLogo.ico?v=5">
+    <link href="[https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap](https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap)" rel="stylesheet">
+    <link href="[https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css](https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css)" rel="stylesheet">
+    <link rel="stylesheet" href="[https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css)">
+    
+    <style>
+        :root {
+            --primary: #0A2540;
+            --secondary: #0284C7;
+            --accent: #00D4FF;
+            --dark-slate: #1E293B;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
+            color: #334155;
+            padding-top: 80px;
+            min-height: 100vh;
+        }
+
+        /* Menú de navegación superior */
+        .navbar-custom {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        .navbar-custom .nav-link {
+            color: var(--primary);
+            font-weight: 600;
+            margin: 0 5px;
+            border-radius: 8px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .navbar-custom .nav-link:hover {
+            background-color: #F1F5F9;
+            color: var(--secondary);
+        }
+
+        .header-logos img {
+            height: 40px;
+            object-fit: contain;
+            margin-right: 15px;
+        }
+
+        /* DISEÑO PARA LA IMAGEN DEL BANNER */
+        .banner-container {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(10, 37, 64, 0.15);
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        .banner-container img {
+            width: 100%;
+            height: auto;
+            max-height: 450px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Secciones del cuerpo */
+        section {
+            padding: 60px 0;
+        }
+        .section-title {
+            color: var(--primary);
+            font-weight: 800;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: var(--secondary);
+            border-radius: 2px;
+        }
+
+        /* Estructura de tarjetas fijas */
+        .card-custom {
+            background: white;
+            border: none;
+            border-radius: 15px;
+            padding: 25px;
+            height: 100%;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card-custom:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        /* MEJORAS VISUALES DE IMPACTO PARA LOS ANS */
+        .ans-critical-card {
+            border-left: 6px solid var(--secondary) !important;
+            background: #FFFFFF;
+        }
+        .ans-restriction-card {
+            border-left: 6px solid #EF4444 !important;
+            background: #FFFFFF;
+        }
+        .ans-badge-title {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        /* Estilos de las pestañas de roles */
+        .custom-role-tab {
+            background: transparent !important;
+            border: none !important;
+        }
+        .custom-role-tab .card-custom {
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        .custom-role-tab.active .card-custom {
+            background-color: #F0F9FF;
+            border: 2px solid var(--secondary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(2, 132, 199, 0.15);
+        }
+
+        /* Buscador integrado */
+        .search-box {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        .search-box input {
+            padding: 15px 20px 15px 50px;
+            border-radius: 30px;
+            border: 2px solid #E2E8F0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+        .search-box i {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--secondary);
+            font-size: 1.2rem;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: #F0F9FF;
+            color: var(--secondary);
+            font-weight: 600;
+        }
+
+        .nav-pills .nav-link:not(.custom-role-tab) {
+            color: var(--primary);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+            font-size: 0.95rem;
+        }
+        .nav-pills .nav-link:not(.custom-role-tab):hover {
+            background-color: #F1F5F9;
+        }
+        .nav-pills .nav-link.active:not(.custom-role-tab) {
+            background-color: var(--secondary);
+            color: white;
+            box-shadow: 0 4px 10px rgba(2, 132, 199, 0.3);
+        }
+
+        .video-responsive {
+            position: relative;
+            padding-bottom: 56.25%; 
+            height: 0;
+            overflow: hidden;
+            border-radius: 15px;
+            background: #1E293B;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .video-responsive iframe, .video-responsive video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="100">
+
+    <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light navbar-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand header-logos" href="#inicio">
+                <img src="wipLogo.png?v=5" alt="Wip">
+                <img src="sergemLogo.png?v=5" alt="SERGEM">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#ans">ANS Corporativos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#flujo">Flujo Operativo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#plataforma">Videotutoriales</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gestion">Gestión Global</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#respuestas">Respuestas Rápidas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#directorio">Directorio</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="inicio" class="pt-4">
+        <div class="container">
+            <div class="banner-container">
+                <!-- Se ha actualizado la ruta para utilizar la nueva imagen generada: image_3.png -->
+                <img src="image_3.png?v=1" alt="Banner Oficial Wip SERGEM">
+            </div>
+            
+            <div class="text-center mt-4">
+                <h1 class="fw-bold display-6 mb-2" style="color: var(--primary);">Manual Operativo Dinámico Wip</h1>
+                <p class="lead text-muted max-width-700 mx-auto mb-0">
+                    Estandarización, Gestión de Flujo y Centralización Logística para la Operación de Mensajería a Nivel Nacional
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="ans" class="bg-white">
+        <div class="container">
+            <h2 class="section-title">Acuerdos de Nivel de Servicio (SLA / ANS)</h2>
+            <p class="text-muted mb-5 lead">
+                Garantía de cumplimiento del ciclo logístico, ventanas horarias críticas y parámetros de capacidad instalada para radicaciones nacionales.
+            </p>
+            
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card-custom ans-critical-card shadow-sm">
+                        <span class="ans-badge-title bg-info text-white"><i class="fas fa-clock me-1"></i> Ventanas de Radicación</span>
+                        <h4 class="fw-bold text-primary mb-3">Tiempos de Despacho y Distribución</h4>
+                        <ul class="list-unstyled text-muted ps-0">
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="fas fa-chevron-right text-info mt-1 me-2"></i>
+                                <span><b>Corte Matutino (Antes de las 8:30 AM):</b> Diligencias tramitadas o acumuladas desde la tarde anterior se consolidan para distribución e inicio de ruta física obligatoria antes del mediodía.</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="fas fa-chevron-right text-info mt-1 me-2"></i>
+                                <span><b>Corte Vespertino (08:30 AM a 2:00 PM):</b> Solicitudes radicadas en este rango ingresan al ciclo de distribución de la tarde (excepto coberturas extendidas en Soacha y municipios periféricos).</span>
+                            </li>
+                            <li class="d-flex align-items-start">
+                                <i class="fas fa-exclamation-circle text-warning mt-1 me-2"></i>
+                                <span><b>Radicaciones Extemporáneas:</b> Todo servicio ingresado fuera de los horarios establecidos se programará de manera automática para el siguiente día hábil operacional.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card-custom ans-restriction-card shadow-sm">
+                        <span class="ans-badge-title bg-danger text-white"><i class="fas fa-shield-alt me-1"></i> Control de Capacidad</span>
+                        <h4 class="fw-bold text-danger mb-3">Restricciones de Carga y Cubicaje</h4>
+                        <p class="text-muted">
+                            Para salvaguardar la integridad de la documentación y optimizar la capacidad operativa de la flota motorizada, se definen límites estrictos por unidad de trayecto:
+                        </p>
+                        <div class="alert alert-danger fw-bold text-center py-3 border-0 my-3" style="background-color: #FEF2F2; color: #DC2626; font-size: 1.1rem; border-radius: 12px;">
+                            <i class="fas fa-balance-scale me-2"></i> Peso Máximo: 25 Kg | Volumen Máximo: 30 Escrituras
+                        </div>
+                        <p class="small text-muted mb-0">
+                            <b>Protocolo de Excedentes:</b> Si el volumen supera el umbral, se debe fragmentar en múltiples solicitudes o <a href="[https://forms.gle/HdBpe9ZuFhfbwa4x9](https://forms.gle/HdBpe9ZuFhfbwa4x9)" target="_blank" class="fw-bold text-primary text-decoration-none">gestionar un vehículo de soporte (carro) mediante el formulario oficial en Theo</a>.
                         </p>
                     </div>
                 </div>
@@ -461,212 +837,445 @@
                         <div class="tab-pane fade" id="v-pills-crear" role="tabpanel">
                             <h4 class="fw-bold text-primary mb-3">Cómo crear tu usuario colaborador</h4>
                             <div class="video-responsive border border-secondary mb-3 shadow-sm">                                
-                                <iframe src="https://www.youtube.com/embed/Vbj5CDc_uJM" allowfullscreen></iframe>
+                                <iframe src="[https://www.youtube.com/embed/Vbj5CDc_uJM](https://www.youtube.com/embed/Vbj5CDc_uJM)" allowfullscreen></iframe>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="v-pills-vincular" role="tabpanel">
                             <h4 class="fw-bold text-primary mb-3">Vincularse a una empresa</h4>
                             <div class="video-responsive border border-secondary mb-3 shadow-sm">                              
-                                <iframe src="https://www.youtube.com/embed/44G9-u5TbfI" allowfullscreen></iframe>
+                                <iframe src="[https://www.youtube.com/embed/44G9-u5TbfI](https://www.youtube.com/embed/44G9-u5TbfI)" allowfullscreen></iframe>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="v-pills-editar" role="tabpanel">
                             <h4 class="fw-bold text-primary mb-3">Editar tu usuario</h4>
                             <div class="video-responsive border border-secondary mb-3 shadow-sm">                            
-                                <iframe src="https://www.youtube.com/embed/wPY75f4FvwI" allowfullscreen></iframe>
+                                <iframe src="[https://www.youtube.com/embed/wPY75f4FvwI](https://www.youtube.com/embed/wPY75f4FvwI)" allowfullscreen></iframe>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="v-pills-gestionar" role="tabpanel">
                             <h4 class="fw-bold text-primary mb-3">Gestionar un servicio</h4>
                             <div class="video-responsive border border-secondary mb-3 shadow-sm">                                
-                                <iframe src="https://www.youtube.com/embed/ZzEk1jGp_Qk" allowfullscreen></iframe>
+                                <iframe src="[https://www.youtube.com/embed/ZzEk1jGp_Qk](https://www.youtube.com/embed/ZzEk1jGp_Qk)" allowfullscreen></iframe>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="v-pills-historial" role="tabpanel">
                             <h4 class="fw-bold text-primary mb-3">Historial de servicios</h4>
                             <div class="video-responsive border border-secondary mb-3 shadow-sm">                            
-                                <iframe src="https://www.youtube.com/embed/9Oz7IgpipME" allowfullscreen></iframe>
+                                <iframe src="[https://www.youtube.com/embed/9Oz7IgpipME](https://www.youtube.com/embed/9Oz7IgpipME)" allowfullscreen></iframe>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="v-pills-ajustes" role="tabpanel">
                             <h4 class="fw-bold text-primary mb-3">Ajustes a tu celular para mejor rendimiento de la app</h4>
                             <div class="video-responsive border border-secondary mb-3 shadow-sm">                            
-                                <iframe src="https://www.youtube.com/embed/8E0BQ8qsC1k" allowfullscreen></iframe>
+                               <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <title>Manual Operativo Wip - SERGEM</title>
+    <link rel="icon" href="sergemLogo.ico?v=5">
+    <link href="[https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap](https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap)" rel="stylesheet">
+    <link href="[https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css](https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css)" rel="stylesheet">
+    <link rel="stylesheet" href="[https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css)">
+    
+    <style>
+        :root {
+            --primary: #0A2540;
+            --secondary: #0284C7;
+            --accent: #00D4FF;
+            --dark-slate: #1E293B;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
+            color: #334155;
+            padding-top: 80px;
+            min-height: 100vh;
+        }
+
+        /* Menú de navegación superior */
+        .navbar-custom {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        .navbar-custom .nav-link {
+            color: var(--primary);
+            font-weight: 600;
+            margin: 0 5px;
+            border-radius: 8px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .navbar-custom .nav-link:hover {
+            background-color: #F1F5F9;
+            color: var(--secondary);
+        }
+
+        .header-logos img {
+            height: 40px;
+            object-fit: contain;
+            margin-right: 15px;
+        }
+
+        /* DISEÑO PARA LA IMAGEN DEL BANNER */
+        .banner-container {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(10, 37, 64, 0.15);
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        .banner-container img {
+            width: 100%;
+            height: auto;
+            max-height: 450px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Secciones del cuerpo */
+        section {
+            padding: 60px 0;
+        }
+        .section-title {
+            color: var(--primary);
+            font-weight: 800;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: var(--secondary);
+            border-radius: 2px;
+        }
+
+        /* Estructura de tarjetas fijas */
+        .card-custom {
+            background: white;
+            border: none;
+            border-radius: 15px;
+            padding: 25px;
+            height: 100%;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card-custom:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        /* MEJORAS VISUALES DE IMPACTO PARA LOS ANS */
+        .ans-critical-card {
+            border-left: 6px solid var(--secondary) !important;
+            background: #FFFFFF;
+        }
+        .ans-restriction-card {
+            border-left: 6px solid #EF4444 !important;
+            background: #FFFFFF;
+        }
+        .ans-badge-title {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        /* Estilos de las pestañas de roles */
+        .custom-role-tab {
+            background: transparent !important;
+            border: none !important;
+        }
+        .custom-role-tab .card-custom {
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        .custom-role-tab.active .card-custom {
+            background-color: #F0F9FF;
+            border: 2px solid var(--secondary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(2, 132, 199, 0.15);
+        }
+
+        /* Buscador integrado */
+        .search-box {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        .search-box input {
+            padding: 15px 20px 15px 50px;
+            border-radius: 30px;
+            border: 2px solid #E2E8F0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+        .search-box i {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--secondary);
+            font-size: 1.2rem;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: #F0F9FF;
+            color: var(--secondary);
+            font-weight: 600;
+        }
+
+        .nav-pills .nav-link:not(.custom-role-tab) {
+            color: var(--primary);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+            font-size: 0.95rem;
+        }
+        .nav-pills .nav-link:not(.custom-role-tab):hover {
+            background-color: #F1F5F9;
+        }
+        .nav-pills .nav-link.active:not(.custom-role-tab) {
+            background-color: var(--secondary);
+            color: white;
+            box-shadow: 0 4px 10px rgba(2, 132, 199, 0.3);
+        }
+
+        .video-responsive {
+            position: relative;
+            padding-bottom: 56.25%; 
+            height: 0;
+            overflow: hidden;
+            border-radius: 15px;
+            background: #1E293B;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .video-responsive iframe, .video-responsive video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="100">
+
+    <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light navbar-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand header-logos" href="#inicio">
+                <img src="wipLogo.png?v=5" alt="Wip">
+                <img src="sergemLogo.png?v=5" alt="SERGEM">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#ans">ANS Corporativos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#flujo">Flujo Operativo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#plataforma">Videotutoriales</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gestion">Gestión Global</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#respuestas">Respuestas Rápidas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#directorio">Directorio</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="inicio" class="pt-4">
+        <div class="container">
+            <div class="banner-container">
+                <img src="image_3.png?v=1" alt="Banner Oficial Wip SERGEM">
+            </div>
+            
+            <div class="text-center mt-4">
+                <h1 class="fw-bold display-6 mb-2" style="color: var(--primary);">Manual Operativo Dinámico Wip</h1>
+                <p class="lead text-muted max-width-700 mx-auto mb-0">
+                    Estandarización, Gestión de Flujo y Centralización Logística para la Operación de Mensajería a Nivel Nacional
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="ans" class="bg-white">
+        <div class="container">
+            <h2 class="section-title">Acuerdos de Nivel de Servicio (SLA / ANS)</h2>
+            <p class="text-muted mb-5 lead">
+                Garantía de cumplimiento del ciclo logístico, ventanas horarias críticas y parámetros de capacidad instalada para radicaciones nacionales.
+            </p>
+            
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card-custom ans-critical-card shadow-sm">
+                        <span class="ans-badge-title bg-info text-white"><i class="fas fa-clock me-1"></i> Ventanas de Radicación</span>
+                        <h4 class="fw-bold text-primary mb-3">Tiempos de Despacho y Distribución</h4>
+                        <ul class="list-unstyled text-muted ps-0">
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="fas fa-chevron-right text-info mt-1 me-2"></i>
+                                <span><b>Corte Matutino (Antes de las 8:30 AM):</b> Diligencias tramitadas o acumuladas desde la tarde anterior se consolidan para distribución e inicio de ruta física obligatoria antes del mediodía.</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="fas fa-chevron-right text-info mt-1 me-2"></i>
+                                <span><b>Corte Vespertino (08:30 AM a 2:00 PM):</b> Solicitudes radicadas en este rango ingresan al ciclo de distribución de la tarde (excepto coberturas extendidas en Soacha y municipios periféricos).</span>
+                            </li>
+                            <li class="d-flex align-items-start">
+                                <i class="fas fa-exclamation-circle text-warning mt-1 me-2"></i>
+                                <span><b>Radicaciones Extemporáneas:</b> Todo servicio ingresado fuera de los horarios establecidos se programará de manera automática para el siguiente día hábil operacional.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card-custom ans-restriction-card shadow-sm">
+                        <span class="ans-badge-title bg-danger text-white"><i class="fas fa-shield-alt me-1"></i> Control de Capacidad</span>
+                        <h4 class="fw-bold text-danger mb-3">Restricciones de Carga y Cubicaje</h4>
+                        <p class="text-muted">
+                            Para salvaguardar la integridad de la documentación y optimizar la capacidad operativa de la flota motorizada, se definen límites estrictos por unidad de trayecto:
+                        </p>
+                        <div class="alert alert-danger fw-bold text-center py-3 border-0 my-3" style="background-color: #FEF2F2; color: #DC2626; font-size: 1.1rem; border-radius: 12px;">
+                            <i class="fas fa-balance-scale me-2"></i> Peso Máximo: 25 Kg | Volumen Máximo: 30 Escrituras
+                        </div>
+                        <p class="small text-muted mb-0">
+                            <b>Protocolo de Excedentes:</b> Si el volumen supera el umbral, se debe fragmentar en múltiples solicitudes o <a href="[https://forms.gle/HdBpe9ZuFhfbwa4x9](https://forms.gle/HdBpe9ZuFhfbwa4x9)" target="_blank" class="fw-bold text-primary text-decoration-none">gestionar un vehículo de soporte (carro) mediante el formulario oficial en Theo</a>.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-12">
+                    <div class="card-custom border-0 bg-light p-4 mt-2">
+                        <h4 class="fw-bold text-primary mb-3"><i class="fas fa-globe-americas text-secondary me-2"></i> Planificación de Frecuencias Logísticas y Cobertura</h4>
+                        <p class="text-muted">
+                            Operación centralizada con cobertura en cascos urbanos principales: <b>Bogotá D.C., Barranquilla, Santa Marta, Cartagena, Ibagué y Medellín</b>. Las rutas satélites o periféricas responden al siguiente esquema de control:
+                        </p>
+                        
+                        <div class="row mt-4 g-3">
+                            <div class="col-md-6">
+                                <div class="p-3 bg-white rounded-3 shadow-sm border-start border-4 border-info h-100">
+                                    <span class="badge bg-info text-white mb-2">Frecuencia: L - M - V</span>
+                                    <h6 class="fw-bold text-primary mb-1">Eje Satélite Norte</h6>
+                                    <p class="mb-0 small text-muted">Cobertura extendida en Cajicá, Chía, Zipaquirá y zonas aledañas. (En semanas con lunes festivo, se traslada al día hábil siguiente).</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-3 bg-white rounded-3 shadow-sm border-start border-4 border-warning h-100">
+                                    <span class="badge bg-warning text-dark mb-2">Frecuencia: M - J</span>
+                                    <h6 class="fw-bold text-primary mb-1">Eje Satélite Sur/Occidente</h6>
+                                    <p class="mb-0 small text-muted">Despachos programados hacia Funza, Madrid, Mosquera, Soacha, Usme periférico y zonas circundantes según la densidad de solicitudes.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="col-12">
+                    <div class="card-custom border-0 p-4" style="background-color: #EDF4F9;">
+                        <h5 class="fw-bold text-dark mb-2"><i class="fas fa-file-invoice-dollar text-secondary me-2"></i> Trazabilidad y Cierre Documental (Auditoría Post-Servicio)</h5>
+                        <p class="text-muted mb-0 small">
+                            Una vez finalizado el ciclo en calle, el mensajero está obligado a digitalizar las evidencias físicas y transmitirlas vía plataforma o correo electrónico corporativo al área requirente. Los soportes físicos en original serán custodiados y radicados directamente ante la Central de Archivo para su almacenamiento definitivo.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="gestion" class="bg-white">
+    <section id="flujo">
         <div class="container">
-            <h2 class="section-title">Gestión y Control Operativo</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card-custom" style="background-color: #F8FAFC; border: 1px solid #E2E8F0;">
-                        <h5 class="fw-bold text-primary"><i class="fas fa-chart-pie"></i> Indicadores y Tableros</h5>
-                        <p class="small text-muted mb-0">Supervisión analítica de solicitudes en tiempo real. Métricas integradas para auditoría de efectividad operativa, tasas de cumplimiento en primer intento e incidencias zonales.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card-custom" style="background-color: #F8FAFC; border: 1px solid #E2E8F0;">
-                        <h5 class="fw-bold text-primary"><i class="fas fa-bullhorn"></i> Plan de Comunicación</h5>
-                        <p class="small text-muted mb-0">Estrategia formal de transferencia de conocimiento para usuarios e inducción operativa. Flujos definidos para el escalamiento controlado de novedades técnicas.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card-custom" style="background-color: #F8FAFC; border: 1px solid #E2E8F0;">
-                        <h5 class="fw-bold text-primary"><i class="fas fa-file-excel"></i> Informes de Operación</h5>
-                        <p class="small text-muted mb-0">Consolidación mensual de productividad, análisis de demanda por centros de costos e identificación de guiones ("-") para la exclusión de servicios no ejecutados.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            <h2 class="section-title">Modelo de Operación Centralizada</h2>
+            <p class="text-muted mb-4 lead">Interacción sistémica de roles clave. Selecciona un perfil para auditar el flujo procedimental en plataforma:</p>
 
-    <section id="respuestas">
-        <div class="container">
-            <h2 class="section-title">Respuestas Rápidas (FAQ)</h2>
-            <p class="text-muted mb-4">Filtrado inteligente en tiempo real para dudas procedimentales críticas.</p>
-            
-            <div class="search-box">
-                <i class="fas fa-search"></i>
-                <input type="text" id="faqSearch" class="form-control form-control-lg border-0" placeholder="Ej: solicitud, app, servicios, rastreo...">
-            </div>
+            <ul class="nav nav-pills row g-4 mb-4" id="pills-tab-roles" role="tablist">
+                <li class="nav-item col-md-4" role="presentation">
+                    <button class="nav-link active w-100 h-100 text-start p-0 custom-role-tab" id="pills-usuario-tab" data-bs-toggle="pill" data-bs-target="#pills-usuario" type="button" role="tab" aria-selected="true">
+                        <div class="card-custom border shadow-sm" style="border-left: 5px solid #0A2540 !important;">
+                            <h4 class="fw-bold" style="color: #0A2540;"><i class="fas fa-user-tie mb-2"></i><br>Funcionario Bolívar</h4>
+                            <p class="small text-muted mb-0">Radica y parametriza la orden en el entorno web corporativo.</p>
+                        </div>
+                    </button>
+                </li>
+                <li class="nav-item col-md-4" role="presentation">
+                    <button class="nav-link w-100 h-100 text-start p-0 custom-role-tab" id="pills-coordinador-tab" data-bs-toggle="pill" data-bs-target="#pills-coordinador" type="button" role="tab" aria-selected="false">
+                        <div class="card-custom border shadow-sm" style="border-left: 5px solid #DC2626 !important;">
+                            <h4 class="fw-bold" style="color: #DC2626;"><i class="fas fa-headset mb-2"></i><br>Coordinador Logístico</h4>
+                            <p class="small text-muted mb-0">Valida la viabilidad, consolida cargas e instruye el despacho zonal.</p>
+                        </div>
+                    </button>
+                </li>
+                <li class="nav-item col-md-4" role="presentation">
+                    <button class="nav-link w-100 h-100 text-start p-0 custom-role-tab" id="pills-mensajero-tab" data-bs-toggle="pill" data-bs-target="#pills-mensajero" type="button" role="tab" aria-selected="false">
+                        <div class="card-custom border shadow-sm" style="border-left: 5px solid #16A34A !important;">
+                            <h4 class="fw-bold" style="color: #16A34A;"><i class="fas fa-motorcycle mb-2"></i><br>Mensajero en Calle</h4>
+                            <p class="small text-muted mb-0">Efectúa la entrega física, captura la prueba digital y cierra el ciclo operativo.</p>
+                        </div>
+                    </button>
+                </li>
+            </ul>
 
-            <div class="accordion shadow-sm" id="accordionFAQ">
-                <div class="accordion-item border-0 mb-2 rounded-3 overflow-hidden faq-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                            ¿Qué hago si olvidé mi contraseña de acceso a Wip?
-                        </button>
-                    </h2>
-                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#accordionFAQ">
-                        <div class="accordion-body text-muted faq-text bg-white">
-                            Debes seleccionar la opción "¿Olvidaste tu contraseña?" en el formulario de login. Un enlace seguro de restablecimiento será enviado automáticamente a tu dirección de correo electrónico corporativo.
+            <div class="tab-content bg-white p-4 rounded-4 shadow-sm border" id="pills-tabContent-roles">
+                <div class="tab-pane fade show active" id="pills-usuario" role="tabpanel">
+                    <h4 class="fw-bold text-primary mb-4"><i class="fas fa-clipboard-list me-2"></i> Radicación de servicio (Paso a Paso)</h4>
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <ol class="list-group list-group-numbered list-group-flush">
+                                <li class="list-group-item border-0">Ingresar a <b>wiptool.com</b> o mediante la intranet corporativa <b>IntraB</b>.</li>
+                                <li class="list-group-item border-0">Navegar al panel lateral izquierdo y seleccionar la opción <b>'Nueva Solicitud'</b>.</li>
+                                <li class="list-group-item border-0">Definir el esquema de distribución (Envío Individual o Múltiples Destinos).</li>
+                                <li class="list-group-item border-0">Ingresar obligatoriamente: Dirección georreferenciada, contacto final, tipo de paquete y centro de costos.</li>
+                                <li class="list-group-item border-0">Validar los datos e inicializar el ticket mediante el botón <b>Crear</b>.</li>
+                            </ol>
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <i class="fas fa-laptop-house fa-5x text-muted opacity-25"></i>
                         </div>
                     </div>
                 </div>
-                
-                <div class="accordion-item border-0 mb-2 rounded-3 overflow-hidden faq-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
-                            ¿Cómo hago la solicitud o subo la diligencia?
-                        </button>
-                    </h2>
-                    <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
-                        <div class="accordion-body text-muted faq-text bg-white">
-                            El flujo paso a paso se encuentra detallado gráficamente en el módulo superior de esta suite. También puedes consultar el bloque de videotutoriales y reproducir el clip titulado "Tutorial Completo" o "Gestionar un servicio".
+                <div class="tab-pane fade" id="pills-coordinador" role="tabpanel">
+                    <h4 class="fw-bold" style="color: #DC2626;"><i class="fas fa-route me-2"></i> Gestión de Coordinación (Paso a Paso)</h4>
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <ol class="list-group list-group-numbered list-group-flush">
+                                <li class="list-group-item border-0">Acceder a la consola de administración en el <b>Dashboard Central</b> de Wip.</li>
+                                <li class="list-group-item border-0">Filtrar las solicitudes entrantes en estado <b>'Pendiente'</b> analizando prioridad y criticidad horaria.</li>
+                                <li class="list-group-item border-0">Verificar restricciones de carga física (Límite de peso/volumen).</li>
+                                <li class="list-group-item border-0">Asignar la orden de trabajo al mensajero idóneo en la zona. El estado mutará a <b>'Asignado'</b>.</li>
+                            </ol>
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <i class="fas fa-map-marked-alt fa-5x text-muted opacity-25"></i>
                         </div>
                     </div>
                 </div>
-
-                <div class="accordion-item border-0 mb-2 rounded-3 overflow-hidden faq-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
-                            ¿Dónde encuentro la app de Wip?
-                        </button>
-                    </h2>
-                    <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
-                        <div class="accordion-body text-muted faq-text bg-white">
-                            El acceso del personal administrativo se realiza de forma directa en el portal web público o a través del acceso unificado disponible en la intranet corporativa (IntraB).
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item border-0 mb-2 rounded-3 overflow-hidden faq-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7">
-                            Aclaración en los tipos de servicios
-                        </button>
-                    </h2>
-                    <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
-                        <div class="accordion-body text-muted faq-text bg-white">
-                            Al estructurar una ruta, el sistema permite elegir entre envío de un origen hacia un destino único o rutas complejas de múltiples destinos encadenados. Todo requerimiento periférico debe ser validado previamente por el despacho logístico central.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item border-0 mb-2 rounded-3 overflow-hidden faq-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                            ¿Es posible editar o cancelar una solicitud?
-                        </button>
-                    </h2>
-                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
-                        <div class="accordion-body text-muted faq-text bg-white">
-                            La modificación o anulación directa en el entorno web es viable únicamente si el ticket se encuentra en estado "Pendiente". Si el estado ha cambiado a "Asignado" o "En Tránsito", toda gestión debe tramitarse telefónicamente con la mesa de control logístico.
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="accordion-item border-0 mb-2 rounded-3 overflow-hidden faq-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                            ¿Cómo puedo hacer seguimiento (rastreo) a mi paquete?
-                        </button>
-                    </h2>
-                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
-                        <div class="accordion-body text-muted faq-text bg-white">
-                            Puedes ingresar al módulo "Central de Monitoreo" o "Historial" en el entorno transaccional. La plataforma refleja en tiempo real los hitos de control: Creado, Asignado, En Tránsito, Entregado o Novedad Operativa.
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="accordion-item border-0 rounded-3 overflow-hidden faq-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-                            ¿Qué sucede si el destinatario no está?
-                        </button>
-                    </h2>
-                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
-                        <div class="accordion-body text-muted faq-text bg-white">
-                            El conductor reportará la incidencia mediante la aplicación móvil generando una alerta de "Novedad". El paquete o documento será retornado a la base operativa o al punto de origen para la reprogramación y re-enrutamiento del servicio.
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div id="noResults" class="alert alert-warning mt-3 border-0 shadow-sm" style="display: none;">
-                No se encontraron respuestas para tu búsqueda. Intenta con otras palabras.
-            </div>
-        </div>
-    </section>
-
-    <section id="directorio" class="bg-white pb-5">
-        <div class="container">
-            <h2 class="section-title">Directorio de Coordinación</h2>
-            <div class="row justify-content-center g-4 text-center">
-                <div class="col-md-5">
-                    <div class="card-custom border" style="background-color: #F8FAFC;">
-                        <div class="rounded-circle bg-primary text-white d-inline-flex justify-content-center align-items-center mb-3 shadow-sm" style="width: 70px; height: 70px; font-size: 24px; font-weight: bold;">LR</div>
-                        <h5 class="fw-bold">Luis Fernando Rincón</h5>
-                        <p class="text-muted small">Coordinador Mensajería<br>Regional Centro - Norte</p>
-                        <a href="mailto:mensajeria@constructorabolivar.com" class="btn btn-outline-primary w-100 mb-2" style="font-size: 0.9rem;">mensajeria@constructorabolivar.com</a>
-                        <a href="tel:3102502316" class="btn btn-primary w-100"><i class="fas fa-phone"></i> 310 2502316</a>
-                    </div>
-                </div>
-
-                <div class="col-md-5">
-                    <div class="card-custom border" style="background-color: #F8FAFC;">
-                        <div class="rounded-circle bg-info text-white d-inline-flex justify-content-center align-items-center mb-3 shadow-sm" style="width: 70px; height: 70px; font-size: 24px; font-weight: bold;">JU</div>
-                        <h5 class="fw-bold">James Urrea Ortiz</h5>
-                        <p class="text-muted small">Coordinador Mensajería<br>Regional Sur</p>
-                        <a href="mailto:jurrea@cbolivar.com" class="btn btn-outline-primary w-100 mb-2" style="font-size: 0.9rem;">jurrea@cbolivar.com</a>
-                        <a href="tel:3154849023" class="btn btn-primary w-100"><i class="fas fa-phone"></i> 315 4849023</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-dark text-white text-center py-4 mt-auto">
+                <div class="tab-pane fade" id="pills-mensajero" role="tabpanel">
+                    <h4 class="fw-bold" style="color: #16A34A;"><i class="fas fa-box-open me-2"></i> Confirmación y Novedades (Paso a Paso)</h4>
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <ol class="list-group list-group-numbered list-group-flush">
+                                <li class="list-group-item border-0">Sincronizar tareas en la aplicación móvil asignada en campo.</li>
+                                <li class="list-group-item border-0">Aceptar el despacho en la app para activar el estado <b>'En Tránsito'</b>.</li>
+                                <li class="list-group-item border-0">Completar la gestión de entrega en destino capturando firmas digitales y metadatos fotográficos.</li>
+                                <li class="list-group-item border-0">Actualizar el estado definitivo a <b>'Entregado'</b> o reportar <b>'Novedad'<footer class="bg-dark text-white text-center py-4 mt-auto">
         <p class="mb-0 small">© 2026 Plataforma Operativa Wip. Todos los derechos reservados.</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="[https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js](https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js)"></script>
     <script>
         // Lógica del Buscador de Respuestas Rápidas (FAQ)
         document.getElementById('faqSearch').addEventListener('keyup', function() {
