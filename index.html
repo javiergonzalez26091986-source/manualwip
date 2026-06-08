@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- ETIQUETAS PARA EVITAR EL CACHÉ Y FORZAR ACTUALIZACIÓN -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
@@ -15,7 +14,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- ESTILOS CSS3 -->
     <style>
         :root {
             --primary: #0A2540;
@@ -222,7 +220,6 @@
 </head>
 <body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="100">
 
-    <!-- ESTRUCTURA HTML - NAVBAR -->
     <nav id="mainNavbar" class="navbar navbar-expand-xl navbar-light navbar-custom fixed-top">
         <div class="container">
             <a class="navbar-brand header-logos" href="#">
@@ -247,7 +244,6 @@
         </div>
     </nav>
 
-    <!-- SECCIÓN INICIO -->
     <section id="inicio">
         <div class="container text-center">
             <div class="banner-text-card mt-5 mt-md-0">
@@ -257,7 +253,6 @@
         </div>
     </section>
 
-    <!-- SECCIÓN ANS Y RUTAS (AMPLIADA Y DESTACADA) -->
     <section id="ans" class="bg-white">
         <div class="container">
             <div class="text-center mb-5">
@@ -267,7 +262,6 @@
             </div>
             
             <div class="row g-4">
-                <!-- Horarios Centrales -->
                 <div class="col-lg-7">
                     <div class="ans-highlight-card p-4 h-100">
                         <h4 class="fw-bold text-primary mb-4"><i class="fas fa-clock text-secondary me-2"></i> Horarios de Atención y Gestión</h4>
@@ -301,7 +295,6 @@
                     </div>
                 </div>
 
-                <!-- Restricciones -->
                 <div class="col-lg-5">
                     <div class="card-custom border border-light h-100 d-flex flex-column justify-content-center" style="background-color: #F8FAFC;">
                         <h4 class="fw-bold text-danger text-center mb-3"><i class="fas fa-exclamation-triangle me-2"></i> Restricción de Carga</h4>
@@ -319,7 +312,6 @@
                     </div>
                 </div>
                 
-                <!-- Cobertura y Satélites -->
                 <div class="col-12">
                     <div class="card-custom border border-light p-4 shadow-sm mt-2">
                         <h4 class="fw-bold text-primary mb-4"><i class="fas fa-map-marked-alt text-secondary me-2"></i> Cobertura Nacional y Rutas Satélites</h4>
@@ -353,7 +345,6 @@
                     </div>
                 </div>
 
-                <!-- Información Adicional Documental -->
                 <div class="col-12">
                     <div class="p-4 rounded-4" style="background-color: #E0F2FE; border: 1px solid #BAE6FD;">
                         <h5 class="fw-bold text-primary mb-2"><i class="fas fa-file-signature me-2"></i> Información Adicional: Gestión de Soportes</h5>
@@ -366,13 +357,11 @@
         </div>
     </section>
 
-    <!-- SECCIÓN ALINEACIÓN NACIONAL DEL PROCESO -->
     <section id="flujo-proceso" class="bg-light">
         <div class="container">
             <h2 class="section-title">Alineación Nacional del Proceso</h2>
             <p class="text-muted mb-5 lead">Conoce cómo se centraliza y distribuye la operación de mensajería, conectando las diferentes áreas de Constructora Bolívar con los agentes logísticos de SERGEM a nivel nacional.</p>
             
-            <!-- Flujo Visual -->
             <div class="row text-center align-items-center g-3 mb-5">
                 <div class="col-md-3">
                     <div class="card-custom border border-primary h-100 d-flex flex-column justify-content-center">
@@ -412,7 +401,6 @@
                 </div>
             </div>
 
-            <!-- Paso a Paso interactivo -->
             <ul class="nav nav-pills row g-4 mb-4 mt-2" id="pills-tab-roles" role="tablist">
                 <li class="nav-item col-md-4" role="presentation">
                     <button class="nav-link active w-100 h-100 text-start p-0 custom-role-tab" id="pills-usuario-tab" data-bs-toggle="pill" data-bs-target="#pills-usuario" type="button" role="tab" aria-selected="true">
@@ -503,7 +491,6 @@
         </div>
     </section>
 
-    <!-- SECCIÓN DE VIDEOS EN PLATAFORMA (DOCUMENTACIÓN) -->
     <section id="plataforma" class="bg-white">
         <div class="container">
             <h2 class="section-title">Documentación del Proceso (Videotutoriales Wip)</h2>
@@ -511,58 +498,68 @@
 
             <div class="row bg-light p-4 rounded-4 shadow-sm align-items-start border">
                 
-                <!-- Menú Lateral -->
                 <div class="col-md-4 mb-4 mb-md-0">
                     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                        <button class="nav-link active text-start mb-2 fw-bold px-3 py-3" id="v-pills-tutorial-tab" data-bs-toggle="pill" data-bs-target="#v-pills-tutorial" type="button" role="tab">
-                            <i class="fas fa-play-circle me-2"></i> Uso Completo (Administrativos)
+                        <button class="nav-link active text-start mb-2 fw-bold px-3 py-3" id="v-pills-ingresar-tab" data-bs-toggle="pill" data-bs-target="#v-pills-ingresar" type="button" role="tab">
+                            <i class="fas fa-sign-in-alt me-2"></i> Ingresar a Wip
                         </button>
-                        <button class="nav-link text-start mb-2 fw-bold px-3 py-3" id="v-pills-crear-tab" data-bs-toggle="pill" data-bs-target="#v-pills-crear" type="button" role="tab">
-                            <i class="fas fa-user-plus me-2"></i> Creación de Usuario
+                        <button class="nav-link text-start mb-2 fw-bold px-3 py-3" id="v-pills-crear1-tab" data-bs-toggle="pill" data-bs-target="#v-pills-crear1" type="button" role="tab">
+                            <i class="fas fa-file-signature me-2"></i> Crear 1 Diligencia
                         </button>
-                        <button class="nav-link text-start mb-2 fw-bold px-3 py-3" id="v-pills-gestionar-tab" data-bs-toggle="pill" data-bs-target="#v-pills-gestionar" type="button" role="tab">
-                            <i class="fas fa-tasks me-2"></i> Radicación y Seguimiento
+                        <button class="nav-link text-start mb-2 fw-bold px-3 py-3" id="v-pills-masivas-tab" data-bs-toggle="pill" data-bs-target="#v-pills-masivas" type="button" role="tab">
+                            <i class="fas fa-copy me-2"></i> Diligencias Masivas
                         </button>
-                        <button class="nav-link text-start fw-bold px-3 py-3" id="v-pills-historial-tab" data-bs-toggle="pill" data-bs-target="#v-pills-historial" type="button" role="tab">
-                            <i class="fas fa-history me-2"></i> Historial y Evidencias
+                        <button class="nav-link text-start fw-bold px-3 py-3" id="v-pills-seguimiento-tab" data-bs-toggle="pill" data-bs-target="#v-pills-seguimiento" type="button" role="tab">
+                            <i class="fas fa-search-location me-2"></i> Seguimiento y Cancelación
                         </button>
                     </div>
                 </div>
 
-                <!-- Área de Video -->
                 <div class="col-md-8">
                     <div class="tab-content" id="v-pills-tabContent">
                         
-                        <div class="tab-pane fade show active" id="v-pills-tutorial" role="tabpanel">
-                            <h4 class="fw-bold text-primary mb-3">Tutorial: Operatividad de la herramienta</h4>
+                        <div class="tab-pane fade show active" id="v-pills-ingresar" role="tabpanel">
+                            <h4 class="fw-bold text-primary mb-3">Tutorial: Ingresar a Wip</h4>
                             <div class="video-responsive border border-secondary mb-3 shadow-sm">
                                 <video controls preload="metadata">
-                                    <source src="videoWip.mp4" type="video/mp4">
+                                    <source src="INGRESAR A WIP.mp4" type="video/mp4">
                                     Tu navegador no soporta el video.
                                 </video>
                             </div>
-                            <p class="text-muted small">Aprende a ingresar, montar tu solicitud y consultar los tiempos de respuesta de forma centralizada.</p>
+                            <p class="text-muted small">Aprende a ingresar correctamente a la plataforma Wip desde la intranet corporativa o enlace web.</p>
                         </div>
 
-                        <div class="tab-pane fade" id="v-pills-crear" role="tabpanel">
-                            <h4 class="fw-bold text-primary mb-3">Creación de usuario colaborador</h4>
+                        <div class="tab-pane fade" id="v-pills-crear1" role="tabpanel">
+                            <h4 class="fw-bold text-primary mb-3">Tutorial: Crear 1 Diligencia</h4>
                             <div class="video-responsive border border-secondary mb-3 shadow-sm">                                
-                                <iframe src="https://www.youtube.com/embed/Vbj5CDc_uJM" allowfullscreen></iframe>
+                                <video controls preload="metadata">
+                                    <source src="CREAR 1 DILIGENCIA.mp4" type="video/mp4">
+                                    Tu navegador no soporta el video.
+                                </video>
                             </div>
+                            <p class="text-muted small">Conoce el paso a paso detallado para radicar una solicitud de mensajería de forma individual.</p>
                         </div>
 
-                        <div class="tab-pane fade" id="v-pills-gestionar" role="tabpanel">
-                            <h4 class="fw-bold text-primary mb-3">Radicación de un nuevo servicio</h4>
+                        <div class="tab-pane fade" id="v-pills-masivas" role="tabpanel">
+                            <h4 class="fw-bold text-primary mb-3">Tutorial: Diligencias Masivas</h4>
                             <div class="video-responsive border border-secondary mb-3 shadow-sm">                                
-                                <iframe src="https://www.youtube.com/embed/ZzEk1jGp_Qk" allowfullscreen></iframe>
+                                <video controls preload="metadata">
+                                    <source src="DILIGENCIAS MASIVAS.mp4" type="video/mp4">
+                                    Tu navegador no soporta el video.
+                                </video>
                             </div>
+                            <p class="text-muted small">Descubre cómo montar múltiples destinos y encadenar rutas complejas en una sola solicitud masiva.</p>
                         </div>
 
-                        <div class="tab-pane fade" id="v-pills-historial" role="tabpanel">
-                            <h4 class="fw-bold text-primary mb-3">Historial, comunicación y evidencias</h4>
+                        <div class="tab-pane fade" id="v-pills-seguimiento" role="tabpanel">
+                            <h4 class="fw-bold text-primary mb-3">Tutorial: Seguimiento y Cancelación</h4>
                             <div class="video-responsive border border-secondary mb-3 shadow-sm">                            
-                                <iframe src="https://www.youtube.com/embed/9Oz7IgpipME" allowfullscreen></iframe>
+                                <video controls preload="metadata">
+                                    <source src="SEGUIMIENTO Y CANCELACIÓN  DILIGENCIAS.mp4" type="video/mp4">
+                                    Tu navegador no soporta el video.
+                                </video>
                             </div>
+                            <p class="text-muted small">Aprende a monitorear el estado en tiempo real de tus radicaciones y el proceso adecuado para cancelarlas si es necesario.</p>
                         </div>
                         
                     </div>
@@ -571,7 +568,6 @@
         </div>
     </section>
 
-    <!-- SECCIÓN GESTIÓN Y CONTROL -->
     <section id="gestion" class="bg-light">
         <div class="container">
             <h2 class="section-title">Medición de Indicadores y Plan de Comunicación</h2>
@@ -598,19 +594,16 @@
         </div>
     </section>
 
-    <!-- SECCIÓN FAQ -->
     <section id="respuestas" class="bg-white">
         <div class="container">
             <h2 class="section-title">Respuestas Rápidas (FAQ)</h2>
             <p class="text-muted mb-4">Busca rápidamente las dudas más comunes sobre la operación o navega por la lista.</p>
             
-            <!-- Buscador -->
             <div class="search-box">
                 <i class="fas fa-search"></i>
                 <input type="text" id="faqSearch" class="form-control form-control-lg border-0" placeholder="Ej: solicitud, vueltas, servicios, rastreo...">
             </div>
 
-            <!-- Acordeón FAQ -->
             <div class="accordion shadow-sm" id="accordionFAQ">
                 
                 <div class="accordion-item border-0 mb-2 rounded-3 overflow-hidden faq-item">
@@ -679,14 +672,12 @@
                 </div>
             </div>
             
-            <!-- Mensaje Sin Resultados -->
             <div id="noResults" class="alert alert-warning mt-3 border-0 shadow-sm" style="display: none;">
                 No se encontraron respuestas para tu búsqueda. Intenta con otras palabras clave.
             </div>
         </div>
     </section>
 
-    <!-- DIRECTORIO DE COORDINACIÓN -->
     <section id="directorio" class="bg-light pb-5">
         <div class="container">
             <h2 class="section-title">Directorio de Coordinación Operativa</h2>
@@ -728,12 +719,10 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="bg-dark text-white text-center py-4 mt-auto">
         <p class="mb-0 small">© 2026 Plataforma Operativa Wip - SERGEM para Constructora Bolívar.</p>
     </footer>
 
-    <!-- SCRIPTS JAVASCRIPT -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         document.getElementById('faqSearch').addEventListener('keyup', function() {
