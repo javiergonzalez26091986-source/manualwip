@@ -88,7 +88,6 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.08);
         }
 
-        /* Estilos específicos para las tarjetas interactivas del Flujo Operativo */
         .custom-role-tab {
             background: transparent !important;
             border: none !important;
@@ -163,24 +162,21 @@
             border: none;
         }
 
-        /* Full width banner styles */
         #inicio {
             padding: 0;
             background-image: url('Banner Oficial Wip SERGEM.png');
             background-size: cover;
             background-position: center;
-            min-height: 80vh; /* Adjust as needed */
+            min-height: 80vh;
             display: flex;
             align-items: center;
             justify-content: center;
         }
         #inicio .container {
-            /* If you want text content contained, place it here. For a clean look with titles on the image graphic, we keep this empty or minimal. */
             width: 100%;
             max-width: none;
             padding: 0;
         }
-        /* Style for a clean title card over full width banner */
         .banner-text-card {
             background-color: rgba(255, 255, 255, 0.9);
             padding: 40px;
@@ -207,11 +203,12 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#flujo-proceso">Flujo del Proceso</a></li>
                     <li class="nav-item"><a class="nav-link" href="#ans">ANS y Rutas</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#flujo">Flujo Operativo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#flujo">Paso a Paso</a></li>
                     <li class="nav-item"><a class="nav-link" href="#plataforma">Videos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#respuestas">Respuestas Rápidas</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#directorio">Directorio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gestion">Gestión Global</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#respuestas">FAQ</a></li>
                 </ul>
             </div>
         </div>
@@ -221,7 +218,53 @@
         <div class="container text-center">
             <div class="banner-text-card">
                 <h1 class="fw-bold" style="color: var(--primary);">Manual Operativo Dinámico Wip</h1>
-                <p class="lead text-muted mb-0">Gestión y Coordinación de Mensajería Wip - Operación Nacional</p>
+                <p class="lead text-muted mb-0">Estandarización, Gestión de Flujo y Centralización Logística para la Operación de Mensajería a Nivel Nacional</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="flujo-proceso" class="bg-light">
+        <div class="container">
+            <h2 class="section-title">Flujo del Proceso Nacional</h2>
+            <p class="text-muted mb-5 lead">Conoce cómo se centraliza y distribuye la operación de mensajería, conectando las diferentes áreas de Constructora Bolívar con los agentes logísticos en todas las regionales.</p>
+            
+            <div class="row text-center align-items-center g-3">
+                <div class="col-md-3">
+                    <div class="card-custom border border-primary h-100 d-flex flex-column justify-content-center">
+                        <i class="fas fa-building fa-3x text-primary mb-3"></i>
+                        <h6 class="fw-bold">Áreas Solicitantes Bolívar</h6>
+                        <p class="small text-muted mb-0">Trazabilidad, Tesorería, Cartera, Proyectos, Administración, etc.</p>
+                    </div>
+                </div>
+                <div class="col-md-1 d-none d-md-flex justify-content-center">
+                    <i class="fas fa-arrow-right fa-2x text-muted"></i>
+                </div>
+                <div class="col-md-2">
+                    <div class="card-custom border border-secondary h-100 d-flex flex-column justify-content-center" style="background-color: #0A2540;">
+                        <img src="wipLogo.png?v=3" alt="Wip Logo" style="height: 40px; object-fit: contain; margin-bottom: 10px; filter: brightness(0) invert(1);">
+                        <h6 class="fw-bold text-white mb-0">Plataforma Central Wip</h6>
+                    </div>
+                </div>
+                <div class="col-md-1 d-none d-md-flex justify-content-center">
+                    <i class="fas fa-arrow-right fa-2x text-muted"></i>
+                </div>
+                <div class="col-md-2">
+                    <div class="card-custom border border-danger h-100 d-flex flex-column justify-content-center">
+                        <img src="sergemLogo.png?v=3" alt="Sergem Logo" style="height: 30px; object-fit: contain; margin-bottom: 15px;">
+                        <h6 class="fw-bold text-danger">Coordinador SERGEM</h6>
+                        <p class="small text-muted mb-0">Recepción y Asignación</p>
+                    </div>
+                </div>
+                <div class="col-md-1 d-none d-md-flex justify-content-center">
+                    <i class="fas fa-arrow-right fa-2x text-muted"></i>
+                </div>
+                <div class="col-md-2">
+                    <div class="card-custom border border-success h-100 d-flex flex-column justify-content-center">
+                        <i class="fas fa-motorcycle fa-2x text-success mb-2"></i>
+                        <h6 class="fw-bold text-success">Mensajeros Regionales</h6>
+                        <p class="small text-muted mb-0">Cali, Barranquilla, Bogotá, etc.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -229,7 +272,7 @@
     <section id="ans" class="bg-white">
         <div class="container">
             <h2 class="section-title">Acuerdos de Nivel de Servicio (ANS) y Cobertura</h2>
-            <p class="text-muted mb-4 lead">En este documento se detallan los horarios y procedimientos para la solicitud de diligencias de mensajería en nuestras sedes administrativas a nivel Nacional.</p>
+            <p class="text-muted mb-4 lead">El cumplimiento de los Acuerdos de Nivel de Servicio es de vital importancia para garantizar la promesa de valor en la operación logística. A continuación se detallan los horarios críticos y procedimientos vigentes.</p>
             
             <div class="row g-4">
                 <div class="col-md-6">
@@ -237,37 +280,37 @@
                         <h4 class="fw-bold text-primary"><i class="fas fa-clock"></i> Horarios de Atención</h4>
                         <ul class="mt-3 text-muted">
                             <li class="mb-2"><b>Antes de las 8:30 am o tarde del día anterior:</b> Se gestionan antes del mediodía.</li>
-                            <li class="mb-2"><b>Entre 8:30 am y 2:00 pm:</b> Se gestionan por la tarde (excepto Soacha y municipios).</li>
-                            <li><b>Fuera de horario:</b> Lo entregado fuera de horario se gestiona el siguiente día hábil.</li>
+                            <li class="mb-2"><b>Entre 8:30 am y 2:00 pm:</b> Se gestionan por la tarde (excepto coberturas extendidas).</li>
+                            <li><b>Fuera de horario:</b> Toda radicación extemporánea se gestiona de manera automática el siguiente día hábil.</li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="card-custom border border-light">
                         <h4 class="fw-bold text-danger"><i class="fas fa-weight-hanging"></i> Restricciones de Carga</h4>
-                        <p class="mt-3 text-muted">Nuestros motorizados tienen restricción por peso y/o volumen:</p>
-                        <div class="alert alert-danger fw-bold text-center py-2">Máximo 25 kg o 30 escrituras</div>
-                        <p class="small text-muted mb-0">Si se requiere trasladar algo que excede estas dimensiones, se debe programar más de un viaje (distribuir las cargas) o <a href="https://forms.gle/HdBpe9ZuFhfbwa4x9" target="_blank" class="fw-bold text-primary text-decoration-none">solicitar transporte en carro por medio de este formulario</a> que encuentras disponible en Theo.</p>
+                        <p class="mt-3 text-muted">Para salvaguardar la documentación y optimizar la flota, existen restricciones estrictas:</p>
+                        <div class="alert alert-danger fw-bold text-center py-2">Máximo 25 kg o 30 escrituras por trayecto</div>
+                        <p class="small text-muted mb-0">Si el volumen excede estas dimensiones, se debe programar más de un viaje o <a href="https://forms.gle/HdBpe9ZuFhfbwa4x9" target="_blank" class="fw-bold text-primary text-decoration-none">solicitar transporte en carro mediante el formulario oficial en Theo</a>.</p>
                     </div>
                 </div>
                 
                 <div class="col-12">
                     <div class="card-custom border border-light" style="background-color: #F8FAFC;">
                         <h4 class="fw-bold text-primary"><i class="fas fa-map-marked-alt"></i> Cobertura y Rutas Especiales</h4>
-                        <p class="text-muted">El servicio de mensajería funciona dentro de cada ciudad (Bogotá y municipios aledaños, Barranquilla, Santa Marta, Cartagena, Ibagué y Medellín). En la plataforma podrás acceder a la mensajería para cada una de estas ciudades y seleccionar entre opciones de un origen con uno o más destinos en caso de que el trámite lo requiera.</p>
-                        <p class="small text-danger"><b>Nota:</b> En caso de requerir una diligencia fuera del perímetro se debe validar la disponibilidad y se coordinará según demanda.</p>
+                        <p class="text-muted">El servicio funciona dentro del perímetro urbano de cada regional principal (Bogotá, Barranquilla, Santa Marta, Cartagena, Ibagué y Medellín). Al radicar en Wip, podrás seleccionar rutas con destinos múltiples según lo requiera el trámite.</p>
+                        <p class="small text-danger"><b>Nota:</b> Toda diligencia fuera del perímetro central estará sujeta a validación previa de disponibilidad logística.</p>
                         
                         <div class="row mt-4">
                             <div class="col-md-6">
                                 <div class="p-3 bg-white rounded shadow-sm border-start border-4 border-info h-100">
-                                    <b>Ruta Norte:</b> Cajicá, Chía, Zipaquirá y aledaños.<br> 
-                                    <small class="text-muted">Recorridos: Lunes, Miércoles y Viernes (y el día siguiente si hay festivo), dependiendo del volumen de solicitudes.</small>
+                                    <b>Ruta Satélite Norte:</b> Cajicá, Chía, Zipaquirá y aledaños.<br> 
+                                    <small class="text-muted">Frecuencia: Lunes, Miércoles y Viernes (se ajusta en semanas con festivo según demanda).</small>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="p-3 bg-white rounded shadow-sm border-start border-4 border-warning h-100 mt-3 mt-md-0">
-                                    <b>Ruta Sur/Occidente:</b> Funza, Madrid, Mosquera, Soacha, Usme y aledaños.<br> 
-                                    <small class="text-muted">Recorridos: Martes y Jueves, dependiendo del volumen de solicitudes.</small>
+                                    <b>Ruta Satélite Sur/Occidente:</b> Funza, Madrid, Mosquera, Soacha, Usme.<br> 
+                                    <small class="text-muted">Frecuencia: Martes y Jueves (sujeto a densidad de solicitudes).</small>
                                 </div>
                             </div>
                         </div>
@@ -276,8 +319,8 @@
 
                 <div class="col-12">
                     <div class="card-custom border border-light bg-light">
-                        <h5 class="fw-bold text-secondary mb-2"><i class="fas fa-file-signature"></i> Información Adicional (Gestión Documental)</h5>
-                        <p class="text-muted mb-0 small">Después de tramitar las diligencias, el mensajero debe escanear los documentos y enviarlos por correo (si es requerido). Los soportes físicos se entregan al área de archivo si no son requeridos por el área usuaria.</p>
+                        <h5 class="fw-bold text-secondary mb-2"><i class="fas fa-file-signature"></i> Trazabilidad y Cierre Documental</h5>
+                        <p class="text-muted mb-0 small">Una vez finalizado el recorrido, el mensajero digitaliza las evidencias y las transmite vía plataforma. Los soportes físicos originales se entregan directamente a la Central de Archivo para su custodia definitiva, salvo indicación contraria del área usuaria.</p>
                     </div>
                 </div>
             </div>
@@ -286,15 +329,15 @@
 
     <section id="flujo">
         <div class="container">
-            <h2 class="section-title">Modelo de Operación Centralizada</h2>
-            <p class="text-muted mb-4 lead">El ecosistema Wip funciona mediante la interacción de tres roles clave. <b>Haz clic en cada perfil</b> para conocer su paso a paso dentro del proceso.</p>
+            <h2 class="section-title">Paso a Paso del Modelo Operativo</h2>
+            <p class="text-muted mb-4 lead">Selecciona el rol correspondiente para visualizar de manera detallada sus actividades dentro de la plataforma Wip.</p>
 
             <ul class="nav nav-pills row g-4 mb-4" id="pills-tab-roles" role="tablist">
                 <li class="nav-item col-md-4" role="presentation">
                     <button class="nav-link active w-100 h-100 text-start p-0 custom-role-tab" id="pills-usuario-tab" data-bs-toggle="pill" data-bs-target="#pills-usuario" type="button" role="tab" aria-selected="true">
                         <div class="card-custom border shadow-sm" style="border-left: 5px solid #0A2540 !important;">
                             <h4 class="fw-bold" style="color: #0A2540;"><i class="fas fa-user-tie mb-2"></i><br>Funcionario Bolívar</h4>
-                            <p class="small text-muted mb-0">Ingresa la solicitud directamente en la interfaz web de Wip, especificando origen, destino y prioridad.</p>
+                            <p class="small text-muted mb-0">Consulta aquí cómo estructurar correctamente tus solicitudes y monitorearlas.</p>
                         </div>
                     </button>
                 </li>
@@ -303,7 +346,7 @@
                     <button class="nav-link w-100 h-100 text-start p-0 custom-role-tab" id="pills-coordinador-tab" data-bs-toggle="pill" data-bs-target="#pills-coordinador" type="button" role="tab" aria-selected="false">
                         <div class="card-custom border shadow-sm" style="border-left: 5px solid #DC2626 !important;">
                             <h4 class="fw-bold" style="color: #DC2626;"><i class="fas fa-headset mb-2"></i><br>Coordinador Logístico</h4>
-                            <p class="small text-muted mb-0">Audita la información desde el panel central, consolida las rutas y despacha las órdenes según disponibilidad.</p>
+                            <p class="small text-muted mb-0">Supervisión en el tablero central y distribución de la carga nacional a nivel regional.</p>
                         </div>
                     </button>
                 </li>
@@ -312,7 +355,7 @@
                     <button class="nav-link w-100 h-100 text-start p-0 custom-role-tab" id="pills-mensajero-tab" data-bs-toggle="pill" data-bs-target="#pills-mensajero" type="button" role="tab" aria-selected="false">
                         <div class="card-custom border shadow-sm" style="border-left: 5px solid #16A34A !important;">
                             <h4 class="fw-bold" style="color: #16A34A;"><i class="fas fa-motorcycle mb-2"></i><br>Mensajero</h4>
-                            <p class="small text-muted mb-0">Ejecuta la orden en calle, recolecta la firma digital y cierra el ciclo reportando el estado final en su App.</p>
+                            <p class="small text-muted mb-0">Recepción de ruta, ejecución física y carga de pruebas en tiempo real.</p>
                         </div>
                     </button>
                 </li>
@@ -320,53 +363,61 @@
 
             <div class="tab-content bg-white p-4 rounded-4 shadow-sm border" id="pills-tabContent-roles">
                 <div class="tab-pane fade show active" id="pills-usuario" role="tabpanel">
-                    <h4 class="fw-bold text-primary mb-4"><i class="fas fa-clipboard-list me-2"></i> Radicación de servicio (Paso a Paso)</h4>
+                    <h4 class="fw-bold text-primary mb-4"><i class="fas fa-clipboard-list me-2"></i> Radicación de Servicio</h4>
                     <div class="row align-items-center">
-                        <div class="col-md-6">
-                            <ol class="list-group list-group-numbered list-group-flush">
-                                <li class="list-group-item border-0">Ingresar a <b>wiptool.com</b> o a través de <b>IntraB</b> con credenciales corporativas.</li>
-                                <li class="list-group-item border-0">Navegar a la opción <b>'Nueva Solicitud'</b>.</li>
-                                <li class="list-group-item border-0">Seleccionar el tipo de servicio (Individual o Múltiple).</li>
-                                <li class="list-group-item border-0">Diligenciar correctamente: Dirección, contacto, tipo de paquete y centro de costos.</li>
-                                <li class="list-group-item border-0">Dar clic en el botón <b>Crear</b>.</li>
+                        <div class="col-md-7">
+                            <p class="text-muted">Por favor sigue atentamente la documentación paso a paso para la correcta parametrización del servicio:</p>
+                            <ol class="list-group list-group-numbered list-group-flush mb-4">
+                                <li class="list-group-item border-0">Ingresa al entorno de <b>wiptool.com</b> a través de la intranet corporativa (IntraB).</li>
+                                <li class="list-group-item border-0">Abre el menú lateral y haz clic en <b>'Nueva Solicitud'</b>.</li>
+                                <li class="list-group-item border-0">Selecciona el esquema requerido (Envío a un origen/destino único o múltiples destinos).</li>
+                                <li class="list-group-item border-0">Ingresa la dirección detallada, nombre del contacto y asocia el centro de costos.</li>
+                                <li class="list-group-item border-0">Revisa la información y presiona <b>Crear</b>.</li>
                             </ol>
+                            <div class="alert alert-info border-0 shadow-sm">
+                                <i class="fas fa-info-circle me-2"></i> Recuerda verificar el material en PDF <strong>"Paso a paso de radicación"</strong> distribuido por canales oficiales para mayor detalle.
+                            </div>
                         </div>
-                        <div class="col-md-6 text-center">
-                            <i class="fas fa-laptop-house fa-5x text-muted opacity-25"></i>
+                        <div class="col-md-5 text-center">
+                            <i class="fas fa-laptop-house fa-6x text-muted opacity-25"></i>
                         </div>
                     </div>
                 </div>
 
                 <div class="tab-pane fade" id="pills-coordinador" role="tabpanel">
-                    <h4 class="fw-bold" style="color: #DC2626;"><i class="fas fa-route me-2"></i> Gestión de Coordinación (Paso a Paso)</h4>
+                    <h4 class="fw-bold" style="color: #DC2626;"><i class="fas fa-route me-2"></i> Gestión, Asignación y Tablero de Control</h4>
                     <div class="row align-items-center">
-                        <div class="col-md-6">
+                        <div class="col-md-7">
                             <ol class="list-group list-group-numbered list-group-flush">
-                                <li class="list-group-item border-0">Acceder al <b>Dashboard Central</b> de Wip.</li>
-                                <li class="list-group-item border-0">Filtrar las solicitudes en estado <b>'Pendiente'</b> por ciudad y prioridad.</li>
-                                <li class="list-group-item border-0">Validar los ANS, rutas logísticas y restricciones de carga.</li>
-                                <li class="list-group-item border-0">Asignar al mensajero disponible. Automáticamente el estado cambiará a <b>'Asignado'</b>.</li>
+                                <li class="list-group-item border-0">Acceso a la vista global del <b>Dashboard Central</b> de Wip.</li>
+                                <li class="list-group-item border-0">Filtrado y validación de las solicitudes entrantes (Estado <b>'Pendiente'</b>) respetando los ANS.</li>
+                                <li class="list-group-item border-0">Alineación de rutas lógicas y validación de cubicaje permitido.</li>
+                                <li class="list-group-item border-0">Despacho de la orden hacia la flota motorizada en cada sede.</li>
                             </ol>
                         </div>
-                        <div class="col-md-6 text-center">
-                            <i class="fas fa-map-marked-alt fa-5x text-muted opacity-25"></i>
+                        <div class="col-md-5 text-center">
+                            <div class="p-4 bg-light rounded border border-secondary shadow-sm">
+                                <i class="fas fa-chart-line fa-3x text-muted mb-2"></i>
+                                <p class="small text-muted fw-bold mb-0">Tablero de Coordinación y Seguimiento</p>
+                                <p class="small text-muted mb-0">(Recepción Nacionalizada)</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="tab-pane fade" id="pills-mensajero" role="tabpanel">
-                    <h4 class="fw-bold" style="color: #16A34A;"><i class="fas fa-box-open me-2"></i> Confirmación y Novedades (Paso a Paso)</h4>
+                    <h4 class="fw-bold" style="color: #16A34A;"><i class="fas fa-box-open me-2"></i> Ejecución de Ruta y Cierre</h4>
                     <div class="row align-items-center">
-                        <div class="col-md-6">
+                        <div class="col-md-7">
                             <ol class="list-group list-group-numbered list-group-flush">
-                                <li class="list-group-item border-0">El mensajero visualiza la nueva tarea asignada en su dispositivo móvil.</li>
-                                <li class="list-group-item border-0">Inicia el recorrido (El estado cambia a <b>'En Tránsito'</b>).</li>
-                                <li class="list-group-item border-0">Al llegar, entrega el paquete y adjunta evidencia fotográfica o recolecta firma digital.</li>
-                                <li class="list-group-item border-0">Marca el servicio como <b>'Entregado'</b> o reporta una <b>'Novedad'</b> justificando el motivo.</li>
+                                <li class="list-group-item border-0">El agente recibe la notificación de la ruta en su dispositivo Wip App.</li>
+                                <li class="list-group-item border-0">Acepta la ruta, cambiando el estado visible a <b>'En Tránsito'</b> para el usuario.</li>
+                                <li class="list-group-item border-0">Entrega del documento físico en el punto de contacto.</li>
+                                <li class="list-group-item border-0">Sube fotografías de soporte, recolecta firma o tipifica una eventual <b>'Novedad'</b> que impida el cierre.</li>
                             </ol>
                         </div>
-                        <div class="col-md-6 text-center">
-                            <i class="fas fa-mobile-alt fa-5x text-muted opacity-25"></i>
+                        <div class="col-md-5 text-center">
+                            <i class="fas fa-mobile-alt fa-6x text-muted opacity-25"></i>
                         </div>
                     </div>
                 </div>
@@ -376,92 +427,63 @@
 
     <section id="plataforma" class="bg-white">
         <div class="container">
-            <h2 class="section-title">Videotutoriales en Plataforma</h2>
-            <p class="text-muted mb-4">Selecciona un proceso en el menú para visualizar el videotutorial paso a paso correspondiente.</p>
+            <h2 class="section-title">Videotutoriales Administrativos (Plataforma Wip)</h2>
+            <p class="text-muted mb-4">Material de apoyo enfocado a las tareas administrativas, monitoreo de radicaciones y trazabilidad de los servicios vigentes.</p>
 
             <div class="row bg-light p-4 rounded-4 shadow-sm align-items-start border">
-                 
+                
                 <div class="col-md-4 mb-4 mb-md-0">
                     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                         <button class="nav-link active text-start mb-2 fw-bold px-3 py-3" id="v-pills-tutorial-tab" data-bs-toggle="pill" data-bs-target="#v-pills-tutorial" type="button" role="tab">
-                            <i class="fas fa-play-circle me-2"></i> Tutorial Completo (IntraB)
+                            <i class="fas fa-play-circle me-2"></i> Uso Completo (Administrativos)
                         </button>
                         <button class="nav-link text-start mb-2 fw-bold px-3 py-3" id="v-pills-crear-tab" data-bs-toggle="pill" data-bs-target="#v-pills-crear" type="button" role="tab">
-                            <i class="fas fa-user-plus me-2"></i> Cómo crear tu usuario
-                        </button>
-                        <button class="nav-link text-start mb-2 fw-bold px-3 py-3" id="v-pills-vincular-tab" data-bs-toggle="pill" data-bs-target="#v-pills-vincular" type="button" role="tab">
-                            <i class="fas fa-building me-2"></i> Vincularse a una empresa
-                        </button>
-                        <button class="nav-link text-start mb-2 fw-bold px-3 py-3" id="v-pills-editar-tab" data-bs-toggle="pill" data-bs-target="#v-pills-editar" type="button" role="tab">
-                            <i class="fas fa-user-edit me-2"></i> Editar tu usuario
+                            <i class="fas fa-user-plus me-2"></i> Creación de Usuario
                         </button>
                         <button class="nav-link text-start mb-2 fw-bold px-3 py-3" id="v-pills-gestionar-tab" data-bs-toggle="pill" data-bs-target="#v-pills-gestionar" type="button" role="tab">
-                            <i class="fas fa-tasks me-2"></i> Gestionar un servicio
+                            <i class="fas fa-tasks me-2"></i> Radicación y Seguimiento
                         </button>
                         <button class="nav-link text-start fw-bold px-3 py-3" id="v-pills-historial-tab" data-bs-toggle="pill" data-bs-target="#v-pills-historial" type="button" role="tab">
-                            <i class="fas fa-history me-2"></i> Historial de servicios
-                        </button>
-                         <button class="nav-link text-start fw-bold px-3 py-3" id="v-pills-ajustes-tab" data-bs-toggle="pill" data-bs-target="#v-pills-ajustes" type="button" role="tab">
-                            <i class="fas fa-cog me-2"></i> Ajustes a tu celular para mejor rendimiento
+                            <i class="fas fa-history me-2"></i> Historial y Evidencias
                         </button>
                     </div>
                 </div>
 
                 <div class="col-md-8">
                     <div class="tab-content" id="v-pills-tabContent">
-                         
+                        
                         <div class="tab-pane fade show active" id="v-pills-tutorial" role="tabpanel">
-                            <h4 class="fw-bold text-primary mb-3">Tutorial: Administración y Gestión</h4>
+                            <h4 class="fw-bold text-primary mb-3">Tutorial: Operatividad de la herramienta</h4>
                             <div class="video-responsive border border-secondary mb-3 shadow-sm">
                                 <video controls preload="metadata">
                                     <source src="videoWip.mp4" type="video/mp4">
                                     Tu navegador no soporta el video.
                                 </video>
                             </div>
-                            <p class="text-muted small">Aprende a ingresar desde IntraB, crear una solicitud con destinos y hacer monitoreo de tus diligencias.</p>
+                            <p class="text-muted small">Aprende a ingresar, montar tu solicitud y consultar los tiempos de respuesta de forma centralizada.</p>
                         </div>
 
                         <div class="tab-pane fade" id="v-pills-crear" role="tabpanel">
-                            <h4 class="fw-bold text-primary mb-3">Cómo crear tu usuario colaborador</h4>
+                            <h4 class="fw-bold text-primary mb-3">Creación de usuario colaborador</h4>
                             <div class="video-responsive border border-secondary mb-3 shadow-sm">                                
                                 <iframe src="https://www.youtube.com/embed/Vbj5CDc_uJM" allowfullscreen></iframe>
                             </div>
                         </div>
 
-                        <div class="tab-pane fade" id="v-pills-vincular" role="tabpanel">
-                            <h4 class="fw-bold text-primary mb-3">Vincularse a una empresa</h4>
-                            <div class="video-responsive border border-secondary mb-3 shadow-sm">                              
-                                <iframe src="https://www.youtube.com/embed/44G9-u5TbfI" allowfullscreen></iframe>
-                            </div>
-                        </div>
-
-                        <div class="tab-pane fade" id="v-pills-editar" role="tabpanel">
-                            <h4 class="fw-bold text-primary mb-3">Editar tu usuario</h4>
-                            <div class="video-responsive border border-secondary mb-3 shadow-sm">                            
-                                <iframe src="https://www.youtube.com/embed/wPY75f4FvwI" allowfullscreen></iframe>
-                            </div>
-                        </div>
-
                         <div class="tab-pane fade" id="v-pills-gestionar" role="tabpanel">
-                            <h4 class="fw-bold text-primary mb-3">Gestionar un servicio</h4>
+                            <h4 class="fw-bold text-primary mb-3">Radicación de un nuevo servicio</h4>
                             <div class="video-responsive border border-secondary mb-3 shadow-sm">                                
                                 <iframe src="https://www.youtube.com/embed/ZzEk1jGp_Qk" allowfullscreen></iframe>
                             </div>
                         </div>
 
                         <div class="tab-pane fade" id="v-pills-historial" role="tabpanel">
-                            <h4 class="fw-bold text-primary mb-3">Historial de servicios</h4>
+                            <h4 class="fw-bold text-primary mb-3">Historial, comunicación y evidencias</h4>
                             <div class="video-responsive border border-secondary mb-3 shadow-sm">                            
                                 <iframe src="https://www.youtube.com/embed/9Oz7IgpipME" allowfullscreen></iframe>
                             </div>
                         </div>
-                         
-                        <div class="tab-pane fade" id="v-pills-ajustes" role="tabpanel">
-                            <h4 class="fw-bold text-primary mb-3">Ajustes a tu celular para mejor rendimiento de la app</h4>
-                            <div class="video-responsive border border-secondary mb-3 shadow-sm">                            
-                                <iframe src="https://www.youtube.com/embed/8E0BQ8qsC1k" allowfullscreen></iframe>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -470,24 +492,24 @@
 
     <section id="gestion" class="bg-white">
         <div class="container">
-            <h2 class="section-title">Gestión y Control Operativo</h2>
+            <h2 class="section-title">Gestión y Control Operativo (Indicadores)</h2>
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="card-custom" style="background-color: #F8FAFC; border: 1px solid #E2E8F0;">
-                        <h5 class="fw-bold text-primary"><i class="fas fa-chart-pie"></i> Indicadores y Tableros</h5>
-                        <p class="small text-muted">Dashboard interactivo para supervisión en tiempo real de estados de solicitud, medición de KPIs (Tiempos de respuesta/SLA) y efectividad de entrega en primer intento.</p>
+                        <h5 class="fw-bold text-primary"><i class="fas fa-chart-pie"></i> Indicadores de Medición</h5>
+                        <p class="small text-muted">A través de Wip extraemos estadísticas concretas: Servicios generados por área, volumen por cada sede regional, distribución de cargas por mensajero y cumplimiento de efectividad.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card-custom" style="background-color: #F8FAFC; border: 1px solid #E2E8F0;">
                         <h5 class="fw-bold text-primary"><i class="fas fa-bullhorn"></i> Plan de Comunicación</h5>
-                        <p class="small text-muted">Estrategia de despliegue del manual hacia los funcionarios. Incluye campañas de expectativa, flujos de escalamiento y documentación estandarizada.</p>
+                        <p class="small text-muted">Incluye el material interactivo y las presentaciones enviadas formalmente para estandarizar el uso de la aplicación entre todos los usuarios de Constructora Bolívar.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card-custom" style="background-color: #F8FAFC; border: 1px solid #E2E8F0;">
-                        <h5 class="fw-bold text-primary"><i class="fas fa-file-excel"></i> Informes de Operación</h5>
-                        <p class="small text-muted">Estructura para consolidación mensual de la productividad por mensajero y análisis de volumen de radicaciones por centro de costo regional.</p>
+                        <h5 class="fw-bold text-primary"><i class="fas fa-file-excel"></i> Informes de Productividad</h5>
+                        <p class="small text-muted">Cortes periódicos de productividad general de la flota, monitoreando la eficiencia del recorrido en calle en contraposición con los ANS establecidos.</p>
                     </div>
                 </div>
             </div>
@@ -497,41 +519,41 @@
     <section id="respuestas">
         <div class="container">
             <h2 class="section-title">Respuestas Rápidas (FAQ)</h2>
-            <p class="text-muted mb-4">Busca rápidamente las dudas más comunes sobre la operation o navega por la lista.</p>
-             
+            <p class="text-muted mb-4">Busca rápidamente las dudas más comunes sobre la operación o navega por la lista.</p>
+            
             <div class="search-box">
                 <i class="fas fa-search"></i>
-                <input type="text" id="faqSearch" class="form-control form-control-lg border-0" placeholder="Ej: solicitud, app, servicios, rastreo...">
+                <input type="text" id="faqSearch" class="form-control form-control-lg border-0" placeholder="Ej: solicitud, vueltas, servicios, rastreo...">
             </div>
 
             <div class="accordion shadow-sm" id="accordionFAQ">
-                 
+                
                 <div class="accordion-item border-0 mb-2 rounded-3 overflow-hidden faq-item">
                     <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                            ¿Qué hago si olvidé mi contraseña de acceso a Wip?
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq8">
+                            ¿Qué significa y cómo se clasifican los servicios de 1, 2 o 3 vueltas?
                         </button>
                     </h2>
-                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#accordionFAQ">
+                    <div id="faq8" class="accordion-collapse collapse show" data-bs-parent="#accordionFAQ">
                         <div class="accordion-body text-muted faq-text bg-white">
-                            Debes hacer clic en la option "¿Olvidaste tu contraseña?" en la pantalla de inicio. Recibirás un enlace en tu correo corporativo para restablecerla.
-                        </div>
-                    </div>
-                </div>
-                 
-                <div class="accordion-item border-0 mb-2 rounded-3 overflow-hidden faq-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
-                            ¿Cómo hago la solicitud o subo la diligencia?
-                        </button>
-                    </h2>
-                    <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
-                        <div class="accordion-body text-muted faq-text bg-white">
-                            Puedes ver el proceso paso a paso dirigiéndote a la sección <b>Manual Interactivo en Plataforma</b> más arriba y seleccionando el video de "Tutorial Completo" o "Gestionar un servicio". 
+                            Esta clasificación determina la complejidad del trayecto. Una (1) vuelta consiste en un envío directo y sencillo. Dos (2) o tres (3) vueltas aplican para trámites que exigen radicados complejos, recolección de firmas, sellos o visitas a múltiples ventanillas antes de retornar los soportes originales.
                         </div>
                     </div>
                 </div>
 
+                <div class="accordion-item border-0 mb-2 rounded-3 overflow-hidden faq-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            ¿Qué hago si olvidé mi contraseña de acceso a Wip?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body text-muted faq-text bg-white">
+                            Debes hacer clic en la opción "¿Olvidaste tu contraseña?" en la pantalla de inicio. Recibirás un enlace en tu correo corporativo para restablecerla.
+                        </div>
+                    </div>
+                </div>
+                
                 <div class="accordion-item border-0 mb-2 rounded-3 overflow-hidden faq-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
@@ -547,57 +569,44 @@
 
                 <div class="accordion-item border-0 mb-2 rounded-3 overflow-hidden faq-item">
                     <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7">
-                            Aclaración en los tipos de servicios
-                        </button>
-                    </h2>
-                    <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
-                        <div class="accordion-body text-muted faq-text bg-white">
-                            Al estructurar una ruta, el sistema permite elegir entre envío de un origen hacia un destino único o rutas complejas de múltiples destinos encadenados. Todo requerimiento periférico debe ser validado previamente por el despacho logístico central.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item border-0 mb-2 rounded-3 overflow-hidden faq-item">
-                    <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
                             ¿Es posible editar o cancelar una solicitud?
                         </button>
                     </h2>
                     <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
                         <div class="accordion-body text-muted faq-text bg-white">
-                            La modificación o anulación directa en el entorno web es viable únicamente si el ticket se encuentra en estado "Pendiente". Si el estado ha cambiado a "Asignado" o "En Tránsito", toda gestión debe tramitarse telefónicamente con la mesa de control logístico.
+                            La modificación directa es viable únicamente si el ticket está "Pendiente". Si cambió a "Asignado" o "En Tránsito", debes tramitar la novedad telefónicamente con la mesa de control logístico.
                         </div>
                     </div>
                 </div>
-                 
+                
                 <div class="accordion-item border-0 mb-2 rounded-3 overflow-hidden faq-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                            ¿Cómo puedo hacer seguimiento (rastreo) a mi paquete?
+                            ¿Cómo puedo hacer seguimiento (rastreo) y ver evidencias?
                         </button>
                     </h2>
                     <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
                         <div class="accordion-body text-muted faq-text bg-white">
-                            Puedes ingresar al módulo "Central de Monitoreo" o "Historial" en el entorno transaccional. La plataforma refleja en tiempo real los hitos de control: Creado, Asignado, En Tránsito, Entregado o Novedad Operativa.
+                            Puedes ingresar al módulo de Historial. Allí se reflejan en tiempo real los hitos de control, permitiéndote interactuar por chat con el mensajero y descargar las fotografías de soporte una vez entregado.
                         </div>
                     </div>
                 </div>
-                 
+                
                 <div class="accordion-item border-0 rounded-3 overflow-hidden faq-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-                            ¿Qué sucede si el destinatario no está?
+                            ¿Qué sucede si el destinatario no se encuentra?
                         </button>
                     </h2>
                     <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
                         <div class="accordion-body text-muted faq-text bg-white">
-                            El conductor reportará la incidencia mediante la aplicación móvil generando una alerta de "Novedad". El paquete o documento será retornado a la base operativa o al punto de origen para la reprogramación y re-enrutamiento del servicio.
+                            El mensajero reportará una "Novedad" inmediata. El paquete será retornado a la base operativa o al origen para gestionar posteriormente la reprogramación del servicio.
                         </div>
                     </div>
                 </div>
             </div>
-             
+            
             <div id="noResults" class="alert alert-warning mt-3 border-0 shadow-sm" style="display: none;">
                 No se encontraron respuestas para tu búsqueda. Intenta con otras palabras.
             </div>
@@ -608,7 +617,7 @@
         <div class="container">
             <h2 class="section-title">Directorio de Coordinación</h2>
             <div class="row justify-content-center g-4 text-center">
-                 
+                
                 <div class="col-md-5">
                     <div class="card-custom border" style="background-color: #F8FAFC;">
                         <div class="rounded-circle bg-primary text-white d-inline-flex justify-content-center align-items-center mb-3 shadow-sm" style="width: 70px; height: 70px; font-size: 24px; font-weight: bold;">LR</div>
@@ -634,12 +643,11 @@
     </section>
 
     <footer class="bg-dark text-white text-center py-4 mt-auto">
-        <p class="mb-0 small">© 2026 Plataforma Operativa Wip. Todos los derechos reservados.</p>
+        <p class="mb-0 small">© 2026 Plataforma Operativa Wip - SERGEM para Constructora Bolívar.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Lógica del Buscador de Respuestas Rápidas (FAQ)
         document.getElementById('faqSearch').addEventListener('keyup', function() {
             let filter = this.value.toLowerCase();
             let faqItems = document.querySelectorAll('.faq-item');
@@ -648,11 +656,10 @@
             faqItems.forEach(item => {
                 let buttonText = item.querySelector('.accordion-button').innerText.toLowerCase();
                 let bodyText = item.querySelector('.faq-text').innerText.toLowerCase();
-                 
+                
                 if (buttonText.includes(filter) || bodyText.includes(filter)) {
                     item.style.display = 'block';
                     hasResults = true;
-                    // Opcional: Expandir automáticamente si hay búsqueda activa larga
                     if(filter.length > 2) {
                         let collapseElement = item.querySelector('.accordion-collapse');
                         let bsCollapse = new bootstrap.Collapse(collapseElement, {toggle: false});
@@ -663,11 +670,9 @@
                 }
             });
 
-            // Mostrar mensaje si no hay resultados
             document.getElementById('noResults').style.display = hasResults ? 'none' : 'block';
         });
 
-        // Control del colapso del menú móvil al hacer clic en un enlace
         document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
             link.addEventListener('click', () => {
                 let navbarCollapse = document.getElementById('navbarNav');
