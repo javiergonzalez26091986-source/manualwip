@@ -285,9 +285,8 @@
                     <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="#ans">ANS Mensajería</a></li>
                     <li class="nav-item"><a class="nav-link" href="#flujo-proceso">Alineación</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#kpis-operativos">Indicadores</a></li>
                     <li class="nav-item"><a class="nav-link" href="#plataforma">Documentación</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#gestion">Gestión</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gestion">Gestión e Indicadores</a></li>
                     <li class="nav-item"><a class="nav-link" href="#comunicacion">Comunicación</a></li>
                     <li class="nav-item"><a class="nav-link" href="#respuestas">FAQ</a></li>
                     <li class="nav-item"><a class="nav-link" href="#directorio">Directorio</a></li>
@@ -564,15 +563,15 @@
         </div>
     </section>
 
-    <section id="kpis-operativos" class="bg-white">
+    <section id="gestion" class="bg-white">
         <div class="container reveal">
             <div class="text-center mb-5">
                 <span class="badge bg-secondary px-3 py-2 text-uppercase letter-spacing-1 mb-2">Métricas de Desempeño</span>
-                <h2 class="section-title mx-auto mb-3" style="max-width: fit-content;">Indicadores de Gestión Operativa</h2>
+                <h2 class="section-title mx-auto mb-3" style="max-width: fit-content;">Indicadores y Gestión Operativa</h2>
                 <p class="lead text-muted max-width-700 mx-auto">Resumen informativo del rendimiento logístico estructurado a partir del reporte de operación nacional.</p>
             </div>
             
-            <div class="row g-4">
+            <div class="row g-4 mb-5">
                 <div class="col-md-4">
                     <div class="card-custom border border-light shadow-sm text-center h-100">
                         <div class="rounded-circle d-inline-flex justify-content-center align-items-center mb-3 mx-auto" style="width: 80px; height: 80px; background-color: #F0F9FF; color: var(--secondary);">
@@ -606,12 +605,27 @@
                     </div>
                 </div>
             </div>
+
+            <div class="row g-4 pt-3 border-top">
+                <div class="col-md-6">
+                    <div class="card-custom bg-light border border-light">
+                        <h5 class="fw-bold text-primary"><i class="fas fa-chart-pie"></i> Definición de Indicadores</h5>
+                        <p class="small text-muted">A través de los tableros de control extraemos métricas: <strong>Volumen por área</strong>, servicios totales por regional, distribución de carga, cumplimiento de ANS y efectividad.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card-custom bg-light border border-light">
+                        <h5 class="fw-bold text-primary"><i class="fas fa-file-excel"></i> Informes de Operación</h5>
+                        <p class="small text-muted">A partir de la data alojada en Wip, se generan cortes mensuales para consolidar la productividad general. Esto permite analizar los picos de demanda y auditar la eficiencia.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="plataforma" class="bg-light">
         <div class="container reveal">
-            <h2 class="section-title">Documentación del Proceso (Videotutoriales Wip)</h2>
+            <h2 class="section-title">Documentación del Proceso (Videotutoriales)</h2>
             <p class="text-muted mb-4">Material de apoyo enfocado a las tareas administrativas, monitoreo de radicaciones y trazabilidad de los servicios.</p>
 
             <div class="row bg-white p-4 rounded-4 shadow-sm align-items-start border">
@@ -682,15 +696,12 @@
         </div>
     </section>
 
-    
-    <!-- PLAN DE COMUNICACIÓN CON CARRUSEL DE 16 DIAPOSITIVAS AUTOREPRODUCIBLES -->
-    <section id="comunicacion" class="bg-light">
+    <section id="comunicacion" class="bg-white">
         <div class="container reveal">
             <h2 class="section-title">Plan de Comunicación</h2>
             <p class="text-muted mb-4">Material interactivo para estandarizar el uso de la aplicación a nivel nacional dentro de las áreas de Constructora Bolívar.</p>
             
             <div class="card-custom border border-light p-4 shadow-sm bg-white">
-                <!-- Se agrega data-bs-interval="30000" para 30 segundos -->
                 <div id="carruselComunicacion" class="carousel slide shadow-sm rounded overflow-hidden" data-bs-ride="carousel" data-bs-interval="30000">
                     
                     <div class="carousel-indicators">
@@ -777,14 +788,14 @@
         </div>
     </section>
 
-    <section id="respuestas" class="bg-white">
+    <section id="respuestas" class="bg-light">
         <div class="container reveal">
             <h2 class="section-title">Respuestas Rápidas (FAQ)</h2>
             <p class="text-muted mb-4">Busca rápidamente las dudas más comunes sobre la operación o navega por la lista.</p>
             
             <div class="search-box">
                 <i class="fas fa-search"></i>
-                <input type="text" id="faqSearch" class="form-control form-control-lg border-0 bg-light" placeholder="Ej: solicitud, app, servicios, rastreo...">
+                <input type="text" id="faqSearch" class="form-control form-control-lg border-0 bg-white shadow-sm" placeholder="Ej: solicitud, app, servicios, rastreo...">
             </div>
 
             <div class="accordion shadow-sm" id="accordionFAQ">
@@ -899,24 +910,44 @@
         </div>
     </section>
 
-    <section id="directorio" class="bg-light pb-5">
+    <section id="directorio" class="bg-white pb-5">
         <div class="container reveal">
             <h2 class="section-title">Directorio de Coordinación</h2>
             <p class="text-muted mb-4 text-center">Para escalamientos o incidencias que requieran gestión humana directa:</p>
             
             <div class="row justify-content-center g-4 text-center mt-2">
                 <div class="col-md-6 col-lg-3">
-                    <div class="card-custom border shadow-sm bg-white">
+                    <div class="card-custom border shadow-sm bg-light">
                         <div class="rounded-circle text-white d-inline-flex justify-content-center align-items-center mb-3 shadow-sm" style="width: 70px; height: 70px; font-size: 24px; font-weight: bold; background-color: var(--secondary);">SR</div>
-                        <h5 class="fw-bold text-primary">Luis Fernando Rincon</h5>
+                        <h5 class="fw-bold text-primary">Stiven Rodriguez</h5>
                         <p class="text-muted small">Coordinador<br><strong>Centro - Norte</strong></p>
                         <a href="mailto:mensajeria@constructorabolivar.com" class="btn btn-outline-primary w-100 mb-2" style="font-size: 0.8rem;"><i class="fas fa-envelope me-1"></i> Correo</a>
                         <a href="tel:3102502316" class="btn btn-primary w-100"><i class="fas fa-phone me-1"></i> 310 2502316</a>
                     </div>
-                </div>          
+                </div>
 
                 <div class="col-md-6 col-lg-3">
-                    <div class="card-custom border shadow-sm bg-white">
+                    <div class="card-custom border shadow-sm bg-light">
+                        <div class="rounded-circle text-white d-inline-flex justify-content-center align-items-center mb-3 shadow-sm" style="width: 70px; height: 70px; font-size: 24px; font-weight: bold; background-color: #059669;">EP</div>
+                        <h5 class="fw-bold text-primary">Eliana Padilla</h5>
+                        <p class="text-muted small">Coordinador<br><strong>Regional Norte</strong></p>
+                        <a href="mailto:eliana.padilla@constructorabolivar.com" class="btn btn-outline-primary w-100 mb-2" style="font-size: 0.8rem;"><i class="fas fa-envelope me-1"></i> Correo</a>
+                        <a href="tel:3023275910" class="btn btn-primary w-100" style="background-color: #059669; border-color: #059669;"><i class="fas fa-phone me-1"></i> 302 3275910</a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="card-custom border shadow-sm bg-light">
+                        <div class="rounded-circle text-white d-inline-flex justify-content-center align-items-center mb-3 shadow-sm" style="width: 70px; height: 70px; font-size: 24px; font-weight: bold; background-color: var(--danger);">DP</div>
+                        <h5 class="fw-bold text-primary">Daniela Parra</h5>
+                        <p class="text-muted small">Coordinador<br><strong>Regional Centro</strong></p>
+                        <a href="mailto:daniela.parra@constructorabolivar.com" class="btn btn-outline-primary w-100 mb-2" style="font-size: 0.8rem;"><i class="fas fa-envelope me-1"></i> Correo</a>
+                        <a href="tel:3006674685" class="btn btn-danger w-100"><i class="fas fa-phone me-1"></i> 300 6674685</a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="card-custom border shadow-sm bg-light">
                         <div class="rounded-circle text-white d-inline-flex justify-content-center align-items-center mb-3 shadow-sm" style="width: 70px; height: 70px; font-size: 24px; font-weight: bold; background-color: var(--warning);">JU</div>
                         <h5 class="fw-bold text-primary">James Urrea</h5>
                         <p class="text-muted small">Coordinador<br><strong>Regional Sur</strong></p>
