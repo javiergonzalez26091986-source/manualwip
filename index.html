@@ -231,7 +231,21 @@
             margin-bottom: 5px;
         }
 
-        /* Estilos para el Carrusel */
+        /* Estilos para el Carrusel Mejorado */
+        .carousel-container {
+            max-width: 900px; /* Evita que se vea gigante */
+            margin: 0 auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            background-color: #f1f5f9;
+        }
+        .carousel-item img {
+            width: 100%;
+            height: auto;
+            max-height: 550px; /* Limita la altura para nitidez */
+            object-fit: contain; /* Ajusta la imagen sin recortar ni estirar */
+        }
         .carousel-control-prev-icon,
         .carousel-control-next-icon {
             background-color: var(--primary);
@@ -265,6 +279,7 @@
             .process-card { min-height: auto; padding: 20px 15px; }
             .ans-highlight-card { padding: 20px !important; }
             .banner-img { max-height: 40vh; object-fit: contain; }
+            .carousel-item img { max-height: 300px; }
         }
     </style>
 </head>
@@ -353,7 +368,7 @@
                         </div>
                         
                         <p class="small text-muted text-center mb-0">
-                            Si se requiere trasladar material que exceda estas dimensiones, se debe <strong>programar más de un viaje</strong> o solicitar transporte en vehículo diligenciando el <a href="https://forms.gle/HdBpe9ZuFhfbwa4x9" target="_blank" class="fw-bold text-primary text-decoration-none border-bottom border-primary">Formulario Oficial aquí</a>.
+                            Si se requiere trasladar material que exceda estas dimensiones, se debe <strong>programar más de un viaje</strong> o solicitar transporte en vehículo diligenciando el <a href="https://forms.gle/HdBpe9ZuFhfbwa4x9" target="_blank" class="fw-bold text-primary text-decoration-none border-bottom border-primary">Formulario Oficial en Theo</a>.
                         </p>
                     </div>
                 </div>
@@ -563,58 +578,12 @@
         </div>
     </section>
 
-    <section id="gestion" class="bg-white">
-        <div class="container reveal">
-            <div class="text-center mb-5">
-                <span class="badge bg-secondary px-3 py-2 text-uppercase letter-spacing-1 mb-2">Métricas de Desempeño</span>
-                <h2 class="section-title mx-auto mb-3" style="max-width: fit-content;">Indicadores y Gestión Operativa</h2>
-                <p class="lead text-muted max-width-700 mx-auto">Resumen informativo del rendimiento logístico estructurado a partir del reporte de operación nacional.</p>
-            </div>
-            
-            <div class="row g-4 mb-5">
-                <div class="col-md-4">
-                    <div class="card-custom border border-light shadow-sm text-center h-100">
-                        <div class="rounded-circle d-inline-flex justify-content-center align-items-center mb-3 mx-auto" style="width: 80px; height: 80px; background-color: #F0F9FF; color: var(--secondary);">
-                            <i class="fas fa-map-marked-alt fa-2x"></i>
-                        </div>
-                        <h4 class="fw-bold text-primary mb-2">Servicios Generados</h4>
-                        <h6 class="text-secondary mb-3">Por Regional</h6>
-                        <p class="small text-muted mb-0">Consolidado del volumen total de radicaciones solicitadas, organizadas según la sede origen a nivel nacional.</p>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="card-custom border border-light shadow-sm text-center h-100">
-                        <div class="rounded-circle d-inline-flex justify-content-center align-items-center mb-3 mx-auto" style="width: 80px; height: 80px; background-color: #FEF2F2; color: var(--danger);">
-                            <i class="fas fa-chart-line fa-2x"></i>
-                        </div>
-                        <h4 class="fw-bold text-primary mb-2">Promedio de Servicios</h4>
-                        <h6 class="text-danger mb-3">Por Sede Administrativa</h6>
-                        <p class="small text-muted mb-0">Métrica de densidad que evalúa la carga operativa promedio mensual para dimensionar la capacidad de la flota.</p>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="card-custom border border-light shadow-sm text-center h-100">
-                        <div class="rounded-circle d-inline-flex justify-content-center align-items-center mb-3 mx-auto" style="width: 80px; height: 80px; background-color: #ECFDF5; color: var(--success);">
-                            <i class="fas fa-bullseye fa-2x"></i>
-                        </div>
-                        <h4 class="fw-bold text-primary mb-2">% de Efectividad</h4>
-                        <h6 class="text-success mb-3">Por Sede Logística</h6>
-                        <p class="small text-muted mb-0">Tasa de éxito en la entrega final en primer intento, reflejando el cumplimiento óptimo de los ANS pactados.</p>
-                    </div>
-                </div>
-            </div>
-
-            
-    </section>
-
-    <section id="plataforma" class="bg-light">
+    <section id="plataforma" class="bg-white">
         <div class="container reveal">
             <h2 class="section-title">Documentación del Proceso (Videotutoriales)</h2>
             <p class="text-muted mb-4">Material de apoyo enfocado a las tareas administrativas, monitoreo de radicaciones y trazabilidad de los servicios.</p>
 
-            <div class="row bg-white p-4 rounded-4 shadow-sm align-items-start border">
+            <div class="row bg-light p-4 rounded-4 shadow-sm align-items-start border">
                 
                 <div class="col-md-4 mb-4 mb-md-0">
                     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
@@ -682,93 +651,156 @@
         </div>
     </section>
 
+    <section id="gestion" class="bg-light">
+        <div class="container reveal">
+            <div class="text-center mb-5">
+                <span class="badge bg-secondary px-3 py-2 text-uppercase letter-spacing-1 mb-2">Métricas de Desempeño</span>
+                <h2 class="section-title mx-auto mb-3" style="max-width: fit-content;">Indicadores y Gestión Operativa</h2>
+                <p class="lead text-muted max-width-700 mx-auto">Resumen informativo del rendimiento logístico estructurado a partir del reporte de operación nacional.</p>
+            </div>
+            
+            <div class="row g-4 mb-5">
+                <div class="col-md-4">
+                    <div class="card-custom border border-light shadow-sm text-center h-100 bg-white">
+                        <div class="rounded-circle d-inline-flex justify-content-center align-items-center mb-3 mx-auto" style="width: 80px; height: 80px; background-color: #F0F9FF; color: var(--secondary);">
+                            <i class="fas fa-map-marked-alt fa-2x"></i>
+                        </div>
+                        <h4 class="fw-bold text-primary mb-2">Servicios Generados</h4>
+                        <h6 class="text-secondary mb-3">Por Regional</h6>
+                        <p class="small text-muted mb-0">Consolidado del volumen total de radicaciones solicitadas, organizadas según la sede origen a nivel nacional.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card-custom border border-light shadow-sm text-center h-100 bg-white">
+                        <div class="rounded-circle d-inline-flex justify-content-center align-items-center mb-3 mx-auto" style="width: 80px; height: 80px; background-color: #FEF2F2; color: var(--danger);">
+                            <i class="fas fa-chart-line fa-2x"></i>
+                        </div>
+                        <h4 class="fw-bold text-primary mb-2">Promedio de Servicios</h4>
+                        <h6 class="text-danger mb-3">Por Sede Administrativa</h6>
+                        <p class="small text-muted mb-0">Métrica de densidad que evalúa la carga operativa promedio mensual para dimensionar la capacidad de la flota.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card-custom border border-light shadow-sm text-center h-100 bg-white">
+                        <div class="rounded-circle d-inline-flex justify-content-center align-items-center mb-3 mx-auto" style="width: 80px; height: 80px; background-color: #ECFDF5; color: var(--success);">
+                            <i class="fas fa-bullseye fa-2x"></i>
+                        </div>
+                        <h4 class="fw-bold text-primary mb-2">% de Efectividad</h4>
+                        <h6 class="text-success mb-3">Por Sede Logística</h6>
+                        <p class="small text-muted mb-0">Tasa de éxito en la entrega final en primer intento, reflejando el cumplimiento óptimo de los ANS pactados.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4 pt-4 border-top">
+                <div class="col-md-6">
+                    <div class="card-custom border border-light bg-white">
+                        <h5 class="fw-bold text-primary"><i class="fas fa-chart-pie me-2"></i> Definición de Indicadores</h5>
+                        <p class="small text-muted mt-2">A través de los tableros de control extraemos métricas de vital importancia: <strong>Volumen por área</strong>, servicios totales por regional, distribución de la carga logística diaria, el estricto cumplimiento de los ANS y la efectividad en entregas.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card-custom border border-light bg-white">
+                        <h5 class="fw-bold text-primary"><i class="fas fa-file-excel me-2"></i> Informes de Operación</h5>
+                        <p class="small text-muted mt-2">A partir de toda la data transaccional alojada en Wip, se generan cortes mensuales para consolidar la productividad general. Esto nos permite analizar detalladamente los picos de demanda y auditar la eficiencia del proceso.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="comunicacion" class="bg-white">
         <div class="container reveal">
             <h2 class="section-title">Plan de Comunicación</h2>
             <p class="text-muted mb-4">Material interactivo para estandarizar el uso de la aplicación a nivel nacional dentro de las áreas de Constructora Bolívar.</p>
             
-            <div class="card-custom border border-light p-4 shadow-sm bg-white">
-                <div id="carruselComunicacion" class="carousel slide shadow-sm rounded overflow-hidden" data-bs-ride="carousel" data-bs-interval="30000">
-                    
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carruselComunicacion" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carruselComunicacion" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carruselComunicacion" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        <button type="button" data-bs-target="#carruselComunicacion" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                        <button type="button" data-bs-target="#carruselComunicacion" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                        <button type="button" data-bs-target="#carruselComunicacion" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                        <button type="button" data-bs-target="#carruselComunicacion" data-bs-slide-to="6" aria-label="Slide 7"></button>
-                        <button type="button" data-bs-target="#carruselComunicacion" data-bs-slide-to="7" aria-label="Slide 8"></button>
-                        <button type="button" data-bs-target="#carruselComunicacion" data-bs-slide-to="8" aria-label="Slide 9"></button>
-                        <button type="button" data-bs-target="#carruselComunicacion" data-bs-slide-to="9" aria-label="Slide 10"></button>
-                        <button type="button" data-bs-target="#carruselComunicacion" data-bs-slide-to="10" aria-label="Slide 11"></button>
-                        <button type="button" data-bs-target="#carruselComunicacion" data-bs-slide-to="11" aria-label="Slide 12"></button>
-                        <button type="button" data-bs-target="#carruselComunicacion" data-bs-slide-to="12" aria-label="Slide 13"></button>
-                        <button type="button" data-bs-target="#carruselComunicacion" data-bs-slide-to="13" aria-label="Slide 14"></button>
-                        <button type="button" data-bs-target="#carruselComunicacion" data-bs-slide-to="14" aria-label="Slide 15"></button>
-                        <button type="button" data-bs-target="#carruselComunicacion" data-bs-slide-to="15" aria-label="Slide 16"></button>
+            <div class="card-custom border border-light p-4 shadow-sm bg-light">
+                
+                <div class="carousel-container">
+                    <div id="carruselComunicacion" class="carousel slide" data-bs-ride="carousel" data-bs-interval="30000">
+                        
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carruselComunicacion" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carruselComunicacion" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carruselComunicacion" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carruselComunicacion" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carruselComunicacion" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                            <button type="button" data-bs-target="#carruselComunicacion" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                            <button type="button" data-bs-target="#carruselComunicacion" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                            <button type="button" data-bs-target="#carruselComunicacion" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                            <button type="button" data-bs-target="#carruselComunicacion" data-bs-slide-to="8" aria-label="Slide 9"></button>
+                            <button type="button" data-bs-target="#carruselComunicacion" data-bs-slide-to="9" aria-label="Slide 10"></button>
+                            <button type="button" data-bs-target="#carruselComunicacion" data-bs-slide-to="10" aria-label="Slide 11"></button>
+                            <button type="button" data-bs-target="#carruselComunicacion" data-bs-slide-to="11" aria-label="Slide 12"></button>
+                            <button type="button" data-bs-target="#carruselComunicacion" data-bs-slide-to="12" aria-label="Slide 13"></button>
+                            <button type="button" data-bs-target="#carruselComunicacion" data-bs-slide-to="13" aria-label="Slide 14"></button>
+                            <button type="button" data-bs-target="#carruselComunicacion" data-bs-slide-to="14" aria-label="Slide 15"></button>
+                            <button type="button" data-bs-target="#carruselComunicacion" data-bs-slide-to="15" aria-label="Slide 16"></button>
+                        </div>
+                        
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/diapositivas/Diapositiva1.JPG" alt="Diapositiva 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/diapositivas/Diapositiva2.JPG" alt="Diapositiva 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/diapositivas/Diapositiva3.JPG" alt="Diapositiva 3">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/diapositivas/Diapositiva4.JPG" alt="Diapositiva 4">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/diapositivas/Diapositiva5.JPG" alt="Diapositiva 5">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/diapositivas/Diapositiva6.JPG" alt="Diapositiva 6">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/diapositivas/Diapositiva7.JPG" alt="Diapositiva 7">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/diapositivas/Diapositiva8.JPG" alt="Diapositiva 8">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/diapositivas/Diapositiva9.JPG" alt="Diapositiva 9">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/diapositivas/Diapositiva10.JPG" alt="Diapositiva 10">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/diapositivas/Diapositiva11.JPG" alt="Diapositiva 11">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/diapositivas/Diapositiva12.JPG" alt="Diapositiva 12">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/diapositivas/Diapositiva13.JPG" alt="Diapositiva 13">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/diapositivas/Diapositiva14.JPG" alt="Diapositiva 14">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/diapositivas/Diapositiva15.JPG" alt="Diapositiva 15">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/diapositivas/Diapositiva16.JPG" alt="Diapositiva 16">
+                            </div>
+                        </div>
+                        
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carruselComunicacion" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon shadow-sm" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        
+                        <button class="carousel-control-next" type="button" data-bs-target="#carruselComunicacion" data-bs-slide="next">
+                            <span class="carousel-control-next-icon shadow-sm" aria-hidden="true"></span>
+                            <span class="visually-hidden">Siguiente</span>
+                        </button>
                     </div>
-                    
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="img/diapositivas/Diapositiva1.JPG" class="d-block w-100" alt="Diapositiva 1">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/diapositivas/Diapositiva2.JPG" class="d-block w-100" alt="Diapositiva 2">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/diapositivas/Diapositiva3.JPG" class="d-block w-100" alt="Diapositiva 3">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/diapositivas/Diapositiva4.JPG" class="d-block w-100" alt="Diapositiva 4">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/diapositivas/Diapositiva5.JPG" class="d-block w-100" alt="Diapositiva 5">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/diapositivas/Diapositiva6.JPG" class="d-block w-100" alt="Diapositiva 6">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/diapositivas/Diapositiva7.JPG" class="d-block w-100" alt="Diapositiva 7">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/diapositivas/Diapositiva8.JPG" class="d-block w-100" alt="Diapositiva 8">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/diapositivas/Diapositiva9.JPG" class="d-block w-100" alt="Diapositiva 9">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/diapositivas/Diapositiva10.JPG" class="d-block w-100" alt="Diapositiva 10">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/diapositivas/Diapositiva11.JPG" class="d-block w-100" alt="Diapositiva 11">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/diapositivas/Diapositiva12.JPG" class="d-block w-100" alt="Diapositiva 12">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/diapositivas/Diapositiva13.JPG" class="d-block w-100" alt="Diapositiva 13">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/diapositivas/Diapositiva14.JPG" class="d-block w-100" alt="Diapositiva 14">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/diapositivas/Diapositiva15.JPG" class="d-block w-100" alt="Diapositiva 15">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/diapositivas/Diapositiva16.JPG" class="d-block w-100" alt="Diapositiva 16">
-                        </div>
-                    </div>
-                    
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carruselComunicacion" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon shadow-sm" aria-hidden="true"></span>
-                        <span class="visually-hidden">Anterior</span>
-                    </button>
-                    
-                    <button class="carousel-control-next" type="button" data-bs-target="#carruselComunicacion" data-bs-slide="next">
-                        <span class="carousel-control-next-icon shadow-sm" aria-hidden="true"></span>
-                        <span class="visually-hidden">Siguiente</span>
-                    </button>
                 </div>
             </div>
         </div>
@@ -905,30 +937,10 @@
                 <div class="col-md-6 col-lg-3">
                     <div class="card-custom border shadow-sm bg-light">
                         <div class="rounded-circle text-white d-inline-flex justify-content-center align-items-center mb-3 shadow-sm" style="width: 70px; height: 70px; font-size: 24px; font-weight: bold; background-color: var(--secondary);">SR</div>
-                        <h5 class="fw-bold text-primary">Stiven Rodriguez</h5>
+                        <h5 class="fw-bold text-primary">Luis Fernando Rincon</h5>
                         <p class="text-muted small">Coordinador<br><strong>Centro - Norte</strong></p>
                         <a href="mailto:mensajeria@constructorabolivar.com" class="btn btn-outline-primary w-100 mb-2" style="font-size: 0.8rem;"><i class="fas fa-envelope me-1"></i> Correo</a>
                         <a href="tel:3102502316" class="btn btn-primary w-100"><i class="fas fa-phone me-1"></i> 310 2502316</a>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3">
-                    <div class="card-custom border shadow-sm bg-light">
-                        <div class="rounded-circle text-white d-inline-flex justify-content-center align-items-center mb-3 shadow-sm" style="width: 70px; height: 70px; font-size: 24px; font-weight: bold; background-color: #059669;">EP</div>
-                        <h5 class="fw-bold text-primary">Eliana Padilla</h5>
-                        <p class="text-muted small">Coordinador<br><strong>Regional Norte</strong></p>
-                        <a href="mailto:eliana.padilla@constructorabolivar.com" class="btn btn-outline-primary w-100 mb-2" style="font-size: 0.8rem;"><i class="fas fa-envelope me-1"></i> Correo</a>
-                        <a href="tel:3023275910" class="btn btn-primary w-100" style="background-color: #059669; border-color: #059669;"><i class="fas fa-phone me-1"></i> 302 3275910</a>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3">
-                    <div class="card-custom border shadow-sm bg-light">
-                        <div class="rounded-circle text-white d-inline-flex justify-content-center align-items-center mb-3 shadow-sm" style="width: 70px; height: 70px; font-size: 24px; font-weight: bold; background-color: var(--danger);">DP</div>
-                        <h5 class="fw-bold text-primary">Daniela Parra</h5>
-                        <p class="text-muted small">Coordinador<br><strong>Regional Centro</strong></p>
-                        <a href="mailto:daniela.parra@constructorabolivar.com" class="btn btn-outline-primary w-100 mb-2" style="font-size: 0.8rem;"><i class="fas fa-envelope me-1"></i> Correo</a>
-                        <a href="tel:3006674685" class="btn btn-danger w-100"><i class="fas fa-phone me-1"></i> 300 6674685</a>
                     </div>
                 </div>
 
@@ -951,6 +963,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+        // Animaciones al hacer Scroll
         function reveal() {
             var reveals = document.querySelectorAll(".reveal");
             for (var i = 0; i < reveals.length; i++) {
@@ -965,6 +978,7 @@
         window.addEventListener("scroll", reveal);
         reveal();
 
+        // Buscador de Respuestas Rápidas (FAQ)
         document.getElementById('faqSearch').addEventListener('keyup', function() {
             let filter = this.value.toLowerCase();
             let faqItems = document.querySelectorAll('.faq-item');
@@ -977,6 +991,7 @@
                 if (buttonText.includes(filter) || bodyText.includes(filter)) {
                     item.style.display = 'block';
                     hasResults = true;
+                    // Auto-abrir pestaña si hay coincidencia
                     if(filter.length > 2) {
                         let collapseElement = item.querySelector('.accordion-collapse');
                         let bsCollapse = new bootstrap.Collapse(collapseElement, {toggle: false});
@@ -990,6 +1005,7 @@
             document.getElementById('noResults').style.display = hasResults ? 'none' : 'block';
         });
 
+        // Ocultar menú en móviles al dar clic
         document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
             link.addEventListener('click', () => {
                 let navbarCollapse = document.getElementById('navbarNav');
