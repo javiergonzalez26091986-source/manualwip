@@ -29,8 +29,10 @@
             color: #334155;
             padding-top: 80px;
             min-height: 100vh;
+            overflow-x: hidden;
         }
 
+        /* Navbar & Logos */
         .navbar-custom {
             background-color: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
@@ -49,12 +51,25 @@
             color: var(--secondary);
         }
 
+        .header-logos {
+            display: flex;
+            align-items: center;
+        }
         .header-logos img {
-            height: 45px;
             object-fit: contain;
             margin: 0 10px;
         }
+        .logo-bolivar {
+            height: 60px; /* Logo más grande y principal */
+        }
+        .logo-wip {
+            height: 38px;
+        }
+        .logo-sergem {
+            height: 32px;
+        }
 
+        /* General Sections */
         section {
             padding: 60px 0;
         }
@@ -76,6 +91,7 @@
             border-radius: 2px;
         }
 
+        /* Cards */
         .card-custom {
             background: white;
             border: none;
@@ -90,6 +106,7 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.08);
         }
 
+        /* Role Tabs */
         .custom-role-tab {
             background: transparent !important;
             border: none !important;
@@ -105,6 +122,7 @@
             box-shadow: 0 10px 20px rgba(2, 132, 199, 0.15);
         }
 
+        /* Search Box */
         .search-box {
             position: relative;
             margin-bottom: 30px;
@@ -124,6 +142,7 @@
             font-size: 1.2rem;
         }
 
+        /* Accordion */
         .accordion-button:not(.collapsed) {
             background-color: #F0F9FF;
             color: var(--secondary);
@@ -146,6 +165,7 @@
             box-shadow: 0 4px 10px rgba(2, 132, 199, 0.3);
         }
 
+        /* Videos */
         .video-responsive {
             position: relative;
             padding-bottom: 56.25%; 
@@ -164,29 +184,16 @@
             border: none;
         }
 
+        /* Banner Principal */
         #inicio {
             padding: 0;
             background-image: url('Banner Oficial Wip SERGEM.png');
             background-size: cover;
             background-position: center;
-            min-height: 80vh;
+            min-height: 85vh;
             display: flex;
             align-items: center;
             justify-content: center;
-        }
-        #inicio .container {
-            width: 100%;
-            max-width: none;
-            padding: 0;
-        }
-        .banner-text-card {
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            max-width: 800px;
-            width: 90%;
-            margin: auto;
         }
         
         /* Estilos Destacados para el ANS */
@@ -216,6 +223,18 @@
             margin-right: 5px;
             margin-bottom: 5px;
         }
+
+        /* Animaciones Scroll (Reveal) */
+        .reveal {
+            position: relative;
+            transform: translateY(40px);
+            opacity: 0;
+            transition: 0.8s all ease;
+        }
+        .reveal.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
     </style>
 </head>
 <body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="100">
@@ -223,9 +242,9 @@
     <nav id="mainNavbar" class="navbar navbar-expand-xl navbar-light navbar-custom fixed-top">
         <div class="container">
             <a class="navbar-brand header-logos" href="#">
-                <img src="wipLogo.png?v=3" alt="Wip">
-                <img src="sergemLogo.png?v=3" alt="SERGEM">
-                <img src="constructoraBolivarLogo.png?v=3" alt="Bolívar">
+                <img src="constructoraBolivarLogo.png?v=3" alt="Bolívar" class="logo-bolivar">
+                <img src="wipLogo.png?v=3" alt="Wip" class="logo-wip">
+                <img src="sergemLogo.png?v=3" alt="SERGEM" class="logo-sergem">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -235,8 +254,8 @@
                     <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="#ans">ANS Mensajería</a></li>
                     <li class="nav-item"><a class="nav-link" href="#flujo-proceso">Alineación del Proceso</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#plataforma">Documentación (Tutoriales)</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#gestion">Indicadores e Informes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#plataforma">Documentación</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gestion">Indicadores</a></li>
                     <li class="nav-item"><a class="nav-link" href="#respuestas">FAQ</a></li>
                     <li class="nav-item"><a class="nav-link" href="#directorio">Directorio</a></li>
                 </ul>
@@ -245,16 +264,10 @@
     </nav>
 
     <section id="inicio">
-        <div class="container text-center">
-            <div class="banner-text-card mt-5 mt-md-0">
-                <h1 class="fw-bold display-5 mb-3" style="color: var(--primary);">Manual Operativo Dinámico Wip</h1>
-                <p class="lead text-muted mb-0">Estandarización, Gestión de Flujo y Centralización Logística para la Operación de Mensajería a Nivel Nacional</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
     <section id="ans" class="bg-white">
-        <div class="container">
+        <div class="container reveal">
             <div class="text-center mb-5">
                 <span class="badge bg-primary px-3 py-2 text-uppercase letter-spacing-1 mb-2">Acuerdos de Nivel de Servicio</span>
                 <h2 class="section-title mx-auto mb-3" style="max-width: fit-content;">ANS Mensajería a Nivel Nacional</h2>
@@ -307,12 +320,12 @@
                         </div>
                         
                         <p class="small text-muted text-center mb-0">
-                            Si se requiere trasladar material que exceda estas dimensiones, se debe <strong>programar más de un viaje</strong> (Distribuir las cargas) o solicitar transporte en vehículo (carro) diligenciando el <a href="https://forms.gle/HdBpe9ZuFhfbwa4x9" target="_blank" class="fw-bold text-primary text-decoration-none border-bottom border-primary">Formulario Oficial en Theo</a>.
+                            Si se requiere trasladar material que exceda estas dimensiones, se debe <strong>programar más de un viaje</strong> o solicitar transporte en vehículo diligenciando el <a href="https://forms.gle/HdBpe9ZuFhfbwa4x9" target="_blank" class="fw-bold text-primary text-decoration-none border-bottom border-primary">Formulario Oficial en Theo</a>.
                         </p>
                     </div>
                 </div>
                 
-                <div class="col-12">
+                <div class="col-12 reveal">
                     <div class="card-custom border border-light p-4 shadow-sm mt-2">
                         <h4 class="fw-bold text-primary mb-4"><i class="fas fa-map-marked-alt text-secondary me-2"></i> Cobertura Nacional y Rutas Satélites</h4>
                         <p class="text-muted mb-4">El servicio de mensajería funciona de forma centralizada dentro del perímetro urbano de <strong>Bogotá, Barranquilla, Santa Marta, Cartagena, Ibagué y Medellín</strong>. En la plataforma podrás elegir opciones de un origen con uno o más destinos. <span class="text-danger fw-bold">En caso de requerir una diligencia fuera del perímetro, se debe validar la disponibilidad y se coordinará según demanda.</span></p>
@@ -345,7 +358,7 @@
                     </div>
                 </div>
 
-                <div class="col-12">
+                <div class="col-12 reveal">
                     <div class="p-4 rounded-4" style="background-color: #E0F2FE; border: 1px solid #BAE6FD;">
                         <h5 class="fw-bold text-primary mb-2"><i class="fas fa-file-signature me-2"></i> Información Adicional: Gestión de Soportes</h5>
                         <p class="text-dark mb-0">
@@ -358,7 +371,7 @@
     </section>
 
     <section id="flujo-proceso" class="bg-light">
-        <div class="container">
+        <div class="container reveal">
             <h2 class="section-title">Alineación Nacional del Proceso</h2>
             <p class="text-muted mb-5 lead">Conoce cómo se centraliza y distribuye la operación de mensajería, conectando las diferentes áreas de Constructora Bolívar con los agentes logísticos de SERGEM a nivel nacional.</p>
             
@@ -374,9 +387,9 @@
                     <i class="fas fa-arrow-right fa-2x text-muted"></i>
                 </div>
                 <div class="col-md-2">
-                    <div class="card-custom border border-secondary h-100 d-flex flex-column justify-content-center" style="background-color: #0A2540;">
-                        <img src="wipLogo.png?v=3" alt="Wip Logo" style="height: 40px; object-fit: contain; margin-bottom: 10px; filter: brightness(0) invert(1);">
-                        <h6 class="fw-bold text-white mb-0">Plataforma Wip</h6>
+                    <div class="card-custom border border-secondary h-100 d-flex flex-column justify-content-center bg-white">
+                        <img src="wipLogo.png?v=3" alt="Wip Logo" style="height: 40px; object-fit: contain; margin-bottom: 10px;">
+                        <h6 class="fw-bold text-secondary mb-0">Plataforma Wip</h6>
                     </div>
                 </div>
                 <div class="col-md-1 d-none d-md-flex justify-content-center">
@@ -431,6 +444,7 @@
             </ul>
 
             <div class="tab-content bg-white p-4 rounded-4 shadow-sm border" id="pills-tabContent-roles">
+                
                 <div class="tab-pane fade show active" id="pills-usuario" role="tabpanel">
                     <h4 class="fw-bold text-primary mb-4"><i class="fas fa-clipboard-list me-2"></i> Radicación de Servicio</h4>
                     <div class="row align-items-center">
@@ -445,7 +459,11 @@
                             </ol>
                         </div>
                         <div class="col-md-5 text-center">
-                            <i class="fas fa-laptop-house fa-6x text-muted opacity-25"></i>
+                            <div class="p-4 bg-light rounded border border-primary shadow-sm d-inline-block">
+                                <i class="fas fa-desktop fa-4x text-primary mb-2"></i>
+                                <p class="small text-muted fw-bold mb-0 mt-3">Portal Web Bolívar</p>
+                                <p class="small text-muted mb-0">(IntraB / Wiptool)</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -462,9 +480,9 @@
                             </ol>
                         </div>
                         <div class="col-md-5 text-center">
-                            <div class="p-4 bg-light rounded border border-secondary shadow-sm">
-                                <i class="fas fa-desktop fa-3x text-muted mb-2"></i>
-                                <p class="small text-muted fw-bold mb-0">Tablero de Control y Seguimiento</p>
+                            <div class="p-4 bg-light rounded border border-secondary shadow-sm d-inline-block">
+                                <i class="fas fa-desktop fa-4x text-muted mb-2"></i>
+                                <p class="small text-muted fw-bold mb-0 mt-3">Tablero de Control</p>
                                 <p class="small text-muted mb-0">(Uso Exclusivo SERGEM)</p>
                             </div>
                         </div>
@@ -476,14 +494,18 @@
                     <div class="row align-items-center">
                         <div class="col-md-7">
                             <ol class="list-group list-group-numbered list-group-flush">
-                                <li class="list-group-item border-0">El agente recibe la notificación de la ruta en su dispositivo Wip App.</li>
+                                <li class="list-group-item border-0">El agente recibe la notificación de la ruta en su dispositivo móvil.</li>
                                 <li class="list-group-item border-0">Acepta la ruta, cambiando el estado visible a <b>'En Tránsito'</b> para el usuario en Bolívar.</li>
                                 <li class="list-group-item border-0">Entrega del documento físico en el punto de contacto.</li>
                                 <li class="list-group-item border-0">Sube fotografías de soporte, recolecta firma o tipifica una eventual <b>'Novedad'</b> que impida el cierre.</li>
                             </ol>
                         </div>
                         <div class="col-md-5 text-center">
-                            <i class="fas fa-mobile-alt fa-6x text-muted opacity-25"></i>
+                            <div class="p-4 bg-light rounded border border-success shadow-sm d-inline-block">
+                                <i class="fas fa-mobile-alt fa-4x text-success mb-2"></i>
+                                <p class="small text-muted fw-bold mb-0 mt-3">App Móvil Wip</p>
+                                <p class="small text-muted mb-0">(Gestión en Calle)</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -492,7 +514,7 @@
     </section>
 
     <section id="plataforma" class="bg-white">
-        <div class="container">
+        <div class="container reveal">
             <h2 class="section-title">Documentación del Proceso (Videotutoriales Wip)</h2>
             <p class="text-muted mb-4">Material de apoyo enfocado a las tareas administrativas, monitoreo de radicaciones y trazabilidad de los servicios vigentes.</p>
 
@@ -569,7 +591,7 @@
     </section>
 
     <section id="gestion" class="bg-light">
-        <div class="container">
+        <div class="container reveal">
             <h2 class="section-title">Medición de Indicadores y Plan de Comunicación</h2>
             <div class="row g-4">
                 <div class="col-md-4">
@@ -595,7 +617,7 @@
     </section>
 
     <section id="respuestas" class="bg-white">
-        <div class="container">
+        <div class="container reveal">
             <h2 class="section-title">Respuestas Rápidas (FAQ)</h2>
             <p class="text-muted mb-4">Busca rápidamente las dudas más comunes sobre la operación o navega por la lista.</p>
             
@@ -679,7 +701,7 @@
     </section>
 
     <section id="directorio" class="bg-light pb-5">
-        <div class="container">
+        <div class="container reveal">
             <h2 class="section-title">Directorio de Coordinación Operativa</h2>
             <p class="text-muted mb-4 text-center">Para escalamientos o incidencias que requieran gestión humana directa, por favor contactar a su coordinador de zona asignado:</p>
             
@@ -725,6 +747,23 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+        // Funcionalidad Scroll Reveal
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        // Desencadenar una vez al cargar
+        reveal();
+
+        // Lógica del Buscador de Respuestas Rápidas (FAQ)
         document.getElementById('faqSearch').addEventListener('keyup', function() {
             let filter = this.value.toLowerCase();
             let faqItems = document.querySelectorAll('.faq-item');
@@ -750,6 +789,7 @@
             document.getElementById('noResults').style.display = hasResults ? 'none' : 'block';
         });
 
+        // Control del colapso del menú móvil al hacer clic
         document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
             link.addEventListener('click', () => {
                 let navbarCollapse = document.getElementById('navbarNav');
