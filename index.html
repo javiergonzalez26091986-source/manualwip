@@ -55,20 +55,16 @@
         .header-logos {
             display: flex;
             align-items: center;
+            flex-wrap: nowrap;
         }
         .header-logos img {
             object-fit: contain;
-            margin: 0 10px;
+            margin: 0 8px;
+            transition: all 0.3s ease;
         }
-        .logo-bolivar {
-            height: 60px;
-        }
-        .logo-wip {
-            height: 38px;
-        }
-        .logo-sergem {
-            height: 32px;
-        }
+        .logo-bolivar { height: 50px; }
+        .logo-wip { height: 32px; }
+        .logo-sergem { height: 28px; }
 
         /* General Sections */
         section {
@@ -107,7 +103,6 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.08);
         }
 
-        /* Tarjetas del flujo de proceso (Mismo tamaño) */
         .process-card {
             min-height: 200px;
             display: flex;
@@ -193,16 +188,19 @@
             border: none;
         }
 
-        /* Banner Principal */
+        /* Banner Principal (Solución Responsiva) */
         #inicio {
             padding: 0;
-            background-image: url('Banner Oficial Wip SERGEM.png');
-            background-size: cover;
-            background-position: center;
-            min-height: 85vh;
+            background-color: #0A2540; /* Color de fondo de respaldo */
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+        .banner-img {
+            width: 100%;
+            height: auto;
+            max-height: 85vh;
+            object-fit: cover;
         }
         
         /* Estilos Destacados para el ANS */
@@ -233,7 +231,7 @@
             margin-bottom: 5px;
         }
 
-        /* Animaciones Scroll (Reveal) */
+        /* Animaciones Scroll */
         .reveal {
             position: relative;
             transform: translateY(40px);
@@ -243,6 +241,21 @@
         .reveal.active {
             transform: translateY(0);
             opacity: 1;
+        }
+
+        /* MEDIA QUERIES PARA CELULARES Y TABLETS (RESPONSIVE) */
+        @media (max-width: 768px) {
+            body { padding-top: 65px; }
+            section { padding: 40px 0; }
+            .section-title { font-size: 1.6rem; margin-bottom: 30px; }
+            .logo-bolivar { height: 35px; margin: 0 5px; }
+            .logo-wip { height: 22px; margin: 0 5px; }
+            .logo-sergem { height: 20px; margin: 0 5px; }
+            .ans-alert-box h3 { font-size: 1.4rem; }
+            .card-custom { padding: 15px; }
+            .process-card { min-height: auto; padding: 20px 15px; }
+            .ans-highlight-card { padding: 20px !important; }
+            .banner-img { max-height: 40vh; object-fit: contain; } /* Evita recorte en celular */
         }
     </style>
 </head>
@@ -262,7 +275,7 @@
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="#ans">ANS Mensajería</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#flujo-proceso">Alineación del Proceso</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#flujo-proceso">Alineación</a></li>
                     <li class="nav-item"><a class="nav-link" href="#kpis-operativos">Indicadores</a></li>
                     <li class="nav-item"><a class="nav-link" href="#plataforma">Documentación</a></li>
                     <li class="nav-item"><a class="nav-link" href="#gestion">Gestión</a></li>
@@ -274,7 +287,8 @@
     </nav>
 
     <section id="inicio">
-        </section>
+        <img src="Banner Oficial Wip SERGEM.png" class="banner-img" alt="Banner Oficial Wip SERGEM">
+    </section>
 
     <section id="ans" class="bg-white">
         <div class="container reveal">
@@ -321,7 +335,7 @@
                 <div class="col-lg-5">
                     <div class="card-custom border border-light h-100 d-flex flex-column justify-content-center" style="background-color: #F8FAFC;">
                         <h4 class="fw-bold text-danger text-center mb-3"><i class="fas fa-exclamation-triangle me-2"></i> Restricción de Carga</h4>
-                        <p class="text-muted text-center mb-4">Nuestra flota motorizada cuenta con límites estrictos de seguridad física para el transporte (peso y volumen).</p>
+                        <p class="text-muted text-center mb-4">Nuestra flota motorizada cuenta con límites estrictos de seguridad física para el transporte.</p>
                         
                         <div class="ans-alert-box text-center mb-4">
                             <h3 class="fw-bold mb-0">Máximo 25 KG</h3>
@@ -344,24 +358,24 @@
                             <div class="col-md-6">
                                 <div class="p-4 bg-light rounded-4 border-start border-4 border-info h-100">
                                     <h5 class="fw-bold text-dark mb-3">Ruta Satélite Norte</h5>
-                                    <p class="small text-muted mb-3">Aplica para los municipios de <strong>Cajicá, Chía, Zipaquirá y zonas aledañas</strong>.</p>
+                                    <p class="small text-muted mb-3">Aplica para <strong>Cajicá, Chía, Zipaquirá y zonas aledañas</strong>.</p>
                                     <div class="d-flex flex-wrap">
                                         <span class="badge-day">L</span>
                                         <span class="badge-day">M</span>
                                         <span class="badge-day">V</span>
                                     </div>
-                                    <p class="small text-primary mt-2 mb-0 fw-bold">*Si el lunes es festivo, el recorrido pasa al día siguiente. Sujeto a volumen de solicitudes.</p>
+                                    <p class="small text-primary mt-2 mb-0 fw-bold">*Si el lunes es festivo, el recorrido pasa al día siguiente. Sujeto a volumen.</p>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="p-4 bg-light rounded-4 border-start border-4 border-warning h-100">
                                     <h5 class="fw-bold text-dark mb-3">Ruta Satélite Sur y Occidente</h5>
-                                    <p class="small text-muted mb-3">Aplica para los municipios de <strong>Funza, Madrid, Mosquera, Soacha, Usme y zonas aledañas</strong>.</p>
+                                    <p class="small text-muted mb-3">Aplica para <strong>Funza, Madrid, Mosquera, Soacha, Usme y zonas aledañas</strong>.</p>
                                     <div class="d-flex flex-wrap">
                                         <span class="badge-day" style="background-color: var(--warning);">M</span>
                                         <span class="badge-day" style="background-color: var(--warning);">J</span>
                                     </div>
-                                    <p class="small text-primary mt-2 mb-0 fw-bold">*Recorridos sujetos a la confirmación y volumen de solicitudes de la zona.</p>
+                                    <p class="small text-primary mt-2 mb-0 fw-bold">*Recorridos sujetos a la confirmación y volumen de solicitudes.</p>
                                 </div>
                             </div>
                         </div>
@@ -372,7 +386,7 @@
                     <div class="p-4 rounded-4" style="background-color: #E0F2FE; border: 1px solid #BAE6FD;">
                         <h5 class="fw-bold text-primary mb-2"><i class="fas fa-file-signature me-2"></i> Información Adicional: Gestión de Soportes</h5>
                         <p class="text-dark mb-0">
-                            Después de tramitar las diligencias, el mensajero debe <strong>escanear los documentos y enviarlos por correo electrónico</strong> (solo si es requerido por el usuario). Los soportes físicos en original se entregan directamente al <strong>área de archivo</strong> de la Constructora si no son exigidos de vuelta por el área usuaria.
+                            Después de tramitar las diligencias, el mensajero debe <strong>escanear los documentos y enviarlos por correo electrónico</strong> (solo si es requerido por el usuario). Los soportes físicos en original se entregan directamente al <strong>área de archivo</strong> si no son exigidos de vuelta.
                         </p>
                     </div>
                 </div>
@@ -383,20 +397,25 @@
     <section id="flujo-proceso" class="bg-light">
         <div class="container reveal">
             <h2 class="section-title">Alineación Nacional del Proceso</h2>
-            <p class="text-muted mb-5 lead">Conoce cómo se centraliza y distribuye la operación de mensajería, conectando las diferentes áreas de Constructora Bolívar con los agentes logísticos de SERGEM a nivel nacional.</p>
+            <p class="text-muted mb-5 lead">Conoce cómo se centraliza y distribuye la operación de mensajería, conectando las áreas con los agentes a nivel nacional.</p>
             
             <div class="row text-center align-items-center justify-content-center g-2 mb-5">
-                <div class="col-lg-2 col-md-4">
+                <div class="col-12 col-md-2">
                     <div class="card-custom border border-primary process-card">
                         <i class="fas fa-building fa-3x text-primary mb-3"></i>
                         <h6 class="fw-bold">Áreas Solicitantes Bolívar</h6>
-                        <p class="small text-muted mb-0">Generación de la solicitud desde cualquier regional.</p>
+                        <p class="small text-muted mb-0">Generación de la solicitud.</p>
                     </div>
                 </div>
-                <div class="col-lg-1 col-md-1 d-none d-md-flex justify-content-center">
+                
+                <div class="col-md-1 d-none d-md-flex justify-content-center">
                     <i class="fas fa-arrow-right fa-2x text-muted"></i>
                 </div>
-                <div class="col-lg-2 col-md-4">
+                <div class="col-12 d-md-none d-flex justify-content-center py-2">
+                    <i class="fas fa-arrow-down fa-2x text-muted"></i>
+                </div>
+
+                <div class="col-12 col-md-2">
                     <div class="card-custom border border-secondary process-card bg-white">
                         <div class="mb-2">
                             <img src="wipLogo.png?v=3" alt="Wip Logo" style="height: 40px; object-fit: contain;">
@@ -404,36 +423,46 @@
                         <h6 class="fw-bold text-secondary mb-0">Plataforma Wip</h6>
                     </div>
                 </div>
-                <div class="col-lg-1 col-md-1 d-none d-md-flex justify-content-center">
+
+                <div class="col-md-1 d-none d-md-flex justify-content-center">
                     <i class="fas fa-arrow-right fa-2x text-muted"></i>
                 </div>
-                <div class="col-lg-2 col-md-4 mt-3 mt-lg-0">
+                <div class="col-12 d-md-none d-flex justify-content-center py-2">
+                    <i class="fas fa-arrow-down fa-2x text-muted"></i>
+                </div>
+
+                <div class="col-12 col-md-2">
                     <div class="card-custom border border-danger process-card">
                         <div class="mb-3">
                             <img src="sergemLogo.png?v=3" alt="Sergem Logo" style="height: 30px; object-fit: contain;">
                         </div>
                         <h6 class="fw-bold text-danger">Mesa de Control</h6>
-                        <p class="small text-muted mb-0">Recepción, validación ANS y asignación.</p>
+                        <p class="small text-muted mb-0">Validación ANS y asignación.</p>
                     </div>
                 </div>
-                <div class="col-lg-1 col-md-1 d-none d-md-flex justify-content-center mt-3 mt-lg-0">
+
+                <div class="col-md-1 d-none d-md-flex justify-content-center">
                     <i class="fas fa-arrow-right fa-2x text-muted"></i>
                 </div>
-                <div class="col-lg-2 col-md-4 mt-3 mt-lg-0">
+                <div class="col-12 d-md-none d-flex justify-content-center py-2">
+                    <i class="fas fa-arrow-down fa-2x text-muted"></i>
+                </div>
+
+                <div class="col-12 col-md-2">
                     <div class="card-custom border border-success process-card">
                         <i class="fas fa-motorcycle fa-2x text-success mb-3"></i>
                         <h6 class="fw-bold text-success">Mensajero Asignado</h6>
-                        <p class="small text-muted mb-0">Ejecución en calle y cierre de ciclo.</p>
+                        <p class="small text-muted mb-0">Ejecución en calle y cierre.</p>
                     </div>
                 </div>
             </div>
 
-            <ul class="nav nav-pills row g-4 mb-4 mt-2" id="pills-tab-roles" role="tablist">
+            <ul class="nav nav-pills row g-3 mb-4 mt-2" id="pills-tab-roles" role="tablist">
                 <li class="nav-item col-md-4" role="presentation">
                     <button class="nav-link active w-100 h-100 text-start p-0 custom-role-tab" id="pills-usuario-tab" data-bs-toggle="pill" data-bs-target="#pills-usuario" type="button" role="tab" aria-selected="true">
                         <div class="card-custom border shadow-sm" style="border-left: 5px solid #0A2540 !important;">
                             <h4 class="fw-bold" style="color: #0A2540;"><i class="fas fa-user-tie mb-2"></i><br>1. Funcionario Bolívar</h4>
-                            <p class="small text-muted mb-0">Consulta aquí cómo estructurar correctamente tus solicitudes y monitorearlas en plataforma.</p>
+                            <p class="small text-muted mb-0">Cómo estructurar correctamente tus solicitudes.</p>
                         </div>
                     </button>
                 </li>
@@ -442,7 +471,7 @@
                     <button class="nav-link w-100 h-100 text-start p-0 custom-role-tab" id="pills-coordinador-tab" data-bs-toggle="pill" data-bs-target="#pills-coordinador" type="button" role="tab" aria-selected="false">
                         <div class="card-custom border shadow-sm" style="border-left: 5px solid #DC2626 !important;">
                             <h4 class="fw-bold" style="color: #DC2626;"><i class="fas fa-headset mb-2"></i><br>2. Coordinador Logístico</h4>
-                            <p class="small text-muted mb-0">Supervisión en el tablero central y distribución de la carga nacional a nivel regional.</p>
+                            <p class="small text-muted mb-0">Supervisión en el tablero central y distribución.</p>
                         </div>
                     </button>
                 </li>
@@ -451,28 +480,26 @@
                     <button class="nav-link w-100 h-100 text-start p-0 custom-role-tab" id="pills-mensajero-tab" data-bs-toggle="pill" data-bs-target="#pills-mensajero" type="button" role="tab" aria-selected="false">
                         <div class="card-custom border shadow-sm" style="border-left: 5px solid #16A34A !important;">
                             <h4 class="fw-bold" style="color: #16A34A;"><i class="fas fa-motorcycle mb-2"></i><br>3. Mensajero SERGEM</h4>
-                            <p class="small text-muted mb-0">Recepción de ruta, ejecución física y carga de pruebas en tiempo real.</p>
+                            <p class="small text-muted mb-0">Recepción de ruta y carga de pruebas.</p>
                         </div>
                     </button>
                 </li>
             </ul>
 
             <div class="tab-content bg-white p-4 rounded-4 shadow-sm border" id="pills-tabContent-roles">
-                
                 <div class="tab-pane fade show active" id="pills-usuario" role="tabpanel">
                     <h4 class="fw-bold text-primary mb-4"><i class="fas fa-clipboard-list me-2"></i> Radicación de Servicio</h4>
                     <div class="row align-items-center">
                         <div class="col-md-7">
-                            <p class="text-muted">Por favor sigue atentamente la documentación paso a paso para la correcta parametrización del servicio:</p>
                             <ol class="list-group list-group-numbered list-group-flush mb-4">
-                                <li class="list-group-item border-0">Ingresa al entorno de <b>wiptool.com</b> a través de la intranet corporativa (IntraB).</li>
+                                <li class="list-group-item border-0">Ingresa al entorno de <b>wiptool.com</b> a través de (IntraB).</li>
                                 <li class="list-group-item border-0">Abre el menú lateral y haz clic en <b>'Nueva Solicitud'</b>.</li>
-                                <li class="list-group-item border-0">Selecciona el esquema requerido (Envío a un origen/destino único o múltiples destinos).</li>
-                                <li class="list-group-item border-0">Ingresa la dirección detallada, nombre del contacto y asocia el centro de costos.</li>
+                                <li class="list-group-item border-0">Selecciona el esquema requerido (Único o múltiples destinos).</li>
+                                <li class="list-group-item border-0">Ingresa dirección, contacto y asocia el centro de costos.</li>
                                 <li class="list-group-item border-0">Revisa la información y presiona <b>Crear</b>.</li>
                             </ol>
                         </div>
-                        <div class="col-md-5 text-center">
+                        <div class="col-md-5 text-center mt-3 mt-md-0">
                             <div class="p-4 bg-light rounded border border-primary shadow-sm d-inline-block">
                                 <i class="fas fa-desktop fa-4x text-primary mb-2"></i>
                                 <p class="small text-muted fw-bold mb-0 mt-3">Portal Web Bolívar</p>
@@ -488,12 +515,12 @@
                         <div class="col-md-7">
                             <ol class="list-group list-group-numbered list-group-flush">
                                 <li class="list-group-item border-0">Acceso a la vista global del <b>Dashboard Central</b> de Wip.</li>
-                                <li class="list-group-item border-0">Filtrado y validación de las solicitudes entrantes (Estado <b>'Pendiente'</b>) respetando los ANS definidos previamente.</li>
-                                <li class="list-group-item border-0">Alineación de rutas lógicas y validación de restricciones de carga y cubicaje permitido.</li>
-                                <li class="list-group-item border-0">Despacho de la orden hacia la flota motorizada en cada sede.</li>
+                                <li class="list-group-item border-0">Filtrado y validación de las solicitudes (Estado <b>'Pendiente'</b>).</li>
+                                <li class="list-group-item border-0">Alineación de rutas lógicas y validación de restricciones.</li>
+                                <li class="list-group-item border-0">Despacho de la orden hacia la flota motorizada.</li>
                             </ol>
                         </div>
-                        <div class="col-md-5 text-center">
+                        <div class="col-md-5 text-center mt-3 mt-md-0">
                             <div class="p-4 bg-light rounded border border-secondary shadow-sm d-inline-block">
                                 <i class="fas fa-desktop fa-4x text-muted mb-2"></i>
                                 <p class="small text-muted fw-bold mb-0 mt-3">Tablero de Control</p>
@@ -508,13 +535,13 @@
                     <div class="row align-items-center">
                         <div class="col-md-7">
                             <ol class="list-group list-group-numbered list-group-flush">
-                                <li class="list-group-item border-0">El agente recibe la notificación de la ruta en su dispositivo móvil.</li>
-                                <li class="list-group-item border-0">Acepta la ruta, cambiando el estado visible a <b>'En Tránsito'</b> para el usuario en Bolívar.</li>
-                                <li class="list-group-item border-0">Entrega del documento físico en el punto de contacto.</li>
-                                <li class="list-group-item border-0">Sube fotografías de soporte, recolecta firma o tipifica una eventual <b>'Novedad'</b> que impida el cierre.</li>
+                                <li class="list-group-item border-0">Notificación de la ruta en su dispositivo móvil.</li>
+                                <li class="list-group-item border-0">Acepta la ruta (estado visible: <b>'En Tránsito'</b>).</li>
+                                <li class="list-group-item border-0">Entrega del documento físico en destino.</li>
+                                <li class="list-group-item border-0">Sube fotos de soporte o tipifica <b>'Novedad'</b>.</li>
                             </ol>
                         </div>
-                        <div class="col-md-5 text-center">
+                        <div class="col-md-5 text-center mt-3 mt-md-0">
                             <div class="p-4 bg-light rounded border border-success shadow-sm d-inline-block">
                                 <i class="fas fa-mobile-alt fa-4x text-success mb-2"></i>
                                 <p class="small text-muted fw-bold mb-0 mt-3">App Móvil Wip</p>
@@ -543,7 +570,7 @@
                         </div>
                         <h4 class="fw-bold text-primary mb-2">Servicios Generados</h4>
                         <h6 class="text-secondary mb-3">Por Regional</h6>
-                        <p class="small text-muted mb-0">Consolidado del volumen total de radicaciones solicitadas, organizadas según la sede origen de Constructora Bolívar a nivel nacional.</p>
+                        <p class="small text-muted mb-0">Consolidado del volumen total de radicaciones solicitadas, organizadas según la sede origen a nivel nacional.</p>
                     </div>
                 </div>
                 
@@ -554,7 +581,7 @@
                         </div>
                         <h4 class="fw-bold text-primary mb-2">Promedio de Servicios</h4>
                         <h6 class="text-danger mb-3">Por Sede Administrativa</h6>
-                        <p class="small text-muted mb-0">Métrica de densidad que evalúa la carga operativa promedio de diligencias asignadas mensualmente para la medición de la capacidad de la flota.</p>
+                        <p class="small text-muted mb-0">Métrica de densidad que evalúa la carga operativa promedio mensual para dimensionar la capacidad de la flota.</p>
                     </div>
                 </div>
                 
@@ -565,7 +592,7 @@
                         </div>
                         <h4 class="fw-bold text-primary mb-2">% de Efectividad</h4>
                         <h6 class="text-success mb-3">Por Sede Logística</h6>
-                        <p class="small text-muted mb-0">Tasa de éxito en la entrega final en primer intento, reflejando el cumplimiento óptimo de los ANS (Acuerdos de Nivel de Servicio).</p>
+                        <p class="small text-muted mb-0">Tasa de éxito en la entrega final en primer intento, reflejando el cumplimiento óptimo de los ANS pactados.</p>
                     </div>
                 </div>
             </div>
@@ -575,7 +602,7 @@
     <section id="plataforma" class="bg-light">
         <div class="container reveal">
             <h2 class="section-title">Documentación del Proceso (Videotutoriales Wip)</h2>
-            <p class="text-muted mb-4">Material de apoyo enfocado a las tareas administrativas, monitoreo de radicaciones y trazabilidad de los servicios vigentes.</p>
+            <p class="text-muted mb-4">Material de apoyo enfocado a las tareas administrativas, monitoreo de radicaciones y trazabilidad de los servicios.</p>
 
             <div class="row bg-white p-4 rounded-4 shadow-sm align-items-start border">
                 
@@ -607,7 +634,6 @@
                                     Tu navegador no soporta el video.
                                 </video>
                             </div>
-                            <p class="text-muted small">Aprende a ingresar correctamente a la plataforma Wip desde la intranet corporativa o enlace web.</p>
                         </div>
 
                         <div class="tab-pane fade" id="v-pills-crear1" role="tabpanel">
@@ -618,7 +644,6 @@
                                     Tu navegador no soporta el video.
                                 </video>
                             </div>
-                            <p class="text-muted small">Conoce el paso a paso detallado para radicar una solicitud de mensajería de forma individual.</p>
                         </div>
 
                         <div class="tab-pane fade" id="v-pills-masivas" role="tabpanel">
@@ -629,7 +654,6 @@
                                     Tu navegador no soporta el video.
                                 </video>
                             </div>
-                            <p class="text-muted small">Descubre cómo montar múltiples destinos y encadenar rutas complejas en una sola solicitud masiva.</p>
                         </div>
 
                         <div class="tab-pane fade" id="v-pills-seguimiento" role="tabpanel">
@@ -640,7 +664,6 @@
                                     Tu navegador no soporta el video.
                                 </video>
                             </div>
-                            <p class="text-muted small">Aprende a monitorear el estado en tiempo real de tus radicaciones y el proceso adecuado para cancelarlas si es necesario.</p>
                         </div>
                         
                     </div>
@@ -651,24 +674,24 @@
 
     <section id="gestion" class="bg-white">
         <div class="container reveal">
-            <h2 class="section-title">Medición de Indicadores y Plan de Comunicación</h2>
+            <h2 class="section-title">Medición y Plan de Comunicación</h2>
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="card-custom bg-light border border-light">
-                        <h5 class="fw-bold text-primary"><i class="fas fa-chart-pie"></i> Definición y Medición de Indicadores</h5>
-                        <p class="small text-muted">A través de los tableros de control de Wip extraemos métricas operativas críticas: <strong>Volumen de servicios por área</strong>, servicios totales por sede regional, distribución de la carga asignada por cada mensajero, cumplimiento de ANS y tasa de entrega exitosa en el primer intento.</p>
+                        <h5 class="fw-bold text-primary"><i class="fas fa-chart-pie"></i> Definición de Indicadores</h5>
+                        <p class="small text-muted">A través de los tableros de control extraemos métricas: <strong>Volumen por área</strong>, servicios totales por regional, distribución de carga, cumplimiento de ANS y efectividad.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card-custom bg-light border border-light">
                         <h5 class="fw-bold text-primary"><i class="fas fa-bullhorn"></i> Plan de Comunicación</h5>
-                        <p class="small text-muted">Este manual interactivo, junto a los videotutoriales y los comunicados oficiales enviados por correo interno, componen la estrategia de transferencia de conocimiento para estandarizar el uso de la aplicación a nivel nacional dentro de las áreas de Constructora Bolívar.</p>
+                        <p class="small text-muted">Este manual interactivo y los comunicados oficiales componen la estrategia de transferencia de conocimiento para estandarizar el uso de la aplicación a nivel nacional.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card-custom bg-light border border-light">
-                        <h5 class="fw-bold text-primary"><i class="fas fa-file-excel"></i> Elaboración de Informes de la Operación</h5>
-                        <p class="small text-muted">A partir de la data alojada en Wip, se generan cortes mensuales para consolidar la productividad general de SERGEM. Esto permite analizar los picos de demanda y auditar la eficiencia logística comparada contra los acuerdos de servicio establecidos.</p>
+                        <h5 class="fw-bold text-primary"><i class="fas fa-file-excel"></i> Informes de Operación</h5>
+                        <p class="small text-muted">A partir de la data alojada en Wip, se generan cortes mensuales para consolidar la productividad general. Esto permite analizar los picos de demanda y auditar la eficiencia.</p>
                     </div>
                 </div>
             </div>
@@ -686,7 +709,6 @@
             </div>
 
             <div class="accordion shadow-sm" id="accordionFAQ">
-                
                 <div class="accordion-item border-0 mb-2 rounded-3 overflow-hidden faq-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-nueva1">
@@ -695,7 +717,7 @@
                     </h2>
                     <div id="faq-nueva1" class="accordion-collapse collapse show" data-bs-parent="#accordionFAQ">
                         <div class="accordion-body text-muted faq-text bg-white">
-                            Para realizar una solicitud, ingresa a la plataforma Wip, dirígete a la sección <strong>'Nueva Solicitud'</strong> en el menú lateral, selecciona el tipo de servicio y completa los campos obligatorios (dirección, contacto, centro de costos). Si tienes dudas del proceso exacto, te invitamos a ver los videos "Crear 1 Diligencia" y "Diligencias Masivas" en la sección de Documentación de esta misma página.
+                            Para realizar una solicitud, ingresa a la plataforma Wip, dirígete a la sección <strong>'Nueva Solicitud'</strong> en el menú lateral, selecciona el tipo de servicio y completa los campos obligatorios. Si tienes dudas, te invitamos a ver los videos en la sección de Documentación de esta página.
                         </div>
                     </div>
                 </div>
@@ -708,7 +730,7 @@
                     </h2>
                     <div id="faq-nueva2" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
                         <div class="accordion-body text-muted faq-text bg-white">
-                            Al momento de crear tu solicitud, el sistema te permite elegir entre un envío directo (origen a un destino único) o una ruta compleja (múltiples destinos encadenados en una misma solicitud). Si tu trámite requiere recolección de firmas, sellos o visitas a varias ventanillas antes de regresar, asegúrate de indicarlo claramente en el campo de "Notas".
+                            Al momento de crear tu solicitud, el sistema te permite elegir entre un envío directo o una ruta compleja (múltiples destinos). Si tu trámite requiere recolección de firmas, espera por sellos o visitas a varias ventanillas, asegúrate de indicarlo en "Notas".
                         </div>
                     </div>
                 </div>
@@ -721,7 +743,7 @@
                     </h2>
                     <div id="faq-nueva3" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
                         <div class="accordion-body text-muted faq-text bg-white">
-                            Para el personal administrativo, la plataforma de Wip está disponible desde cualquier navegador web en la dirección <strong>wiptool.com</strong>, y también cuenta con un acceso directo y centralizado desde la intranet corporativa (IntraB) de Constructora Bolívar.
+                            Para el personal administrativo, la plataforma de Wip está disponible desde cualquier navegador web en la dirección <strong>wiptool.com</strong>, y también cuenta con un acceso desde la intranet corporativa (IntraB).
                         </div>
                     </div>
                 </div>
@@ -734,7 +756,7 @@
                     </h2>
                     <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
                         <div class="accordion-body text-muted faq-text bg-white">
-                            Esta clasificación determina la complejidad logística. <strong>Una (1) vuelta</strong> consiste en un envío directo, recoger en A y entregar en B. <strong>Dos (2) o tres (3) vueltas</strong> aplican para trámites que exigen radicados complejos ante entidades, recolección de firmas, espera por sellos, o visitas a múltiples ventanillas y notarias antes de retornar los soportes originales.
+                            Esta clasificación determina la complejidad. <strong>Una (1) vuelta</strong> consiste en un envío directo. <strong>Dos (2) o tres (3) vueltas</strong> aplican para trámites que exigen radicados ante entidades, recolección de firmas, sellos, o visitas a múltiples notarias antes de retornar los soportes.
                         </div>
                     </div>
                 </div>
@@ -747,7 +769,7 @@
                     </h2>
                     <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
                         <div class="accordion-body text-muted faq-text bg-white">
-                            Debes hacer clic en la opción "¿Olvidaste tu contraseña?" en la pantalla de inicio del portal Wip. Recibirás inmediatamente un enlace en tu correo corporativo para restablecerla de forma segura.
+                            Haz clic en "¿Olvidaste tu contraseña?" en la pantalla de inicio del portal Wip. Recibirás un enlace en tu correo corporativo para restablecerla de forma segura.
                         </div>
                     </div>
                 </div>
@@ -760,7 +782,7 @@
                     </h2>
                     <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
                         <div class="accordion-body text-muted faq-text bg-white">
-                            La anulación o modificación directa en la web es viable únicamente si el ticket se encuentra en estado "Pendiente". Si el estado de tu radicación ha cambiado a "Asignado" o "En Tránsito", toda gestión o cancelación debe tramitarse obligatoriamente mediante el Directorio de Coordinación de SERGEM.
+                            La modificación en la web es viable únicamente si el ticket está "Pendiente". Si ha cambiado a "Asignado" o "En Tránsito", toda gestión debe tramitarse mediante el Directorio de Coordinación.
                         </div>
                     </div>
                 </div>
@@ -768,12 +790,12 @@
                 <div class="accordion-item border-0 mb-2 rounded-3 overflow-hidden faq-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                            ¿Cómo puedo hacer seguimiento (rastreo) y ver las evidencias físicas?
+                            ¿Cómo puedo hacer seguimiento y ver las evidencias físicas?
                         </button>
                     </h2>
                     <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
                         <div class="accordion-body text-muted faq-text bg-white">
-                            Puedes ingresar al módulo de Historial dentro de tu sesión en Wip. Allí se reflejan en tiempo real los hitos de control, permitiéndote además interactuar por chat directamente con el mensajero en calle y descargar las fotografías de soporte o guías firmadas una vez que el estado sea "Entregado".
+                            Ingresa al módulo de Historial. Allí se reflejan en tiempo real los hitos de control, permitiéndote interactuar por chat con el mensajero y descargar las fotografías de soporte cuando el estado sea "Entregado".
                         </div>
                     </div>
                 </div>
@@ -786,7 +808,7 @@
                     </h2>
                     <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
                         <div class="accordion-body text-muted faq-text bg-white">
-                            El mensajero asignado reportará una "Novedad" inmediata desde la aplicación móvil. Por seguridad, el paquete o documento será retornado a la base operativa o al punto de origen en Bolívar para gestionar posteriormente la reprogramación del servicio en una nueva ventana horaria.
+                            El mensajero reportará una "Novedad" desde la app. Por seguridad, el paquete retornará a la base operativa o al punto de origen para gestionar la reprogramación del servicio en una nueva ventana horaria.
                         </div>
                     </div>
                 </div>
@@ -800,17 +822,16 @@
 
     <section id="directorio" class="bg-white pb-5">
         <div class="container reveal">
-            <h2 class="section-title">Directorio de Coordinación Operativa</h2>
-            <p class="text-muted mb-4 text-center">Para escalamientos o incidencias que requieran gestión humana directa, por favor contactar a su coordinador de zona asignado:</p>
+            <h2 class="section-title">Directorio de Coordinación</h2>
+            <p class="text-muted mb-4 text-center">Para escalamientos o incidencias que requieran gestión humana directa:</p>
             
             <div class="row justify-content-center g-4 text-center mt-2">
-                
                 <div class="col-md-6 col-lg-3">
                     <div class="card-custom border shadow-sm bg-light">
                         <div class="rounded-circle text-white d-inline-flex justify-content-center align-items-center mb-3 shadow-sm" style="width: 70px; height: 70px; font-size: 24px; font-weight: bold; background-color: var(--secondary);">SR</div>
                         <h5 class="fw-bold text-primary">Stiven Rodriguez</h5>
-                        <p class="text-muted small">Coordinador Mensajería<br><strong>Regional Centro - Norte</strong></p>
-                        <a href="mailto:mensajeria@constructorabolivar.com" class="btn btn-outline-primary w-100 mb-2" style="font-size: 0.8rem;"><i class="fas fa-envelope me-1"></i> Correo Electrónico</a>
+                        <p class="text-muted small">Coordinador<br><strong>Centro - Norte</strong></p>
+                        <a href="mailto:mensajeria@constructorabolivar.com" class="btn btn-outline-primary w-100 mb-2" style="font-size: 0.8rem;"><i class="fas fa-envelope me-1"></i> Correo</a>
                         <a href="tel:3102502316" class="btn btn-primary w-100"><i class="fas fa-phone me-1"></i> 310 2502316</a>
                     </div>
                 </div>
@@ -819,8 +840,8 @@
                     <div class="card-custom border shadow-sm bg-light">
                         <div class="rounded-circle text-white d-inline-flex justify-content-center align-items-center mb-3 shadow-sm" style="width: 70px; height: 70px; font-size: 24px; font-weight: bold; background-color: #059669;">EP</div>
                         <h5 class="fw-bold text-primary">Eliana Padilla</h5>
-                        <p class="text-muted small">Coordinador Mensajería<br><strong>Regional Norte</strong></p>
-                        <a href="mailto:eliana.padilla@constructorabolivar.com" class="btn btn-outline-primary w-100 mb-2" style="font-size: 0.8rem;"><i class="fas fa-envelope me-1"></i> Correo Electrónico</a>
+                        <p class="text-muted small">Coordinador<br><strong>Regional Norte</strong></p>
+                        <a href="mailto:eliana.padilla@constructorabolivar.com" class="btn btn-outline-primary w-100 mb-2" style="font-size: 0.8rem;"><i class="fas fa-envelope me-1"></i> Correo</a>
                         <a href="tel:3023275910" class="btn btn-primary w-100" style="background-color: #059669; border-color: #059669;"><i class="fas fa-phone me-1"></i> 302 3275910</a>
                     </div>
                 </div>
@@ -829,8 +850,8 @@
                     <div class="card-custom border shadow-sm bg-light">
                         <div class="rounded-circle text-white d-inline-flex justify-content-center align-items-center mb-3 shadow-sm" style="width: 70px; height: 70px; font-size: 24px; font-weight: bold; background-color: var(--danger);">DP</div>
                         <h5 class="fw-bold text-primary">Daniela Parra</h5>
-                        <p class="text-muted small">Coordinador Mensajería<br><strong>Regional Centro</strong></p>
-                        <a href="mailto:daniela.parra@constructorabolivar.com" class="btn btn-outline-primary w-100 mb-2" style="font-size: 0.8rem;"><i class="fas fa-envelope me-1"></i> Correo Electrónico</a>
+                        <p class="text-muted small">Coordinador<br><strong>Regional Centro</strong></p>
+                        <a href="mailto:daniela.parra@constructorabolivar.com" class="btn btn-outline-primary w-100 mb-2" style="font-size: 0.8rem;"><i class="fas fa-envelope me-1"></i> Correo</a>
                         <a href="tel:3006674685" class="btn btn-danger w-100"><i class="fas fa-phone me-1"></i> 300 6674685</a>
                     </div>
                 </div>
@@ -838,13 +859,12 @@
                 <div class="col-md-6 col-lg-3">
                     <div class="card-custom border shadow-sm bg-light">
                         <div class="rounded-circle text-white d-inline-flex justify-content-center align-items-center mb-3 shadow-sm" style="width: 70px; height: 70px; font-size: 24px; font-weight: bold; background-color: var(--warning);">JU</div>
-                        <h5 class="fw-bold text-primary">James Urrea Ortiz</h5>
-                        <p class="text-muted small">Coordinador Mensajería<br><strong>Regional Sur</strong></p>
-                        <a href="mailto:jurrea@cbolivar.com" class="btn btn-outline-primary w-100 mb-2" style="font-size: 0.8rem;"><i class="fas fa-envelope me-1"></i> Correo Electrónico</a>
+                        <h5 class="fw-bold text-primary">James Urrea</h5>
+                        <p class="text-muted small">Coordinador<br><strong>Regional Sur</strong></p>
+                        <a href="mailto:jurrea@cbolivar.com" class="btn btn-outline-primary w-100 mb-2" style="font-size: 0.8rem;"><i class="fas fa-envelope me-1"></i> Correo</a>
                         <a href="tel:3154849023" class="btn btn-warning text-white w-100"><i class="fas fa-phone me-1"></i> 315 4849023</a>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -855,7 +875,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Funcionalidad Scroll Reveal (Aparición progresiva)
         function reveal() {
             var reveals = document.querySelectorAll(".reveal");
             for (var i = 0; i < reveals.length; i++) {
@@ -868,10 +887,8 @@
             }
         }
         window.addEventListener("scroll", reveal);
-        // Desencadenar una vez al cargar la página
         reveal();
 
-        // Lógica del Buscador de Respuestas Rápidas (FAQ)
         document.getElementById('faqSearch').addEventListener('keyup', function() {
             let filter = this.value.toLowerCase();
             let faqItems = document.querySelectorAll('.faq-item');
@@ -897,7 +914,6 @@
             document.getElementById('noResults').style.display = hasResults ? 'none' : 'block';
         });
 
-        // Control del colapso del menú móvil al hacer clic
         document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
             link.addEventListener('click', () => {
                 let navbarCollapse = document.getElementById('navbarNav');
