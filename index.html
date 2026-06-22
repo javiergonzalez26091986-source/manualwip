@@ -233,7 +233,7 @@
 
         /* Estilos para el Carrusel Mejorado */
         .carousel-container {
-            max-width: 900px; /* Evita que se vea gigante */
+            max-width: 900px;
             margin: 0 auto;
             border-radius: 15px;
             overflow: hidden;
@@ -243,8 +243,8 @@
         .carousel-item img {
             width: 100%;
             height: auto;
-            max-height: 550px; /* Limita la altura para nitidez */
-            object-fit: contain; /* Ajusta la imagen sin recortar ni estirar */
+            max-height: 550px;
+            object-fit: contain;
         }
         .carousel-control-prev-icon,
         .carousel-control-next-icon {
@@ -326,31 +326,37 @@
                 <div class="col-lg-7">
                     <div class="ans-highlight-card p-4 h-100">
                         <h4 class="fw-bold text-primary mb-4"><i class="fas fa-clock text-secondary me-2"></i> Horarios de Atención y Gestión</h4>
+                        
                         <div class="d-flex align-items-start mb-4">
                             <div class="flex-shrink-0 me-3 mt-1">
                                 <i class="fas fa-sun fa-2x text-warning"></i>
                             </div>
                             <div>
-                                <h5 class="fw-bold mb-1">Corte Matutino</h5>
-                                <p class="text-muted mb-0">Las solicitudes recibidas <strong>antes de las 8:30 am</strong> o en la tarde del día anterior, se gestionan de forma obligatoria <strong>antes del mediodía</strong>.</p>
+                                <h5 class="fw-bold mb-1">Jornada Mañana</h5>
+                                <p class="text-muted mb-0">Las solicitudes recibidas entre las <strong>7:00 a.m. y las 12:00 p.m.</strong> se gestionarán de forma obligatoria durante la <strong>jornada de la tarde</strong>.</p>
                             </div>
                         </div>
+                        
                         <div class="d-flex align-items-start mb-4">
                             <div class="flex-shrink-0 me-3 mt-1">
                                 <i class="fas fa-cloud-sun fa-2x text-info"></i>
                             </div>
                             <div>
-                                <h5 class="fw-bold mb-1">Corte Vespertino</h5>
-                                <p class="text-muted mb-0">Las solicitudes recibidas <strong>entre las 8:30 am y las 2:00 pm</strong> se gestionan de forma obligatoria <strong>por la tarde</strong>. <br><small><em>(Aplica para sedes principales, excepto Soacha y municipios periféricos).</em></small></p>
+                                <h5 class="fw-bold mb-1">Jornada Tarde</h5>
+                                <p class="text-muted mb-0">Las solicitudes recibidas entre la <strong>1:00 p.m. y las 5:00 p.m.</strong> serán gestionadas en la <strong>siguiente jornada hábil</strong>.</p>
                             </div>
                         </div>
+                        
                         <div class="d-flex align-items-start">
                             <div class="flex-shrink-0 me-3 mt-1">
-                                <i class="fas fa-moon fa-2x" style="color: #64748B;"></i>
+                                <i class="fas fa-exclamation-circle fa-2x" style="color: #64748B;"></i>
                             </div>
                             <div>
-                                <h5 class="fw-bold mb-1">Corte Extemporáneo</h5>
-                                <p class="text-muted mb-0">Todo documento o paquete entregado <strong>fuera del horario establecido</strong> ingresará al flujo logístico para gestionarse el <strong>siguiente día hábil</strong>.</p>
+                                <h5 class="fw-bold mb-1">Excepciones y Particularidades</h5>
+                                <p class="text-muted mb-0">
+                                    <strong>Ibagué:</strong> Servicio de medio tiempo (8:00 a.m. a 12:00 p.m.), las solicitudes deben recibirse el día hábil anterior. <br>
+                                    <strong>Girardot y Ricaurte:</strong> Programación realizada a demanda.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -362,13 +368,13 @@
                         <p class="text-muted text-center mb-4">Nuestra flota motorizada cuenta con límites estrictos de seguridad física para el transporte.</p>
                         
                         <div class="ans-alert-box text-center mb-4">
-                            <h3 class="fw-bold mb-0">Máximo 25 KG</h3>
+                            <h3 class="fw-bold mb-0">Máximo 20 KG</h3>
                             <div class="my-2 text-danger fw-bold">Ó</div>
-                            <h3 class="fw-bold mb-0">30 Escrituras</h3>
+                            <h3 class="fw-bold mb-0">20 Escrituras</h3>
                         </div>
                         
                         <p class="small text-muted text-center mb-0">
-                            Si se requiere trasladar material que exceda estas dimensiones, se debe <strong>programar más de un viaje</strong> o solicitar transporte en vehículo diligenciando el <a href="https://forms.gle/HdBpe9ZuFhfbwa4x9" target="_blank" class="fw-bold text-primary text-decoration-none border-bottom border-primary">Formulario Oficial aquí</a>.
+                            Si se requiere trasladar material que exceda estas dimensiones, se debe <strong>programar más de un viaje</strong> distribuyendo las cargas, o solicitar transporte en vehículo a través de las plataformas de cada regional.
                         </p>
                     </div>
                 </div>
@@ -376,33 +382,42 @@
                 <div class="col-12 reveal">
                     <div class="card-custom border border-light p-4 shadow-sm mt-2">
                         <h4 class="fw-bold text-primary mb-4"><i class="fas fa-map-marked-alt text-secondary me-2"></i> Cobertura Nacional y Rutas Satélites</h4>
-                        <p class="text-muted mb-4">El servicio de mensajería funciona de forma centralizada dentro del perímetro urbano de <strong>Bogotá, Barranquilla, Santa Marta, Cartagena, Ibagué y Medellín</strong>. En la plataforma podrás elegir opciones de un origen con uno o más destinos. <span class="text-danger fw-bold">En caso de requerir una diligencia fuera del perímetro, se debe validar la disponibilidad y se coordinará según demanda.</span></p>
+                        <p class="text-muted mb-4">El servicio de mensajería funciona dentro del perímetro urbano de <strong>Bogotá, Barranquilla, Santa Marta, Cartagena, Ibagué y Medellín</strong>. <span class="text-danger fw-bold">En caso de requerir una diligencia fuera del perímetro, se debe validar disponibilidad con el líder.</span></p>
                         
                         <div class="row g-4">
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <div class="p-4 bg-light rounded-4 border-start border-4 border-info h-100">
-                                    <h5 class="fw-bold text-dark mb-3">Ruta Satélite Norte</h5>
-                                    <p class="small text-muted mb-3">Aplica para <strong>Cajicá, Chía, Zipaquirá y zonas aledañas</strong>.</p>
+                                    <h5 class="fw-bold text-dark mb-3">Centro - Norte</h5>
+                                    <p class="small text-muted mb-3">Aplica para <strong>Cota, Chía, Cajicá y Zipaquirá</strong>.</p>
                                     <div class="d-flex flex-wrap">
                                         <span class="badge-day">Lun</span>
                                         <span class="badge-day">Mié</span>
                                         <span class="badge-day">Vie</span>
                                     </div>
-                                    <p class="small text-primary mt-2 mb-0 fw-bold">*Si el lunes es festivo, el recorrido pasa al día siguiente. Sujeto a volumen.</p>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <div class="p-4 bg-light rounded-4 border-start border-4 border-warning h-100">
-                                    <h5 class="fw-bold text-dark mb-3">Ruta Satélite Sur y Occidente</h5>
-                                    <p class="small text-muted mb-3">Aplica para <strong>Funza, Madrid, Mosquera, Soacha, Usme y zonas aledañas</strong>.</p>
+                                    <h5 class="fw-bold text-dark mb-3">Centro - Sur</h5>
+                                    <p class="small text-muted mb-3">Aplica para <strong>Funza, Mosquera, Madrid, Soacha y Usme</strong>.</p>
                                     <div class="d-flex flex-wrap">
                                         <span class="badge-day" style="background-color: var(--warning);">Mar</span>
                                         <span class="badge-day" style="background-color: var(--warning);">Jue</span>
                                     </div>
-                                    <p class="small text-primary mt-2 mb-0 fw-bold">*Recorridos sujetos a la confirmación y volumen de solicitudes.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="p-4 bg-light rounded-4 border-start border-4 border-success h-100">
+                                    <h5 class="fw-bold text-dark mb-3">Regional Sur</h5>
+                                    <p class="small text-muted mb-3">Aplica para <strong>Jamundí, Palmira y Candelaria</strong>.</p>
+                                    <div class="d-flex flex-wrap">
+                                        <span class="badge-day" style="background-color: var(--success);">Mar</span>
+                                        <span class="badge-day" style="background-color: var(--success);">Jue</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <p class="small text-muted mt-3 mb-0 fw-bold text-center">* Estas zonas se programan de acuerdo a la demanda de solicitudes operativas.</p>
                     </div>
                 </div>
 
@@ -410,7 +425,7 @@
                     <div class="p-4 rounded-4" style="background-color: #E0F2FE; border: 1px solid #BAE6FD;">
                         <h5 class="fw-bold text-primary mb-2"><i class="fas fa-file-signature me-2"></i> Información Adicional: Gestión de Soportes</h5>
                         <p class="text-dark mb-0">
-                            Después de tramitar las diligencias, el mensajero debe <strong>escanear los documentos y enviarlos por correo electrónico</strong> (solo si es requerido por el usuario). Los soportes físicos en original se entregan directamente al <strong>área de archivo</strong> si no son exigidos de vuelta.
+                            Después de tramitar las diligencias, el mensajero debe <strong>escanear los documentos y remitirlos por correo electrónico</strong> (según el caso). Los soportes físicos en original se entregan directamente al <strong>área de archivo</strong> si no son exigidos por el área usuaria.
                         </p>
                     </div>
                 </div>
@@ -695,6 +710,7 @@
             </div>
 
     
+        </div>
     </section>
 
     <section id="comunicacion" class="bg-white">
@@ -920,9 +936,9 @@
             <div class="row justify-content-center g-4 text-center mt-2">
                 <div class="col-md-6 col-lg-3">
                     <div class="card-custom border shadow-sm bg-light">
-                        <div class="rounded-circle text-white d-inline-flex justify-content-center align-items-center mb-3 shadow-sm" style="width: 70px; height: 70px; font-size: 24px; font-weight: bold; background-color: var(--secondary);">SR</div>
-                        <h5 class="fw-bold text-primary">Luis Fernando Rincon</h5>
-                        <p class="text-muted small">Coordinador<br><strong>Centro - Norte</strong></p>
+                        <div class="rounded-circle text-white d-inline-flex justify-content-center align-items-center mb-3 shadow-sm" style="width: 70px; height: 70px; font-size: 24px; font-weight: bold; background-color: var(--secondary);">LR</div>
+                        <h5 class="fw-bold text-primary">Luis Fernando Rincón</h5>
+                        <p class="text-muted small">Coordinador de Mensajería<br><strong>Centro - Norte</strong></p>
                         <a href="mailto:mensajeria@constructorabolivar.com" class="btn btn-outline-primary w-100 mb-2" style="font-size: 0.8rem;"><i class="fas fa-envelope me-1"></i> Correo</a>
                         <a href="tel:3102502316" class="btn btn-primary w-100"><i class="fas fa-phone me-1"></i> 310 2502316</a>
                     </div>
@@ -931,8 +947,8 @@
                 <div class="col-md-6 col-lg-3">
                     <div class="card-custom border shadow-sm bg-light">
                         <div class="rounded-circle text-white d-inline-flex justify-content-center align-items-center mb-3 shadow-sm" style="width: 70px; height: 70px; font-size: 24px; font-weight: bold; background-color: var(--warning);">JU</div>
-                        <h5 class="fw-bold text-primary">James Urrea</h5>
-                        <p class="text-muted small">Coordinador<br><strong>Regional Sur</strong></p>
+                        <h5 class="fw-bold text-primary">James Urrea Ortiz</h5>
+                        <p class="text-muted small">Líder Nacional de Mensajería<br><strong>Regional Sur</strong></p>
                         <a href="mailto:jurrea@cbolivar.com" class="btn btn-outline-primary w-100 mb-2" style="font-size: 0.8rem;"><i class="fas fa-envelope me-1"></i> Correo</a>
                         <a href="tel:3154849023" class="btn btn-warning text-white w-100"><i class="fas fa-phone me-1"></i> 315 4849023</a>
                     </div>
